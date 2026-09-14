@@ -469,23 +469,27 @@ export function SiteHeader() {
                         </Link>
 
                         {/* SECOND LEVEL */}
+                        {/* SECOND LEVEL */}
                         {openGroup === area.slug && (
                           <div
                             className="
-                              absolute
-                              left-full
-                              top-0
-                              z-[80]
-                              ml-1
-                              w-64
-                              overflow-hidden
-                              rounded-md
-                              border
-                              border-border
-                              bg-card
-                              shadow-xl
-                              sm:w-72
-                            "
+      absolute
+      top-0
+      left-full
+      ml-1
+      w-64
+      overflow-hidden
+      rounded-md
+      border
+      border-border
+      bg-card
+      shadow-xl
+      sm:w-72
+      max-lg:left-auto
+      max-lg:right-full
+      max-lg:ml-0
+      max-lg:mr-1
+    "
                           >
                             {area.topics.map((topic) => (
                               <Link
