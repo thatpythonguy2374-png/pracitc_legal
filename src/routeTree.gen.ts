@@ -23,17 +23,15 @@ import { Route as PracticeCivilLitigationPropertyDisputesRouteImport } from './r
 import { Route as PracticeCivilLitigationPublicNuisanceLitigationRouteImport } from './routes/practice/civil-litigation/public-nuisance-litigation'
 import { Route as PracticeCivilLitigationRecoverySuitsRouteImport } from './routes/practice/civil-litigation/recovery-suits'
 import { Route as PracticeCivilLitigationRwaElectionMattersRouteImport } from './routes/practice/civil-litigation/rwa-election-matters'
+import { Route as PracticeCriminalMattersIndexRouteImport } from './routes/practice/criminal-matters/index'
+import { Route as PracticeCriminalMattersBailAndAnticipatoryRouteImport } from './routes/practice/criminal-matters/bail-and-anticipatory'
 import { Route as PracticeMatrimonialMattersIndexRouteImport } from './routes/practice/matrimonial-matters/index'
 import { Route as PracticeMatrimonialMattersChildCustodyRouteImport } from './routes/practice/matrimonial-matters/child-custody'
 import { Route as PracticeMatrimonialMattersDivorceAndMutualConsentRouteImport } from './routes/practice/matrimonial-matters/divorce-and-mutual-consent'
 import { Route as PracticeMatrimonialMattersDomesticViolenceRouteImport } from './routes/practice/matrimonial-matters/domestic-violence'
 import { Route as PracticeMatrimonialMattersMaintenanceAndAlimonyRouteImport } from './routes/practice/matrimonial-matters/maintenance-and-alimony'
+import { Route as PracticeMatrimonialMattersNullityOfMarriageRouteImport } from './routes/practice/matrimonial-matters/nullity-of-marriage'
 import { Route as PracticeMatrimonialMattersRestitutionOfConjugalRightsRouteImport } from './routes/practice/matrimonial-matters/restitution-of-conjugal-rights'
-import { Route as PracticeMotorAccidentClaimsIndexRouteImport } from './routes/practice/motor-accident-claims/index'
-import { Route as PracticeMotorAccidentClaimsCompensationClaimsRouteImport } from './routes/practice/motor-accident-claims/compensation-claims'
-import { Route as PracticeMotorAccidentClaimsHitAndRunCasesRouteImport } from './routes/practice/motor-accident-claims/hit-and-run-cases'
-import { Route as PracticeMotorAccidentClaimsInsuranceDisputesRouteImport } from './routes/practice/motor-accident-claims/insurance-disputes'
-import { Route as PracticeMotorAccidentClaimsMactAppealsRouteImport } from './routes/practice/motor-accident-claims/mact-appeals'
 import { Route as PracticePropertyRightsIndexRouteImport } from './routes/practice/property-rights/index'
 import { Route as PracticePropertyRightsLandAcquisitionRouteImport } from './routes/practice/property-rights/land-acquisition'
 import { Route as PracticePropertyRightsPartitionSuitsRouteImport } from './routes/practice/property-rights/partition-suits'
@@ -121,6 +119,18 @@ const PracticeCivilLitigationRwaElectionMattersRoute =
     path: '/practice/civil-litigation/rwa-election-matters',
     getParentRoute: () => rootRouteImport,
   } as any)
+const PracticeCriminalMattersIndexRoute =
+  PracticeCriminalMattersIndexRouteImport.update({
+    id: '/practice/criminal-matters/',
+    path: '/practice/criminal-matters/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PracticeCriminalMattersBailAndAnticipatoryRoute =
+  PracticeCriminalMattersBailAndAnticipatoryRouteImport.update({
+    id: '/practice/criminal-matters/bail-and-anticipatory',
+    path: '/practice/criminal-matters/bail-and-anticipatory',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PracticeMatrimonialMattersIndexRoute =
   PracticeMatrimonialMattersIndexRouteImport.update({
     id: '/practice/matrimonial-matters/',
@@ -151,40 +161,16 @@ const PracticeMatrimonialMattersMaintenanceAndAlimonyRoute =
     path: '/practice/matrimonial-matters/maintenance-and-alimony',
     getParentRoute: () => rootRouteImport,
   } as any)
+const PracticeMatrimonialMattersNullityOfMarriageRoute =
+  PracticeMatrimonialMattersNullityOfMarriageRouteImport.update({
+    id: '/practice/matrimonial-matters/nullity-of-marriage',
+    path: '/practice/matrimonial-matters/nullity-of-marriage',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute =
   PracticeMatrimonialMattersRestitutionOfConjugalRightsRouteImport.update({
     id: '/practice/matrimonial-matters/restitution-of-conjugal-rights',
     path: '/practice/matrimonial-matters/restitution-of-conjugal-rights',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PracticeMotorAccidentClaimsIndexRoute =
-  PracticeMotorAccidentClaimsIndexRouteImport.update({
-    id: '/practice/motor-accident-claims/',
-    path: '/practice/motor-accident-claims/',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PracticeMotorAccidentClaimsCompensationClaimsRoute =
-  PracticeMotorAccidentClaimsCompensationClaimsRouteImport.update({
-    id: '/practice/motor-accident-claims/compensation-claims',
-    path: '/practice/motor-accident-claims/compensation-claims',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PracticeMotorAccidentClaimsHitAndRunCasesRoute =
-  PracticeMotorAccidentClaimsHitAndRunCasesRouteImport.update({
-    id: '/practice/motor-accident-claims/hit-and-run-cases',
-    path: '/practice/motor-accident-claims/hit-and-run-cases',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PracticeMotorAccidentClaimsInsuranceDisputesRoute =
-  PracticeMotorAccidentClaimsInsuranceDisputesRouteImport.update({
-    id: '/practice/motor-accident-claims/insurance-disputes',
-    path: '/practice/motor-accident-claims/insurance-disputes',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PracticeMotorAccidentClaimsMactAppealsRoute =
-  PracticeMotorAccidentClaimsMactAppealsRouteImport.update({
-    id: '/practice/motor-accident-claims/mact-appeals',
-    path: '/practice/motor-accident-claims/mact-appeals',
     getParentRoute: () => rootRouteImport,
   } as any)
 const PracticePropertyRightsIndexRoute =
@@ -232,22 +218,20 @@ export interface FileRoutesByFullPath {
   '/practice/civil-litigation/public-nuisance-litigation': typeof PracticeCivilLitigationPublicNuisanceLitigationRoute
   '/practice/civil-litigation/recovery-suits': typeof PracticeCivilLitigationRecoverySuitsRoute
   '/practice/civil-litigation/rwa-election-matters': typeof PracticeCivilLitigationRwaElectionMattersRoute
+  '/practice/criminal-matters/bail-and-anticipatory': typeof PracticeCriminalMattersBailAndAnticipatoryRoute
   '/practice/matrimonial-matters/child-custody': typeof PracticeMatrimonialMattersChildCustodyRoute
   '/practice/matrimonial-matters/divorce-and-mutual-consent': typeof PracticeMatrimonialMattersDivorceAndMutualConsentRoute
   '/practice/matrimonial-matters/domestic-violence': typeof PracticeMatrimonialMattersDomesticViolenceRoute
   '/practice/matrimonial-matters/maintenance-and-alimony': typeof PracticeMatrimonialMattersMaintenanceAndAlimonyRoute
+  '/practice/matrimonial-matters/nullity-of-marriage': typeof PracticeMatrimonialMattersNullityOfMarriageRoute
   '/practice/matrimonial-matters/restitution-of-conjugal-rights': typeof PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute
-  '/practice/motor-accident-claims/compensation-claims': typeof PracticeMotorAccidentClaimsCompensationClaimsRoute
-  '/practice/motor-accident-claims/hit-and-run-cases': typeof PracticeMotorAccidentClaimsHitAndRunCasesRoute
-  '/practice/motor-accident-claims/insurance-disputes': typeof PracticeMotorAccidentClaimsInsuranceDisputesRoute
-  '/practice/motor-accident-claims/mact-appeals': typeof PracticeMotorAccidentClaimsMactAppealsRoute
   '/practice/property-rights/land-acquisition': typeof PracticePropertyRightsLandAcquisitionRoute
   '/practice/property-rights/partition-suits': typeof PracticePropertyRightsPartitionSuitsRoute
   '/practice/property-rights/tenancy-and-eviction': typeof PracticePropertyRightsTenancyAndEvictionRoute
   '/practice/property-rights/title-and-ownership-disputes': typeof PracticePropertyRightsTitleAndOwnershipDisputesRoute
   '/practice/civil-litigation/': typeof PracticeCivilLitigationIndexRoute
+  '/practice/criminal-matters/': typeof PracticeCriminalMattersIndexRoute
   '/practice/matrimonial-matters/': typeof PracticeMatrimonialMattersIndexRoute
-  '/practice/motor-accident-claims/': typeof PracticeMotorAccidentClaimsIndexRoute
   '/practice/property-rights/': typeof PracticePropertyRightsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -264,22 +248,20 @@ export interface FileRoutesByTo {
   '/practice/civil-litigation/public-nuisance-litigation': typeof PracticeCivilLitigationPublicNuisanceLitigationRoute
   '/practice/civil-litigation/recovery-suits': typeof PracticeCivilLitigationRecoverySuitsRoute
   '/practice/civil-litigation/rwa-election-matters': typeof PracticeCivilLitigationRwaElectionMattersRoute
+  '/practice/criminal-matters/bail-and-anticipatory': typeof PracticeCriminalMattersBailAndAnticipatoryRoute
   '/practice/matrimonial-matters/child-custody': typeof PracticeMatrimonialMattersChildCustodyRoute
   '/practice/matrimonial-matters/divorce-and-mutual-consent': typeof PracticeMatrimonialMattersDivorceAndMutualConsentRoute
   '/practice/matrimonial-matters/domestic-violence': typeof PracticeMatrimonialMattersDomesticViolenceRoute
   '/practice/matrimonial-matters/maintenance-and-alimony': typeof PracticeMatrimonialMattersMaintenanceAndAlimonyRoute
+  '/practice/matrimonial-matters/nullity-of-marriage': typeof PracticeMatrimonialMattersNullityOfMarriageRoute
   '/practice/matrimonial-matters/restitution-of-conjugal-rights': typeof PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute
-  '/practice/motor-accident-claims/compensation-claims': typeof PracticeMotorAccidentClaimsCompensationClaimsRoute
-  '/practice/motor-accident-claims/hit-and-run-cases': typeof PracticeMotorAccidentClaimsHitAndRunCasesRoute
-  '/practice/motor-accident-claims/insurance-disputes': typeof PracticeMotorAccidentClaimsInsuranceDisputesRoute
-  '/practice/motor-accident-claims/mact-appeals': typeof PracticeMotorAccidentClaimsMactAppealsRoute
   '/practice/property-rights/land-acquisition': typeof PracticePropertyRightsLandAcquisitionRoute
   '/practice/property-rights/partition-suits': typeof PracticePropertyRightsPartitionSuitsRoute
   '/practice/property-rights/tenancy-and-eviction': typeof PracticePropertyRightsTenancyAndEvictionRoute
   '/practice/property-rights/title-and-ownership-disputes': typeof PracticePropertyRightsTitleAndOwnershipDisputesRoute
   '/practice/civil-litigation': typeof PracticeCivilLitigationIndexRoute
+  '/practice/criminal-matters': typeof PracticeCriminalMattersIndexRoute
   '/practice/matrimonial-matters': typeof PracticeMatrimonialMattersIndexRoute
-  '/practice/motor-accident-claims': typeof PracticeMotorAccidentClaimsIndexRoute
   '/practice/property-rights': typeof PracticePropertyRightsIndexRoute
 }
 export interface FileRoutesById {
@@ -297,22 +279,20 @@ export interface FileRoutesById {
   '/practice/civil-litigation/public-nuisance-litigation': typeof PracticeCivilLitigationPublicNuisanceLitigationRoute
   '/practice/civil-litigation/recovery-suits': typeof PracticeCivilLitigationRecoverySuitsRoute
   '/practice/civil-litigation/rwa-election-matters': typeof PracticeCivilLitigationRwaElectionMattersRoute
+  '/practice/criminal-matters/bail-and-anticipatory': typeof PracticeCriminalMattersBailAndAnticipatoryRoute
   '/practice/matrimonial-matters/child-custody': typeof PracticeMatrimonialMattersChildCustodyRoute
   '/practice/matrimonial-matters/divorce-and-mutual-consent': typeof PracticeMatrimonialMattersDivorceAndMutualConsentRoute
   '/practice/matrimonial-matters/domestic-violence': typeof PracticeMatrimonialMattersDomesticViolenceRoute
   '/practice/matrimonial-matters/maintenance-and-alimony': typeof PracticeMatrimonialMattersMaintenanceAndAlimonyRoute
+  '/practice/matrimonial-matters/nullity-of-marriage': typeof PracticeMatrimonialMattersNullityOfMarriageRoute
   '/practice/matrimonial-matters/restitution-of-conjugal-rights': typeof PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute
-  '/practice/motor-accident-claims/compensation-claims': typeof PracticeMotorAccidentClaimsCompensationClaimsRoute
-  '/practice/motor-accident-claims/hit-and-run-cases': typeof PracticeMotorAccidentClaimsHitAndRunCasesRoute
-  '/practice/motor-accident-claims/insurance-disputes': typeof PracticeMotorAccidentClaimsInsuranceDisputesRoute
-  '/practice/motor-accident-claims/mact-appeals': typeof PracticeMotorAccidentClaimsMactAppealsRoute
   '/practice/property-rights/land-acquisition': typeof PracticePropertyRightsLandAcquisitionRoute
   '/practice/property-rights/partition-suits': typeof PracticePropertyRightsPartitionSuitsRoute
   '/practice/property-rights/tenancy-and-eviction': typeof PracticePropertyRightsTenancyAndEvictionRoute
   '/practice/property-rights/title-and-ownership-disputes': typeof PracticePropertyRightsTitleAndOwnershipDisputesRoute
   '/practice/civil-litigation/': typeof PracticeCivilLitigationIndexRoute
+  '/practice/criminal-matters/': typeof PracticeCriminalMattersIndexRoute
   '/practice/matrimonial-matters/': typeof PracticeMatrimonialMattersIndexRoute
-  '/practice/motor-accident-claims/': typeof PracticeMotorAccidentClaimsIndexRoute
   '/practice/property-rights/': typeof PracticePropertyRightsIndexRoute
 }
 export interface FileRouteTypes {
@@ -331,22 +311,20 @@ export interface FileRouteTypes {
     | '/practice/civil-litigation/public-nuisance-litigation'
     | '/practice/civil-litigation/recovery-suits'
     | '/practice/civil-litigation/rwa-election-matters'
+    | '/practice/criminal-matters/bail-and-anticipatory'
     | '/practice/matrimonial-matters/child-custody'
     | '/practice/matrimonial-matters/divorce-and-mutual-consent'
     | '/practice/matrimonial-matters/domestic-violence'
     | '/practice/matrimonial-matters/maintenance-and-alimony'
+    | '/practice/matrimonial-matters/nullity-of-marriage'
     | '/practice/matrimonial-matters/restitution-of-conjugal-rights'
-    | '/practice/motor-accident-claims/compensation-claims'
-    | '/practice/motor-accident-claims/hit-and-run-cases'
-    | '/practice/motor-accident-claims/insurance-disputes'
-    | '/practice/motor-accident-claims/mact-appeals'
     | '/practice/property-rights/land-acquisition'
     | '/practice/property-rights/partition-suits'
     | '/practice/property-rights/tenancy-and-eviction'
     | '/practice/property-rights/title-and-ownership-disputes'
     | '/practice/civil-litigation/'
+    | '/practice/criminal-matters/'
     | '/practice/matrimonial-matters/'
-    | '/practice/motor-accident-claims/'
     | '/practice/property-rights/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -363,22 +341,20 @@ export interface FileRouteTypes {
     | '/practice/civil-litigation/public-nuisance-litigation'
     | '/practice/civil-litigation/recovery-suits'
     | '/practice/civil-litigation/rwa-election-matters'
+    | '/practice/criminal-matters/bail-and-anticipatory'
     | '/practice/matrimonial-matters/child-custody'
     | '/practice/matrimonial-matters/divorce-and-mutual-consent'
     | '/practice/matrimonial-matters/domestic-violence'
     | '/practice/matrimonial-matters/maintenance-and-alimony'
+    | '/practice/matrimonial-matters/nullity-of-marriage'
     | '/practice/matrimonial-matters/restitution-of-conjugal-rights'
-    | '/practice/motor-accident-claims/compensation-claims'
-    | '/practice/motor-accident-claims/hit-and-run-cases'
-    | '/practice/motor-accident-claims/insurance-disputes'
-    | '/practice/motor-accident-claims/mact-appeals'
     | '/practice/property-rights/land-acquisition'
     | '/practice/property-rights/partition-suits'
     | '/practice/property-rights/tenancy-and-eviction'
     | '/practice/property-rights/title-and-ownership-disputes'
     | '/practice/civil-litigation'
+    | '/practice/criminal-matters'
     | '/practice/matrimonial-matters'
-    | '/practice/motor-accident-claims'
     | '/practice/property-rights'
   id:
     | '__root__'
@@ -395,22 +371,20 @@ export interface FileRouteTypes {
     | '/practice/civil-litigation/public-nuisance-litigation'
     | '/practice/civil-litigation/recovery-suits'
     | '/practice/civil-litigation/rwa-election-matters'
+    | '/practice/criminal-matters/bail-and-anticipatory'
     | '/practice/matrimonial-matters/child-custody'
     | '/practice/matrimonial-matters/divorce-and-mutual-consent'
     | '/practice/matrimonial-matters/domestic-violence'
     | '/practice/matrimonial-matters/maintenance-and-alimony'
+    | '/practice/matrimonial-matters/nullity-of-marriage'
     | '/practice/matrimonial-matters/restitution-of-conjugal-rights'
-    | '/practice/motor-accident-claims/compensation-claims'
-    | '/practice/motor-accident-claims/hit-and-run-cases'
-    | '/practice/motor-accident-claims/insurance-disputes'
-    | '/practice/motor-accident-claims/mact-appeals'
     | '/practice/property-rights/land-acquisition'
     | '/practice/property-rights/partition-suits'
     | '/practice/property-rights/tenancy-and-eviction'
     | '/practice/property-rights/title-and-ownership-disputes'
     | '/practice/civil-litigation/'
+    | '/practice/criminal-matters/'
     | '/practice/matrimonial-matters/'
-    | '/practice/motor-accident-claims/'
     | '/practice/property-rights/'
   fileRoutesById: FileRoutesById
 }
@@ -428,22 +402,20 @@ export interface RootRouteChildren {
   PracticeCivilLitigationPublicNuisanceLitigationRoute: typeof PracticeCivilLitigationPublicNuisanceLitigationRoute
   PracticeCivilLitigationRecoverySuitsRoute: typeof PracticeCivilLitigationRecoverySuitsRoute
   PracticeCivilLitigationRwaElectionMattersRoute: typeof PracticeCivilLitigationRwaElectionMattersRoute
+  PracticeCriminalMattersBailAndAnticipatoryRoute: typeof PracticeCriminalMattersBailAndAnticipatoryRoute
   PracticeMatrimonialMattersChildCustodyRoute: typeof PracticeMatrimonialMattersChildCustodyRoute
   PracticeMatrimonialMattersDivorceAndMutualConsentRoute: typeof PracticeMatrimonialMattersDivorceAndMutualConsentRoute
   PracticeMatrimonialMattersDomesticViolenceRoute: typeof PracticeMatrimonialMattersDomesticViolenceRoute
   PracticeMatrimonialMattersMaintenanceAndAlimonyRoute: typeof PracticeMatrimonialMattersMaintenanceAndAlimonyRoute
+  PracticeMatrimonialMattersNullityOfMarriageRoute: typeof PracticeMatrimonialMattersNullityOfMarriageRoute
   PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute: typeof PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute
-  PracticeMotorAccidentClaimsCompensationClaimsRoute: typeof PracticeMotorAccidentClaimsCompensationClaimsRoute
-  PracticeMotorAccidentClaimsHitAndRunCasesRoute: typeof PracticeMotorAccidentClaimsHitAndRunCasesRoute
-  PracticeMotorAccidentClaimsInsuranceDisputesRoute: typeof PracticeMotorAccidentClaimsInsuranceDisputesRoute
-  PracticeMotorAccidentClaimsMactAppealsRoute: typeof PracticeMotorAccidentClaimsMactAppealsRoute
   PracticePropertyRightsLandAcquisitionRoute: typeof PracticePropertyRightsLandAcquisitionRoute
   PracticePropertyRightsPartitionSuitsRoute: typeof PracticePropertyRightsPartitionSuitsRoute
   PracticePropertyRightsTenancyAndEvictionRoute: typeof PracticePropertyRightsTenancyAndEvictionRoute
   PracticePropertyRightsTitleAndOwnershipDisputesRoute: typeof PracticePropertyRightsTitleAndOwnershipDisputesRoute
   PracticeCivilLitigationIndexRoute: typeof PracticeCivilLitigationIndexRoute
+  PracticeCriminalMattersIndexRoute: typeof PracticeCriminalMattersIndexRoute
   PracticeMatrimonialMattersIndexRoute: typeof PracticeMatrimonialMattersIndexRoute
-  PracticeMotorAccidentClaimsIndexRoute: typeof PracticeMotorAccidentClaimsIndexRoute
   PracticePropertyRightsIndexRoute: typeof PracticePropertyRightsIndexRoute
 }
 
@@ -547,6 +519,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PracticeCivilLitigationRwaElectionMattersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/practice/criminal-matters/': {
+      id: '/practice/criminal-matters/'
+      path: '/practice/criminal-matters'
+      fullPath: '/practice/criminal-matters/'
+      preLoaderRoute: typeof PracticeCriminalMattersIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/practice/criminal-matters/bail-and-anticipatory': {
+      id: '/practice/criminal-matters/bail-and-anticipatory'
+      path: '/practice/criminal-matters/bail-and-anticipatory'
+      fullPath: '/practice/criminal-matters/bail-and-anticipatory'
+      preLoaderRoute: typeof PracticeCriminalMattersBailAndAnticipatoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/practice/matrimonial-matters/': {
       id: '/practice/matrimonial-matters/'
       path: '/practice/matrimonial-matters'
@@ -582,46 +568,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PracticeMatrimonialMattersMaintenanceAndAlimonyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/practice/matrimonial-matters/nullity-of-marriage': {
+      id: '/practice/matrimonial-matters/nullity-of-marriage'
+      path: '/practice/matrimonial-matters/nullity-of-marriage'
+      fullPath: '/practice/matrimonial-matters/nullity-of-marriage'
+      preLoaderRoute: typeof PracticeMatrimonialMattersNullityOfMarriageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/practice/matrimonial-matters/restitution-of-conjugal-rights': {
       id: '/practice/matrimonial-matters/restitution-of-conjugal-rights'
       path: '/practice/matrimonial-matters/restitution-of-conjugal-rights'
       fullPath: '/practice/matrimonial-matters/restitution-of-conjugal-rights'
       preLoaderRoute: typeof PracticeMatrimonialMattersRestitutionOfConjugalRightsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/practice/motor-accident-claims/': {
-      id: '/practice/motor-accident-claims/'
-      path: '/practice/motor-accident-claims'
-      fullPath: '/practice/motor-accident-claims/'
-      preLoaderRoute: typeof PracticeMotorAccidentClaimsIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/practice/motor-accident-claims/compensation-claims': {
-      id: '/practice/motor-accident-claims/compensation-claims'
-      path: '/practice/motor-accident-claims/compensation-claims'
-      fullPath: '/practice/motor-accident-claims/compensation-claims'
-      preLoaderRoute: typeof PracticeMotorAccidentClaimsCompensationClaimsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/practice/motor-accident-claims/hit-and-run-cases': {
-      id: '/practice/motor-accident-claims/hit-and-run-cases'
-      path: '/practice/motor-accident-claims/hit-and-run-cases'
-      fullPath: '/practice/motor-accident-claims/hit-and-run-cases'
-      preLoaderRoute: typeof PracticeMotorAccidentClaimsHitAndRunCasesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/practice/motor-accident-claims/insurance-disputes': {
-      id: '/practice/motor-accident-claims/insurance-disputes'
-      path: '/practice/motor-accident-claims/insurance-disputes'
-      fullPath: '/practice/motor-accident-claims/insurance-disputes'
-      preLoaderRoute: typeof PracticeMotorAccidentClaimsInsuranceDisputesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/practice/motor-accident-claims/mact-appeals': {
-      id: '/practice/motor-accident-claims/mact-appeals'
-      path: '/practice/motor-accident-claims/mact-appeals'
-      fullPath: '/practice/motor-accident-claims/mact-appeals'
-      preLoaderRoute: typeof PracticeMotorAccidentClaimsMactAppealsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/practice/property-rights/': {
@@ -686,6 +644,8 @@ const rootRouteChildren: RootRouteChildren = {
     PracticeCivilLitigationRecoverySuitsRoute,
   PracticeCivilLitigationRwaElectionMattersRoute:
     PracticeCivilLitigationRwaElectionMattersRoute,
+  PracticeCriminalMattersBailAndAnticipatoryRoute:
+    PracticeCriminalMattersBailAndAnticipatoryRoute,
   PracticeMatrimonialMattersChildCustodyRoute:
     PracticeMatrimonialMattersChildCustodyRoute,
   PracticeMatrimonialMattersDivorceAndMutualConsentRoute:
@@ -694,16 +654,10 @@ const rootRouteChildren: RootRouteChildren = {
     PracticeMatrimonialMattersDomesticViolenceRoute,
   PracticeMatrimonialMattersMaintenanceAndAlimonyRoute:
     PracticeMatrimonialMattersMaintenanceAndAlimonyRoute,
+  PracticeMatrimonialMattersNullityOfMarriageRoute:
+    PracticeMatrimonialMattersNullityOfMarriageRoute,
   PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute:
     PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute,
-  PracticeMotorAccidentClaimsCompensationClaimsRoute:
-    PracticeMotorAccidentClaimsCompensationClaimsRoute,
-  PracticeMotorAccidentClaimsHitAndRunCasesRoute:
-    PracticeMotorAccidentClaimsHitAndRunCasesRoute,
-  PracticeMotorAccidentClaimsInsuranceDisputesRoute:
-    PracticeMotorAccidentClaimsInsuranceDisputesRoute,
-  PracticeMotorAccidentClaimsMactAppealsRoute:
-    PracticeMotorAccidentClaimsMactAppealsRoute,
   PracticePropertyRightsLandAcquisitionRoute:
     PracticePropertyRightsLandAcquisitionRoute,
   PracticePropertyRightsPartitionSuitsRoute:
@@ -713,8 +667,8 @@ const rootRouteChildren: RootRouteChildren = {
   PracticePropertyRightsTitleAndOwnershipDisputesRoute:
     PracticePropertyRightsTitleAndOwnershipDisputesRoute,
   PracticeCivilLitigationIndexRoute: PracticeCivilLitigationIndexRoute,
+  PracticeCriminalMattersIndexRoute: PracticeCriminalMattersIndexRoute,
   PracticeMatrimonialMattersIndexRoute: PracticeMatrimonialMattersIndexRoute,
-  PracticeMotorAccidentClaimsIndexRoute: PracticeMotorAccidentClaimsIndexRoute,
   PracticePropertyRightsIndexRoute: PracticePropertyRightsIndexRoute,
 }
 export const routeTree = rootRouteImport

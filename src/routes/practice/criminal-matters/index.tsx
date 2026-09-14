@@ -2,28 +2,56 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
-export const Route = createFileRoute("/practice/motor-accident-claims/")({
+export const Route = createFileRoute("/practice/criminal-matters/")({
   head: () => ({
     meta: [
-      { title: "Motor Accident Claims — Practic Legal" },
-      { name: "description", content: "Compensation claims and insurance disputes before Motor Accident Claims Tribunals and appellate courts." },
-      { property: "og:title", content: "Motor Accident Claims — Practic Legal" },
-      { property: "og:description", content: "Compensation claims and insurance disputes before Motor Accident Claims Tribunals and appellate courts." },
+      { title: "Criminal Matters — Practic Legal" },
+      {
+        name: "description",
+        content:
+          "Sensitive, discreet counsel on divorce, maintenance, custody, and protection from domestic violence.",
+      },
+      { property: "og:title", content: "Criminal Matters — Practic Legal" },
+      {
+        property: "og:description",
+        content:
+          "Sensitive, discreet counsel on divorce, maintenance, custody, and protection from domestic violence.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: MotorAccidentClaimsPage,
+  component: MatrimonialMattersPage,
 });
 
 const topics = [
-  { title: "Compensation Claims", summary: "End-to-end handling of MACT claims for injury, disability, and loss of life.", href: "/practice/motor-accident-claims/compensation-claims" },
-  { title: "Insurance Disputes", summary: "Contesting repudiation, policy exclusions, and delay in settlement by insurers.", href: "/practice/motor-accident-claims/insurance-disputes" },
-  { title: "Hit & Run Cases", summary: "Solatium fund claims and investigation support where the offending vehicle is untraced.", href: "/practice/motor-accident-claims/hit-and-run-cases" },
-  { title: "MACT Appeals", summary: "Appeals for enhancement of awards, and defence of appeals filed by insurers.", href: "/practice/motor-accident-claims/mact-appeals" }
+  {
+    title: "Bail & Anticipatory",
+    summary:
+      "Criminal defence, bail and anticipatory bail applications, and representation in criminal proceedings before trial courts, appellate courts, and other competent authorities.",
+    href: "/practice/criminal-matters/bail-and-anticipatory",
+  },
+  {
+    title: "Maintenance & Alimony",
+    summary:
+      "Claims and defences for interim maintenance, permanent alimony, and enforcement of maintenance orders.",
+    href: "/practice/matrimonial-matters/maintenance-and-alimony",
+  },
+  {
+    title: "Child Custody",
+    summary:
+      "Custody, guardianship, and visitation matters guided always by the welfare of the child.",
+    href: "/practice/matrimonial-matters/child-custody",
+  },
+  {
+    title: "Domestic Violence",
+    summary:
+      "Protection, residence, and monetary relief under the Protection of Women from Domestic Violence Act.",
+    href: "/practice/matrimonial-matters/domestic-violence",
+  },
 ];
 
-function MotorAccidentClaimsPage() {
+function MatrimonialMattersPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -38,10 +66,11 @@ function MotorAccidentClaimsPage() {
         <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-28">
           <p className="eyebrow text-primary">Practice Area</p>
           <h1 className="mt-4 font-display text-4xl font-extrabold uppercase leading-[1.05] tracking-tight md:text-6xl">
-            Motor Accident Claims
+            Criminal Matters
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/75">
-            Compensation claims and insurance disputes before Motor Accident Claims Tribunals and appellate courts.
+            Sensitive, discreet counsel on divorce, maintenance, custody, and protection from
+            domestic violence.
           </p>
         </div>
       </section>

@@ -281,10 +281,7 @@ function MatrimonialMattersDivorceAndMutualConsentPage() {
                 <span className="mt-4 block h-1 w-16 bg-primary" />
 
                 <p className="mt-8 leading-relaxed text-muted-foreground">
-                  We provide end-to-end legal assistance in matters before the MCS Tribunal. From
-                  reviewing society records and issuing legal notices to representing clients in
-                  disputes before cooperative authorities and tribunals, our team focuses on
-                  protecting your rights and securing effective legal remedies.
+                  We provide comprehensive legal assistance in matters relating to:
                 </p>
               </div>
 

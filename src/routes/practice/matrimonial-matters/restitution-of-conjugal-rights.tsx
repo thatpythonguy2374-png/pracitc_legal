@@ -14,7 +14,7 @@ export const Route = createFileRoute(
       {
         name: "description",
         content:
-          "Custody, guardianship, and visitation matters guided always by the welfare of the child.",
+          "Restitution of conjugal rights is a legal remedy that orders a deserting spouse to return to the matrimonial home and resume cohabitation",
       },
       {
         property: "og:title",
@@ -23,7 +23,7 @@ export const Route = createFileRoute(
       {
         property: "og:description",
         content:
-          "Custody, guardianship, and visitation matters guided always by the welfare of the child.",
+          "Restitution of conjugal rights is a legal remedy that orders a deserting spouse to return to the matrimonial home and resume cohabitation",
       },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -134,106 +134,75 @@ function MatrimonialMattersRestitutionofConjugalRights() {
           </div>
         </section>
       </div>
-      <section className="bg-secondary/40 py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <Reveal>
-            <p className="eyebrow">Protection</p>
-            <h2 className="section-title mt-3 text-3xl md:text-4xl">Matters We Handle </h2>
-            <span className="mt-4 block h-1 w-16 bg-primary" />
+      <div className="bg-secondary/40">
+        <section className=" mx-auto max-w-7xl px-6 py-20 ">
+          <div className="grid gap-12 lg:grid-cols-12 lg:items-start ">
+            {/* Left Side */}
+            <div className="lg:col-span-4">
+              <Reveal>
+                <h2 className="section-title mt-3 text-3xl md:text-4xl">Grounds of Defence</h2>
 
-            <div className="mt-12 grid gap-6 md:grid-cols-3">
-              <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Physical Custody</h3>
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                  The child resides primarily with one parent, while the other parent may be granted
-                  visitation or access rights.
-                </p>
-              </div>
-
-              <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Joint Custody</h3>
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Both parents share the responsibility of raising the child, with custody being
-                  exercised according to a schedule determined by the court or mutually agreed
-                  between the parties.
-                </p>
-              </div>
-
-              <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Legal Custody</h3>
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                  The parent or parents are given the authority to make important decisions
-                  concerning the child’s education, healthcare, upbringing and welfare.
-                </p>
-              </div>
-              <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Visitation Rights</h3>
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Even where one parent is granted custody, the other parent may be entitled to
-                  reasonable visitation or interaction with the child, unless restricted by the
-                  court in exceptional circumstances.
-                </p>
-              </div>
-              <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Guardianship Matters</h3>
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Apart from custody disputes between parents, we also advise and represent clients
-                  in guardianship proceedings relating to minors where appointment or declaration of
-                  a legal guardian becomes necessary under applicable law.
-                </p>
-              </div>
-              <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">
-                  Mediation and Amicable Resolution
-                </h3>
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Where appropriate, we encourage parents to resolve custody and parenting issues
-                  through negotiation or mediation. Amicable arrangements often reduce conflict and
-                  help create a stable environment for the child. However, where settlement is not
-                  possible, we provide diligent preparation and effective representation before the
-                  Family Court to protect our clients’ rights and the child’s welfare.
-                </p>
-              </div>
-
-              <div className="rounded-sm border border-border bg-card p-8 md:col-span-2 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Factors considered by Courts</h3>
-
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                  While deciding custody matters, courts generally consider:
-                </p>
-
-                <ul className="mt-6 space-y-3 text-muted-foreground">
-                  <li>• The welfare and best interests of the child</li>
-                  <li>• Age and needs of the child</li>
-                  <li>• Emotional and psychological well-being</li>
-                  <li>• Educational requirements</li>
-                  <li>• Financial stability of the parents</li>
-                  <li>• Character and conduct of the parties</li>
-                  <li>• Existing relationship between the child and each parent</li>
-                  <li>• Any other relevant circumstances affecting the child’s welfare</li>
-                  <li>
-                    • Wishes of the child, where appropriate considering the child’s age and
-                    maturity
-                  </li>
-                </ul>
-              </div>
-              <div className="flex flex-col justify-center rounded-sm bg-primary p-8 text-center text-primary-foreground">
-                <p className="text-lg italic">
-                  "Protecting your investment through strategic legal advocacy."
-                </p>
-
-                <Link
-                  to="/"
-                  hash="contact"
-                  className="mt-8 inline-flex items-center justify-center rounded-sm border border-primary-foreground px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-colors hover:bg-primary-foreground hover:text-primary"
-                >
-                  Consult an Expert
-                </Link>
-              </div>
+                <span className="mt-4 block h-1 w-16 bg-primary" />
+              </Reveal>
             </div>
-          </Reveal>
-        </div>
-      </section>
+
+            {/* Right Side */}
+            <div className="space-y-8 text-base leading-relaxed text-muted-foreground lg:col-span-8">
+              <Reveal>
+                <p className="text-[19px]">
+                  A petition for Restitution of Conjugal Rights is not automatically granted. The
+                  respondent has the right to contest the proceedings and demonstrate that there was
+                  a lawful or reasonable justification for living separately. Depending upon the
+                  facts of the case, common defences may include:
+                </p>
+
+                <Stagger className="grid gap-x-10 gap-y-4 md:grid-cols-2 pt-2 ps-8">
+                  {[
+                    "Cruelty or abusive conduct",
+                    "Domestic violence",
+                    "Adultery",
+                    "Desertion by the petitioner",
+                    "Failure to discharge marital obligations",
+                    "Any other legally recognized ground",
+                    "Conduct making cohabitation unsafe or unreasonable",
+                  ].map((item) => (
+                    <StaggerItem key={item}>
+                      <div className="flex items-start gap-3">
+                        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                        <p>{item}</p>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </Stagger>
+
+                <h3 className="font-display text-xl font-bold pt-5 text-foreground text-[22px]">
+                  Consequences of a Decree
+                </h3>
+                <p className="text-[19px]">
+                  If the court grants a decree for Restitution of Conjugal Rights and the parties
+                  fail to resume cohabitation within the period prescribed under the applicable
+                  matrimonial law, such non-compliance may have legal consequences, including
+                  providing a statutory ground for seeking divorce, subject to the applicable legal
+                  provisions. Every case depends upon its individual facts and the governing
+                  personal law.
+                </p>
+                <h3 className="font-display text-xl font-bold pt-5 text-foreground text-[22px]">
+                  Our Approach
+                </h3>
+                <p className="text-[19px]">
+                  Matrimonial disputes involve not only legal rights but also deeply personal
+                  relationships. Before initiating or defending legal proceedings, we carefully
+                  evaluate the factual background, applicable law and the long-term implications for
+                  our clients. Where reconciliation is possible, we encourage amicable resolution
+                  through dialogue or mediation. Where litigation becomes necessary, we provide
+                  diligent preparation and effective courtroom advocacy to protect our clients’
+                  interests.
+                </p>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+      </div>
 
       <div className="bg-secondary/40">
         <section className=" mx-auto max-w-7xl px-6 py-20">
@@ -255,18 +224,18 @@ function MatrimonialMattersRestitutionofConjugalRights() {
                 {[
                   {
                     no: "01",
-                    title: "Review & Legal Advisory",
-                    desc: "Interim custody applications, Documentation, Visitation and access rights.",
+                    title: "Petitions & Legal Advisory",
+                    desc: "Filing petitions for Restitution of Conjugal Rights, defence against restitution proceedings, legal notices, and pre-litigation advice.",
                   },
                   {
                     no: "02",
-                    title: "Litigation & Representation",
-                    desc: "Representation before RERA Authorities, Child custody petitions, Child relocation disputes, Modification of custody arrangements, Enforcement of custody and visitation orders, Guardianship petitions",
+                    title: "Court Representation & Proceedings",
+                    desc: "Representation before Family Courts, assistance with evidence and trial proceedings, and handling connected matrimonial disputes.",
                   },
                   {
                     no: "03",
-                    title: "Negotiation & Settlement",
-                    desc: "Permanent custody proceedings, Appeals against custody orders",
+                    title: "Settlement & Appeals",
+                    desc: "Settlement negotiations and mediation, along with appeals against Family Court orders.",
                   },
                 ].map((service) => (
                   <div key={service.no} className="flex gap-6">

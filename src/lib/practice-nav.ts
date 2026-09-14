@@ -51,16 +51,17 @@ export const practiceNav: NavArea[] = [
       { slug: "child-custody", title: "Child Custody", href: "/practice/matrimonial-matters/child-custody" },
       { slug: "domestic-violence", title: "Domestic Violence", href: "/practice/matrimonial-matters/domestic-violence" },
       { slug: "restitution-of-conjugal-rights", title: "Restitution of Conjugal Rights", href: "/practice/matrimonial-matters/restitution-of-conjugal-rights" },
+      { slug: "nullity-of-marriage", title: "Nullity Of Marriage", href: "/practice/matrimonial-matters/nullity-of-marriage" },
     ],
   },
   {
-    slug: "motor-accident-claims",
-    title: "Motor Accident Claims",
-    short: "Motor Accident",
-    desc: "Compensation claims and insurance disputes before Motor Accident Claims Tribunals and appellate courts.",
-    href: "/practice/motor-accident-claims",
+    slug: "criminal-matters",
+    title: "Criminal Matters",
+    short: "Criminal",
+    desc: "Criminal defence and representation in criminal proceedings before trial courts, appellate courts, and other competent judicial authorities.",
+    href: "/practice/criminal-matters",
     topics: [
-      { slug: "compensation-claims", title: "Compensation Claims", href: "/practice/motor-accident-claims/compensation-claims" },
+      { slug: "bail-and-anticipatory", title: "Bail & Anticipatory", href: "/practice/criminal-matters/bail-and-anticipatory" },
       { slug: "insurance-disputes", title: "Insurance Disputes", href: "/practice/motor-accident-claims/insurance-disputes" },
       { slug: "hit-and-run-cases", title: "Hit & Run Cases", href: "/practice/motor-accident-claims/hit-and-run-cases" },
       { slug: "mact-appeals", title: "MACT Appeals", href: "/practice/motor-accident-claims/mact-appeals" }
