@@ -28,6 +28,7 @@ import { Route as PracticeMatrimonialMattersChildCustodyRouteImport } from './ro
 import { Route as PracticeMatrimonialMattersDivorceAndMutualConsentRouteImport } from './routes/practice/matrimonial-matters/divorce-and-mutual-consent'
 import { Route as PracticeMatrimonialMattersDomesticViolenceRouteImport } from './routes/practice/matrimonial-matters/domestic-violence'
 import { Route as PracticeMatrimonialMattersMaintenanceAndAlimonyRouteImport } from './routes/practice/matrimonial-matters/maintenance-and-alimony'
+import { Route as PracticeMatrimonialMattersRestitutionOfConjugalRightsRouteImport } from './routes/practice/matrimonial-matters/restitution-of-conjugal-rights'
 import { Route as PracticeMotorAccidentClaimsIndexRouteImport } from './routes/practice/motor-accident-claims/index'
 import { Route as PracticeMotorAccidentClaimsCompensationClaimsRouteImport } from './routes/practice/motor-accident-claims/compensation-claims'
 import { Route as PracticeMotorAccidentClaimsHitAndRunCasesRouteImport } from './routes/practice/motor-accident-claims/hit-and-run-cases'
@@ -150,6 +151,12 @@ const PracticeMatrimonialMattersMaintenanceAndAlimonyRoute =
     path: '/practice/matrimonial-matters/maintenance-and-alimony',
     getParentRoute: () => rootRouteImport,
   } as any)
+const PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute =
+  PracticeMatrimonialMattersRestitutionOfConjugalRightsRouteImport.update({
+    id: '/practice/matrimonial-matters/restitution-of-conjugal-rights',
+    path: '/practice/matrimonial-matters/restitution-of-conjugal-rights',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PracticeMotorAccidentClaimsIndexRoute =
   PracticeMotorAccidentClaimsIndexRouteImport.update({
     id: '/practice/motor-accident-claims/',
@@ -229,6 +236,7 @@ export interface FileRoutesByFullPath {
   '/practice/matrimonial-matters/divorce-and-mutual-consent': typeof PracticeMatrimonialMattersDivorceAndMutualConsentRoute
   '/practice/matrimonial-matters/domestic-violence': typeof PracticeMatrimonialMattersDomesticViolenceRoute
   '/practice/matrimonial-matters/maintenance-and-alimony': typeof PracticeMatrimonialMattersMaintenanceAndAlimonyRoute
+  '/practice/matrimonial-matters/restitution-of-conjugal-rights': typeof PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute
   '/practice/motor-accident-claims/compensation-claims': typeof PracticeMotorAccidentClaimsCompensationClaimsRoute
   '/practice/motor-accident-claims/hit-and-run-cases': typeof PracticeMotorAccidentClaimsHitAndRunCasesRoute
   '/practice/motor-accident-claims/insurance-disputes': typeof PracticeMotorAccidentClaimsInsuranceDisputesRoute
@@ -260,6 +268,7 @@ export interface FileRoutesByTo {
   '/practice/matrimonial-matters/divorce-and-mutual-consent': typeof PracticeMatrimonialMattersDivorceAndMutualConsentRoute
   '/practice/matrimonial-matters/domestic-violence': typeof PracticeMatrimonialMattersDomesticViolenceRoute
   '/practice/matrimonial-matters/maintenance-and-alimony': typeof PracticeMatrimonialMattersMaintenanceAndAlimonyRoute
+  '/practice/matrimonial-matters/restitution-of-conjugal-rights': typeof PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute
   '/practice/motor-accident-claims/compensation-claims': typeof PracticeMotorAccidentClaimsCompensationClaimsRoute
   '/practice/motor-accident-claims/hit-and-run-cases': typeof PracticeMotorAccidentClaimsHitAndRunCasesRoute
   '/practice/motor-accident-claims/insurance-disputes': typeof PracticeMotorAccidentClaimsInsuranceDisputesRoute
@@ -292,6 +301,7 @@ export interface FileRoutesById {
   '/practice/matrimonial-matters/divorce-and-mutual-consent': typeof PracticeMatrimonialMattersDivorceAndMutualConsentRoute
   '/practice/matrimonial-matters/domestic-violence': typeof PracticeMatrimonialMattersDomesticViolenceRoute
   '/practice/matrimonial-matters/maintenance-and-alimony': typeof PracticeMatrimonialMattersMaintenanceAndAlimonyRoute
+  '/practice/matrimonial-matters/restitution-of-conjugal-rights': typeof PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute
   '/practice/motor-accident-claims/compensation-claims': typeof PracticeMotorAccidentClaimsCompensationClaimsRoute
   '/practice/motor-accident-claims/hit-and-run-cases': typeof PracticeMotorAccidentClaimsHitAndRunCasesRoute
   '/practice/motor-accident-claims/insurance-disputes': typeof PracticeMotorAccidentClaimsInsuranceDisputesRoute
@@ -325,6 +335,7 @@ export interface FileRouteTypes {
     | '/practice/matrimonial-matters/divorce-and-mutual-consent'
     | '/practice/matrimonial-matters/domestic-violence'
     | '/practice/matrimonial-matters/maintenance-and-alimony'
+    | '/practice/matrimonial-matters/restitution-of-conjugal-rights'
     | '/practice/motor-accident-claims/compensation-claims'
     | '/practice/motor-accident-claims/hit-and-run-cases'
     | '/practice/motor-accident-claims/insurance-disputes'
@@ -356,6 +367,7 @@ export interface FileRouteTypes {
     | '/practice/matrimonial-matters/divorce-and-mutual-consent'
     | '/practice/matrimonial-matters/domestic-violence'
     | '/practice/matrimonial-matters/maintenance-and-alimony'
+    | '/practice/matrimonial-matters/restitution-of-conjugal-rights'
     | '/practice/motor-accident-claims/compensation-claims'
     | '/practice/motor-accident-claims/hit-and-run-cases'
     | '/practice/motor-accident-claims/insurance-disputes'
@@ -387,6 +399,7 @@ export interface FileRouteTypes {
     | '/practice/matrimonial-matters/divorce-and-mutual-consent'
     | '/practice/matrimonial-matters/domestic-violence'
     | '/practice/matrimonial-matters/maintenance-and-alimony'
+    | '/practice/matrimonial-matters/restitution-of-conjugal-rights'
     | '/practice/motor-accident-claims/compensation-claims'
     | '/practice/motor-accident-claims/hit-and-run-cases'
     | '/practice/motor-accident-claims/insurance-disputes'
@@ -419,6 +432,7 @@ export interface RootRouteChildren {
   PracticeMatrimonialMattersDivorceAndMutualConsentRoute: typeof PracticeMatrimonialMattersDivorceAndMutualConsentRoute
   PracticeMatrimonialMattersDomesticViolenceRoute: typeof PracticeMatrimonialMattersDomesticViolenceRoute
   PracticeMatrimonialMattersMaintenanceAndAlimonyRoute: typeof PracticeMatrimonialMattersMaintenanceAndAlimonyRoute
+  PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute: typeof PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute
   PracticeMotorAccidentClaimsCompensationClaimsRoute: typeof PracticeMotorAccidentClaimsCompensationClaimsRoute
   PracticeMotorAccidentClaimsHitAndRunCasesRoute: typeof PracticeMotorAccidentClaimsHitAndRunCasesRoute
   PracticeMotorAccidentClaimsInsuranceDisputesRoute: typeof PracticeMotorAccidentClaimsInsuranceDisputesRoute
@@ -568,6 +582,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PracticeMatrimonialMattersMaintenanceAndAlimonyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/practice/matrimonial-matters/restitution-of-conjugal-rights': {
+      id: '/practice/matrimonial-matters/restitution-of-conjugal-rights'
+      path: '/practice/matrimonial-matters/restitution-of-conjugal-rights'
+      fullPath: '/practice/matrimonial-matters/restitution-of-conjugal-rights'
+      preLoaderRoute: typeof PracticeMatrimonialMattersRestitutionOfConjugalRightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/practice/motor-accident-claims/': {
       id: '/practice/motor-accident-claims/'
       path: '/practice/motor-accident-claims'
@@ -673,6 +694,8 @@ const rootRouteChildren: RootRouteChildren = {
     PracticeMatrimonialMattersDomesticViolenceRoute,
   PracticeMatrimonialMattersMaintenanceAndAlimonyRoute:
     PracticeMatrimonialMattersMaintenanceAndAlimonyRoute,
+  PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute:
+    PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute,
   PracticeMotorAccidentClaimsCompensationClaimsRoute:
     PracticeMotorAccidentClaimsCompensationClaimsRoute,
   PracticeMotorAccidentClaimsHitAndRunCasesRoute:

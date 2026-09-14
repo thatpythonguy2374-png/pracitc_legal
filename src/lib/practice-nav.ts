@@ -49,7 +49,8 @@ export const practiceNav: NavArea[] = [
       { slug: "divorce-and-mutual-consent", title: "Divorce & Mutual Consent", href: "/practice/matrimonial-matters/divorce-and-mutual-consent" },
       { slug: "maintenance-and-alimony", title: "Maintenance & Alimony", href: "/practice/matrimonial-matters/maintenance-and-alimony" },
       { slug: "child-custody", title: "Child Custody", href: "/practice/matrimonial-matters/child-custody" },
-      { slug: "domestic-violence", title: "Domestic Violence", href: "/practice/matrimonial-matters/domestic-violence" }
+      { slug: "domestic-violence", title: "Domestic Violence", href: "/practice/matrimonial-matters/domestic-violence" },
+      { slug: "restitution-of-conjugal-rights", title: "Restitution of Conjugal Rights", href: "/practice/matrimonial-matters/restitution-of-conjugal-rights" },
     ],
   },
   {

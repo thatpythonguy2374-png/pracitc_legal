@@ -106,7 +106,7 @@ function MatrimonialMattersDivorceAndMutualConsentPage() {
                   understanding the legal process is essential to protecting your rights and
                   interests.
                 </p>
-                <h3 className="font-display text-xl font-bold pt-5 text-black">
+                <h3 className="font-display text-xl font-bold pt-5 text-foreground">
                   Divorce under Indian Law
                 </h3>
                 <p className="text-[19px]">
