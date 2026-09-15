@@ -2,23 +2,23 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import Reveal from "@/components/Reveal";
-
+import { Stagger, StaggerItem } from "@/components/Stagger";
 import DisclaimerSection from "@/components/Disclaimer";
 
-export const Route = createFileRoute("/practice/criminal-matters/bail-and-anticipatory")({
+export const Route = createFileRoute("/practice/criminal-matters/crimes-against-women")({
   head: () => ({
     meta: [
-      { title: "Bail & Anticipatory — Criminal Matters | Practic Legal" },
+      { title: "Crimes Aganist Women — Criminal Matters | Practic Legal" },
       {
         name: "description",
         content:
-          "Criminal defence, bail and anticipatory bail applications, and representation in criminal proceedings before trial courts, appellate courts, and other competent authorities.",
+          "Legal assistance in crimes against women, including domestic violence, harassment, cruelty, dowry-related offences, and representation before trial and appellate courts.",
       },
-      { property: "og:title", content: "Bail & Anticipatory — Criminal Matters | Practic Legal" },
+      { property: "og:title", content: "Crimes Aganist Women — Criminal Matters | Practic Legal" },
       {
         property: "og:description",
         content:
-          "Criminal defence, bail and anticipatory bail applications, and representation in criminal proceedings before trial courts, appellate courts, and other competent authorities.",
+          "Legal assistance in crimes against women, including domestic violence, harassment, cruelty, dowry-related offences, and representation before trial and appellate courts.",
       },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -61,17 +61,16 @@ function RouteComponent() {
             </p>
 
             <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
-              Bail &
+              Crimes
               <br />
-              Anticipatory
+              Aganist Women
             </h1>
 
             <div className="w-20 h-[2px] bg-orange-400 my-6" />
 
             <p className="text-lg md:text-xl text-white/80 leading-relaxed">
-              Criminal defence, bail and anticipatory bail applications, and representation in
-              criminal proceedings before trial courts, appellate courts, and other competent
-              authorities.
+              Legal assistance in crimes against women, including domestic violence, harassment,
+              cruelty, dowry-related offences, and representation before trial and appellate courts.
             </p>
           </div>
         </div>
@@ -84,7 +83,7 @@ function RouteComponent() {
               <Reveal>
                 <p className="eyebrow">Overview</p>
 
-                <h2 className="section-title mt-3 text-3xl md:text-4xl">Child Custody</h2>
+                <h2 className="section-title mt-3 text-3xl md:text-4xl">Crimes Aganist Women</h2>
 
                 <span className="mt-4 block h-1 w-16 bg-primary" />
               </Reveal>
@@ -94,10 +93,10 @@ function RouteComponent() {
             <div className="space-y-8 text-base leading-relaxed text-muted-foreground lg:col-span-8">
               <Reveal>
                 <p className="text-[19px]">
-                  Child custody refers to the legal rights and responsibilities relating to the
-                  care, upbringing, and welfare of a minor child. Custody disputes commonly arise
-                  during divorce, judicial separation, annulment or between parents living
-                  separately.
+                  Offences against women often involve issues affecting personal safety, dignity,
+                  privacy and individual rights. Such matters require not only sound legal
+                  representation but also a sensitive and confidential approach that recognizes the
+                  emotional and personal circumstances surrounding each case.
                 </p>
                 <p className="text-[19px] pt-4">
                   Child custody disputes are among the most sensitive aspects of matrimonial

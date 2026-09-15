@@ -62,9 +62,9 @@ export const practiceNav: NavArea[] = [
     href: "/practice/criminal-matters",
     topics: [
       { slug: "bail-and-anticipatory", title: "Bail & Anticipatory", href: "/practice/criminal-matters/bail-and-anticipatory" },
-      { slug: "insurance-disputes", title: "Insurance Disputes", href: "/practice/motor-accident-claims/insurance-disputes" },
-      { slug: "hit-and-run-cases", title: "Hit & Run Cases", href: "/practice/motor-accident-claims/hit-and-run-cases" },
-      { slug: "mact-appeals", title: "MACT Appeals", href: "/practice/motor-accident-claims/mact-appeals" }
+      { slug: "crimes-against-women", title: "Crimes Against Women", href: "/practice/criminal-matters/crimes-against-women" },
+      { slug: "hit-and-run-cases", title: "Hit & Run Cases", href: "/practice/criminal-matters/hit-and-run-cases" },
+      { slug: "mact-appeals", title: "MACT Appeals", href: "/practice/criminal-matters/mact-appeals" }
     ],
   },
   {
