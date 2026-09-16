@@ -469,7 +469,6 @@ export function SiteHeader() {
                         </Link>
 
                         {/* SECOND LEVEL */}
-                        {/* SECOND LEVEL */}
                         {openGroup === area.slug && (
                           <div
                             className="
