@@ -98,18 +98,57 @@ function RouteComponent() {
                   representation but also a sensitive and confidential approach that recognizes the
                   emotional and personal circumstances surrounding each case.
                 </p>
-                <p className="text-[19px] pt-4">
-                  Child custody disputes are among the most sensitive aspects of matrimonial
-                  litigation. While parents may have divergent views regarding the upbringing of a
-                  child, the paramount consideration for every court is the welfare and best
-                  interests of the child. Every case is decided on its own facts, with the child’s
-                  welfare being the overriding consideration.
-                </p>
               </Reveal>
             </div>
           </div>
         </section>
       </div>
+
+      <section className="bg-secondary/40 py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal>
+            <h2 className="section-title mt-3 text-3xl md:text-4xl"> Legal Assistance </h2>
+            <span className="mt-4 block h-1 w-16 bg-primary" />
+
+            <div className="mt-12 grid gap-6 md:grid-cols-4">
+              <div className="rounded-sm border border-border bg-card p-8 md:col-span-2 transition-all hover:-translate-y-1 hover:border-primary">
+                <h3 className="font-display text-xl font-bold"> For Victims</h3>
+                <p className="text-muted-foreground pt-5">
+                  We assist women in seeking appropriate legal remedies in matters involving
+                  offences affecting their safety, dignity and personal liberty. Our services
+                  include:
+                </p>
+                <ul className="mt-6 space-y-3 text-muted-foreground">
+                  <li>• Legal consultation and case assessment</li>
+                  <li>• Assistance in registration of FIRs and criminal complaints </li>
+                  <li>• Criminal appeals and revision proceedings</li>
+                  <li>• Opposing bail applications where appropriate </li>
+                  <li>• Representation during investigation </li>
+                  <li>• Representation before criminal courts</li>
+                  <li>• Coordination with other connected legal proceedings, where required</li>
+                </ul>
+              </div>
+              <div className="rounded-sm border border-border bg-card p-8 md:col-span-2 transition-all hover:-translate-y-1 hover:border-primary">
+                <h3 className="font-display text-xl font-bold">For Accused</h3>
+                <p className="text-muted-foreground pt-5">
+                  Criminal allegations involving offences against women can have significant legal
+                  and personal consequences. Every accused person is entitled to a fair
+                  investigation and legal representation in accordance with the principles of
+                  natural justice. We provide legal assistance in:
+                </p>
+                <ul className="mt-6 space-y-3 text-muted-foreground">
+                  <li>• Pre-arrest legal consultation </li>
+                  <li>• Appeals and revision proceedings</li>
+                  <li>• Defence before criminal courts</li>
+                  <li>• Representation during investigation</li>
+                  <li>• Anticipatory and Regular Bail</li>
+                  <li>• Quashing of criminal proceedings, where legally maintainable</li>
+                </ul>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
       <section className="bg-secondary/40 py-20">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
@@ -119,88 +158,77 @@ function RouteComponent() {
 
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Physical Custody</h3>
+                <h3 className="font-display text-xl font-bold">Sexual Harassment</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  The child resides primarily with one parent, while the other parent may be granted
-                  visitation or access rights.
+                  Legal assistance in matters involving unwelcome sexual conduct, harassment at the
+                  workplace or in public spaces, and related criminal proceedings.
                 </p>
               </div>
 
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Joint Custody</h3>
+                <h3 className="font-display text-xl font-bold">Stalking</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Both parents share the responsibility of raising the child, with custody being
-                  exercised according to a schedule determined by the court or mutually agreed
-                  between the parties.
+                  Representation in cases involving persistent following, unwanted contact,
+                  monitoring, or other conduct that causes fear, distress, or invasion of privacy.
                 </p>
               </div>
 
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Legal Custody</h3>
+                <h3 className="font-display text-xl font-bold">Voyeurism</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  The parent or parents are given the authority to make important decisions
-                  concerning the child’s education, healthcare, upbringing and welfare.
+                  Legal assistance in cases involving unauthorized viewing, recording, capturing, or
+                  sharing of private acts or images without consent.
                 </p>
               </div>
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Visitation Rights</h3>
+                <h3 className="font-display text-xl font-bold">Criminal Intimidation</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Even where one parent is granted custody, the other parent may be entitled to
-                  reasonable visitation or interaction with the child, unless restricted by the
-                  court in exceptional circumstances.
+                  Assistance in cases involving threats, coercion, blackmail, or intimidation
+                  intended to cause fear or compel a person to act against their will.
                 </p>
               </div>
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Guardianship Matters</h3>
+                <h3 className="font-display text-xl font-bold">Outraging the Modesty of a Woman</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Apart from custody disputes between parents, we also advise and represent clients
-                  in guardianship proceedings relating to minors where appointment or declaration of
-                  a legal guardian becomes necessary under applicable law.
+                  Legal representation in cases involving assault, criminal force, or other acts
+                  intended to violate or insult the dignity and modesty of a woman.
                 </p>
               </div>
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
                 <h3 className="font-display text-xl font-bold">
-                  Mediation and Amicable Resolution
+                  Sexual Assault and Related Offences
                 </h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Where appropriate, we encourage parents to resolve custody and parenting issues
-                  through negotiation or mediation. Amicable arrangements often reduce conflict and
-                  help create a stable environment for the child. However, where settlement is not
-                  possible, we provide diligent preparation and effective representation before the
-                  Family Court to protect our clients’ rights and the child’s welfare.
+                  Defence and representation in matters involving sexual assault, molestation, and
+                  other offences of a sexual nature, including proceedings before competent courts.
                 </p>
               </div>
-
-              <div className="rounded-sm border border-border bg-card p-8 md:col-span-2 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Factors considered by Courts</h3>
-
+              <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
+                <h3 className="font-display text-xl font-bold">
+                  Online Harassment and Cyber Abuse
+                </h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  While deciding custody matters, courts generally consider:
+                  Legal assistance in cases involving cyberstalking, abusive communications, online
+                  threats, impersonation, and other forms of digital harassment.
                 </p>
-
-                <ul className="mt-6 space-y-3 text-muted-foreground">
-                  <li>• The welfare and best interests of the child</li>
-                  <li>• Age and needs of the child</li>
-                  <li>• Emotional and psychological well-being</li>
-                  <li>• Educational requirements</li>
-                  <li>• Financial stability of the parents</li>
-                  <li>• Character and conduct of the parties</li>
-                  <li>• Existing relationship between the child and each parent</li>
-                  <li>• Any other relevant circumstances affecting the child’s welfare</li>
-                  <li>
-                    • Wishes of the child, where appropriate considering the child’s age and
-                    maturity
-                  </li>
-                </ul>
               </div>
+              <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
+                <h3 className="font-display text-xl font-bold">
+                  Distribution or Misuse of Private Digital Content
+                </h3>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  Assistance in cases involving unauthorized sharing, publication, circulation, or
+                  misuse of private photographs, videos, messages, or other digital content.
+                </p>
+              </div>
+
               <div className="flex flex-col justify-center rounded-sm bg-primary p-8 text-center text-primary-foreground">
                 <p className="text-lg italic">
-                  "Protecting your investment through strategic legal advocacy."
+                  “Protecting your rights, dignity, and safety through dedicated legal advocacy.”
                 </p>
 
                 <Link
-                  to="/"
-                  hash="contact"
+                  to="/contact"
                   className="mt-8 inline-flex items-center justify-center rounded-sm border border-primary-foreground px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-colors hover:bg-primary-foreground hover:text-primary"
                 >
                   Consult an Expert
@@ -210,56 +238,6 @@ function RouteComponent() {
           </Reveal>
         </div>
       </section>
-
-      <div className="bg-secondary/40">
-        <section className=" mx-auto max-w-7xl px-6 py-20">
-          <Reveal>
-            <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
-              <div>
-                <p className="eyebrow">Comprehensive Assistance</p>
-
-                <h2 className="section-title mt-3 text-3xl md:text-4xl">Our Services</h2>
-
-                <span className="mt-4 block h-1 w-16 bg-primary" />
-
-                <p className="mt-8 leading-relaxed text-muted-foreground">
-                  We provide comprehensive legal assistance in matters relating to:
-                </p>
-              </div>
-
-              <div className="space-y-10">
-                {[
-                  {
-                    no: "01",
-                    title: "Review & Legal Advisory",
-                    desc: "Interim custody applications, Documentation, Visitation and access rights.",
-                  },
-                  {
-                    no: "02",
-                    title: "Litigation & Representation",
-                    desc: "Representation before RERA Authorities, Child custody petitions, Child relocation disputes, Modification of custody arrangements, Enforcement of custody and visitation orders, Guardianship petitions",
-                  },
-                  {
-                    no: "03",
-                    title: "Negotiation & Settlement",
-                    desc: "Permanent custody proceedings, Appeals against custody orders",
-                  },
-                ].map((service) => (
-                  <div key={service.no} className="flex gap-6">
-                    <span className="text-3xl font-bold text-primary">{service.no}</span>
-
-                    <div>
-                      <h3 className="font-display text-xl font-bold">{service.title}</h3>
-
-                      <p className="mt-2 leading-relaxed text-muted-foreground">{service.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-        </section>
-      </div>
 
       <DisclaimerSection />
       <SiteFooter />
