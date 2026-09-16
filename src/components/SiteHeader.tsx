@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { createPortal } from "react-dom";
 import { Link } from "@tanstack/react-router";
 import { ChevronDown, Menu, X } from "lucide-react";
@@ -9,6 +9,7 @@ export function SiteHeader() {
   const [openGroup, setOpenGroup] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   /* Lock body scroll when mobile menu is open */
   useEffect(() => {
@@ -24,6 +25,15 @@ export function SiteHeader() {
     };
   }, [mobileOpen]);
 
+  /* Clear any pending close timeout on unmount */
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
+
   /* Close mobile menu */
   const closeMobile = () => {
     setMobileOpen(false);
@@ -33,6 +43,22 @@ export function SiteHeader() {
   const closePractice = () => {
     setPracticeOpen(false);
     setOpenGroup(null);
+  };
+
+  /* Cancel any pending close and open immediately */
+  const handlePracticeEnter = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setPracticeOpen(true);
+  };
+
+  /* Delay closing by 1s so the user can move the mouse into the menu */
+  const handlePracticeLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      closePractice();
+    }, 500);
   };
 
   const mobilePanel = mobileOpen
@@ -372,8 +398,8 @@ export function SiteHeader() {
             {/* PRACTICE */}
             <div
               className="relative"
-              onMouseEnter={() => setPracticeOpen(true)}
-              onMouseLeave={closePractice}
+              onMouseEnter={handlePracticeEnter}
+              onMouseLeave={handlePracticeLeave}
             >
               <button
                 type="button"
@@ -472,23 +498,23 @@ export function SiteHeader() {
                         {openGroup === area.slug && (
                           <div
                             className="
-      absolute
-      top-0
-      left-full
-      ml-1
-      w-64
-      overflow-hidden
-      rounded-md
-      border
-      border-border
-      bg-card
-      shadow-xl
-      sm:w-72
-      max-lg:left-auto
-      max-lg:right-full
-      max-lg:ml-0
-      max-lg:mr-1
-    "
+                              absolute
+                              top-0
+                              left-full
+                              ml-1
+                              w-64
+                              overflow-hidden
+                              rounded-md
+                              border
+                              border-border
+                              bg-card
+                              shadow-xl
+                              sm:w-72
+                              max-lg:left-auto
+                              max-lg:right-full
+                              max-lg:ml-0
+                              max-lg:mr-1
+                            "
                           >
                             {area.topics.map((topic) => (
                               <Link
