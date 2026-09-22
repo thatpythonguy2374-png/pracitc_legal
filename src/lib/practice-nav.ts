@@ -27,16 +27,56 @@ export const practiceNav: NavArea[] = [
     desc: "Representation before trial courts, tribunals, and appellate forums in civil and commercial disputes.",
     href: "/practice/civil-litigation",
     topics: [
-      { slug: "builder-buyer-disputes", title: "Builder Buyer Disputes", href: "/practice/civil-litigation/builder-buyer-disputes" },
-      { slug: "insurance-claims", title: "Insurance Claims", href: "/practice/civil-litigation/insurance-claims" },
-      { slug: "landlord-tenant", title: "Landlord Tenant", href: "/practice/civil-litigation/landlord-tenant" },
-      { slug: "mcd-tribunal-matters", title: "MCD Tribunal Matters", href: "/practice/civil-litigation/mcd-tribunal-matters" },
-      { slug: "probate-of-will", title: "Probate of Will", href: "/practice/civil-litigation/probate-of-will" },
-      { slug: "property-disputes", title: "Property Disputes", href: "/practice/civil-litigation/property-disputes" },
-      { slug: "public-nuisance-litigation", title: "Public Nuisance Litigation", href: "/practice/civil-litigation/public-nuisance-litigation" },
-      { slug: "recovery-suits", title: "Recovery Suits", href: "/practice/civil-litigation/recovery-suits" },
-      { slug: "rwa-election-matters", title: "RWA Election Matters", href: "/practice/civil-litigation/rwa-election-matters" },
-      { slug: "probate-of-will-5", title: "Probate of Will", href: "/practice/civil-litigation/probate-of-will-5" }
+      {
+        slug: "builder-buyer-disputes",
+        title: "Builder Buyer Disputes",
+        href: "/practice/civil-litigation/builder-buyer-disputes",
+      },
+      {
+        slug: "insurance-claims",
+        title: "Insurance Claims",
+        href: "/practice/civil-litigation/insurance-claims",
+      },
+      {
+        slug: "landlord-tenant",
+        title: "Landlord Tenant",
+        href: "/practice/civil-litigation/landlord-tenant",
+      },
+      {
+        slug: "mcd-tribunal-matters",
+        title: "MCD Tribunal Matters",
+        href: "/practice/civil-litigation/mcd-tribunal-matters",
+      },
+      {
+        slug: "probate-of-will",
+        title: "Probate of Will",
+        href: "/practice/civil-litigation/probate-of-will",
+      },
+      {
+        slug: "property-disputes",
+        title: "Property Disputes",
+        href: "/practice/civil-litigation/property-disputes",
+      },
+      {
+        slug: "public-nuisance-litigation",
+        title: "Public Nuisance Litigation",
+        href: "/practice/civil-litigation/public-nuisance-litigation",
+      },
+      {
+        slug: "recovery-suits",
+        title: "Recovery Suits",
+        href: "/practice/civil-litigation/recovery-suits",
+      },
+      {
+        slug: "rwa-election-matters",
+        title: "RWA Election Matters",
+        href: "/practice/civil-litigation/rwa-election-matters",
+      },
+      {
+        slug: "probate-of-will-5",
+        title: "Probate of Will",
+        href: "/practice/civil-litigation/probate-of-will-5",
+      },
     ],
   },
   {
@@ -46,12 +86,36 @@ export const practiceNav: NavArea[] = [
     desc: "Sensitive, discreet counsel on divorce, maintenance, custody, and protection from domestic violence.",
     href: "/practice/matrimonial-matters",
     topics: [
-      { slug: "divorce-and-mutual-consent", title: "Divorce & Mutual Consent", href: "/practice/matrimonial-matters/divorce-and-mutual-consent" },
-      { slug: "maintenance-and-alimony", title: "Maintenance & Alimony", href: "/practice/matrimonial-matters/maintenance-and-alimony" },
-      { slug: "child-custody", title: "Child Custody", href: "/practice/matrimonial-matters/child-custody" },
-      { slug: "domestic-violence", title: "Domestic Violence", href: "/practice/matrimonial-matters/domestic-violence" },
-      { slug: "restitution-of-conjugal-rights", title: "Restitution of Conjugal Rights", href: "/practice/matrimonial-matters/restitution-of-conjugal-rights" },
-      { slug: "nullity-of-marriage", title: "Nullity Of Marriage", href: "/practice/matrimonial-matters/nullity-of-marriage" },
+      {
+        slug: "divorce-and-mutual-consent",
+        title: "Divorce & Mutual Consent",
+        href: "/practice/matrimonial-matters/divorce-and-mutual-consent",
+      },
+      {
+        slug: "maintenance-and-alimony",
+        title: "Maintenance & Alimony",
+        href: "/practice/matrimonial-matters/maintenance-and-alimony",
+      },
+      {
+        slug: "child-custody",
+        title: "Child Custody",
+        href: "/practice/matrimonial-matters/child-custody",
+      },
+      {
+        slug: "domestic-violence",
+        title: "Domestic Violence",
+        href: "/practice/matrimonial-matters/domestic-violence",
+      },
+      {
+        slug: "restitution-of-conjugal-rights",
+        title: "Restitution of Conjugal Rights",
+        href: "/practice/matrimonial-matters/restitution-of-conjugal-rights",
+      },
+      {
+        slug: "nullity-of-marriage",
+        title: "Nullity Of Marriage",
+        href: "/practice/matrimonial-matters/nullity-of-marriage",
+      },
     ],
   },
   {
@@ -61,10 +125,26 @@ export const practiceNav: NavArea[] = [
     desc: "Criminal defence and representation in criminal proceedings before trial courts, appellate courts, and other competent judicial authorities.",
     href: "/practice/criminal-matters",
     topics: [
-      { slug: "bail-and-anticipatory", title: "Bail & Anticipatory", href: "/practice/criminal-matters/bail-and-anticipatory" },
-      { slug: "crimes-against-women", title: "Crimes Against Women", href: "/practice/criminal-matters/crimes-against-women" },
-      { slug: "hit-and-run-cases", title: "Hit & Run Cases", href: "/practice/criminal-matters/hit-and-run-cases" },
-      { slug: "mact-appeals", title: "MACT Appeals", href: "/practice/criminal-matters/mact-appeals" }
+      {
+        slug: "bail-and-anticipatory",
+        title: "Bail & Anticipatory",
+        href: "/practice/criminal-matters/bail-and-anticipatory",
+      },
+      {
+        slug: "crimes-against-women",
+        title: "Crimes Against Women",
+        href: "/practice/criminal-matters/crimes-against-women",
+      },
+      {
+        slug: "cyber-crimes-legal-representation",
+        title: "Cyber Crimes Legal Representation",
+        href: "/practice/criminal-matters/cyber-crimes-legal-representation",
+      },
+      {
+        slug: "mact-appeals",
+        title: "MACT Appeals",
+        href: "/practice/criminal-matters/mact-appeals",
+      },
     ],
   },
   {
@@ -74,13 +154,28 @@ export const practiceNav: NavArea[] = [
     desc: "Title, partition, tenancy, and acquisition matters for individuals, families, and developers.",
     href: "/practice/property-rights",
     topics: [
-      { slug: "title-and-ownership-disputes", title: "Title & Ownership Disputes", href: "/practice/property-rights/title-and-ownership-disputes" },
-      { slug: "partition-suits", title: "Partition Suits", href: "/practice/property-rights/partition-suits" },
-      { slug: "tenancy-and-eviction", title: "Tenancy & Eviction", href: "/practice/property-rights/tenancy-and-eviction" },
-      { slug: "land-acquisition", title: "Land Acquisition", href: "/practice/property-rights/land-acquisition" }
+      {
+        slug: "title-and-ownership-disputes",
+        title: "Title & Ownership Disputes",
+        href: "/practice/property-rights/title-and-ownership-disputes",
+      },
+      {
+        slug: "partition-suits",
+        title: "Partition Suits",
+        href: "/practice/property-rights/partition-suits",
+      },
+      {
+        slug: "tenancy-and-eviction",
+        title: "Tenancy & Eviction",
+        href: "/practice/property-rights/tenancy-and-eviction",
+      },
+      {
+        slug: "land-acquisition",
+        title: "Land Acquisition",
+        href: "/practice/property-rights/land-acquisition",
+      },
     ],
-  }
+  },
 ];
 
-export const getNavArea = (slug: string) =>
-  practiceNav.find((a) => a.slug === slug);
+export const getNavArea = (slug: string) => practiceNav.find((a) => a.slug === slug);

@@ -26,6 +26,7 @@ import { Route as PracticeCivilLitigationRwaElectionMattersRouteImport } from '.
 import { Route as PracticeCriminalMattersIndexRouteImport } from './routes/practice/criminal-matters/index'
 import { Route as PracticeCriminalMattersBailAndAnticipatoryRouteImport } from './routes/practice/criminal-matters/bail-and-anticipatory'
 import { Route as PracticeCriminalMattersCrimesAgainstWomenRouteImport } from './routes/practice/criminal-matters/crimes-against-women'
+import { Route as PracticeCriminalMattersCyberCrimesLegalRepresentationRouteImport } from './routes/practice/criminal-matters/cyber-crimes-legal-representation'
 import { Route as PracticeMatrimonialMattersIndexRouteImport } from './routes/practice/matrimonial-matters/index'
 import { Route as PracticeMatrimonialMattersChildCustodyRouteImport } from './routes/practice/matrimonial-matters/child-custody'
 import { Route as PracticeMatrimonialMattersDivorceAndMutualConsentRouteImport } from './routes/practice/matrimonial-matters/divorce-and-mutual-consent'
@@ -138,6 +139,12 @@ const PracticeCriminalMattersCrimesAgainstWomenRoute =
     path: '/practice/criminal-matters/crimes-against-women',
     getParentRoute: () => rootRouteImport,
   } as any)
+const PracticeCriminalMattersCyberCrimesLegalRepresentationRoute =
+  PracticeCriminalMattersCyberCrimesLegalRepresentationRouteImport.update({
+    id: '/practice/criminal-matters/cyber-crimes-legal-representation',
+    path: '/practice/criminal-matters/cyber-crimes-legal-representation',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PracticeMatrimonialMattersIndexRoute =
   PracticeMatrimonialMattersIndexRouteImport.update({
     id: '/practice/matrimonial-matters/',
@@ -227,6 +234,7 @@ export interface FileRoutesByFullPath {
   '/practice/civil-litigation/rwa-election-matters': typeof PracticeCivilLitigationRwaElectionMattersRoute
   '/practice/criminal-matters/bail-and-anticipatory': typeof PracticeCriminalMattersBailAndAnticipatoryRoute
   '/practice/criminal-matters/crimes-against-women': typeof PracticeCriminalMattersCrimesAgainstWomenRoute
+  '/practice/criminal-matters/cyber-crimes-legal-representation': typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRoute
   '/practice/matrimonial-matters/child-custody': typeof PracticeMatrimonialMattersChildCustodyRoute
   '/practice/matrimonial-matters/divorce-and-mutual-consent': typeof PracticeMatrimonialMattersDivorceAndMutualConsentRoute
   '/practice/matrimonial-matters/domestic-violence': typeof PracticeMatrimonialMattersDomesticViolenceRoute
@@ -258,6 +266,7 @@ export interface FileRoutesByTo {
   '/practice/civil-litigation/rwa-election-matters': typeof PracticeCivilLitigationRwaElectionMattersRoute
   '/practice/criminal-matters/bail-and-anticipatory': typeof PracticeCriminalMattersBailAndAnticipatoryRoute
   '/practice/criminal-matters/crimes-against-women': typeof PracticeCriminalMattersCrimesAgainstWomenRoute
+  '/practice/criminal-matters/cyber-crimes-legal-representation': typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRoute
   '/practice/matrimonial-matters/child-custody': typeof PracticeMatrimonialMattersChildCustodyRoute
   '/practice/matrimonial-matters/divorce-and-mutual-consent': typeof PracticeMatrimonialMattersDivorceAndMutualConsentRoute
   '/practice/matrimonial-matters/domestic-violence': typeof PracticeMatrimonialMattersDomesticViolenceRoute
@@ -290,6 +299,7 @@ export interface FileRoutesById {
   '/practice/civil-litigation/rwa-election-matters': typeof PracticeCivilLitigationRwaElectionMattersRoute
   '/practice/criminal-matters/bail-and-anticipatory': typeof PracticeCriminalMattersBailAndAnticipatoryRoute
   '/practice/criminal-matters/crimes-against-women': typeof PracticeCriminalMattersCrimesAgainstWomenRoute
+  '/practice/criminal-matters/cyber-crimes-legal-representation': typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRoute
   '/practice/matrimonial-matters/child-custody': typeof PracticeMatrimonialMattersChildCustodyRoute
   '/practice/matrimonial-matters/divorce-and-mutual-consent': typeof PracticeMatrimonialMattersDivorceAndMutualConsentRoute
   '/practice/matrimonial-matters/domestic-violence': typeof PracticeMatrimonialMattersDomesticViolenceRoute
@@ -323,6 +333,7 @@ export interface FileRouteTypes {
     | '/practice/civil-litigation/rwa-election-matters'
     | '/practice/criminal-matters/bail-and-anticipatory'
     | '/practice/criminal-matters/crimes-against-women'
+    | '/practice/criminal-matters/cyber-crimes-legal-representation'
     | '/practice/matrimonial-matters/child-custody'
     | '/practice/matrimonial-matters/divorce-and-mutual-consent'
     | '/practice/matrimonial-matters/domestic-violence'
@@ -354,6 +365,7 @@ export interface FileRouteTypes {
     | '/practice/civil-litigation/rwa-election-matters'
     | '/practice/criminal-matters/bail-and-anticipatory'
     | '/practice/criminal-matters/crimes-against-women'
+    | '/practice/criminal-matters/cyber-crimes-legal-representation'
     | '/practice/matrimonial-matters/child-custody'
     | '/practice/matrimonial-matters/divorce-and-mutual-consent'
     | '/practice/matrimonial-matters/domestic-violence'
@@ -385,6 +397,7 @@ export interface FileRouteTypes {
     | '/practice/civil-litigation/rwa-election-matters'
     | '/practice/criminal-matters/bail-and-anticipatory'
     | '/practice/criminal-matters/crimes-against-women'
+    | '/practice/criminal-matters/cyber-crimes-legal-representation'
     | '/practice/matrimonial-matters/child-custody'
     | '/practice/matrimonial-matters/divorce-and-mutual-consent'
     | '/practice/matrimonial-matters/domestic-violence'
@@ -417,6 +430,7 @@ export interface RootRouteChildren {
   PracticeCivilLitigationRwaElectionMattersRoute: typeof PracticeCivilLitigationRwaElectionMattersRoute
   PracticeCriminalMattersBailAndAnticipatoryRoute: typeof PracticeCriminalMattersBailAndAnticipatoryRoute
   PracticeCriminalMattersCrimesAgainstWomenRoute: typeof PracticeCriminalMattersCrimesAgainstWomenRoute
+  PracticeCriminalMattersCyberCrimesLegalRepresentationRoute: typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRoute
   PracticeMatrimonialMattersChildCustodyRoute: typeof PracticeMatrimonialMattersChildCustodyRoute
   PracticeMatrimonialMattersDivorceAndMutualConsentRoute: typeof PracticeMatrimonialMattersDivorceAndMutualConsentRoute
   PracticeMatrimonialMattersDomesticViolenceRoute: typeof PracticeMatrimonialMattersDomesticViolenceRoute
@@ -554,6 +568,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PracticeCriminalMattersCrimesAgainstWomenRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/practice/criminal-matters/cyber-crimes-legal-representation': {
+      id: '/practice/criminal-matters/cyber-crimes-legal-representation'
+      path: '/practice/criminal-matters/cyber-crimes-legal-representation'
+      fullPath: '/practice/criminal-matters/cyber-crimes-legal-representation'
+      preLoaderRoute: typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/practice/matrimonial-matters/': {
       id: '/practice/matrimonial-matters/'
       path: '/practice/matrimonial-matters'
@@ -669,6 +690,8 @@ const rootRouteChildren: RootRouteChildren = {
     PracticeCriminalMattersBailAndAnticipatoryRoute,
   PracticeCriminalMattersCrimesAgainstWomenRoute:
     PracticeCriminalMattersCrimesAgainstWomenRoute,
+  PracticeCriminalMattersCyberCrimesLegalRepresentationRoute:
+    PracticeCriminalMattersCyberCrimesLegalRepresentationRoute,
   PracticeMatrimonialMattersChildCustodyRoute:
     PracticeMatrimonialMattersChildCustodyRoute,
   PracticeMatrimonialMattersDivorceAndMutualConsentRoute:
