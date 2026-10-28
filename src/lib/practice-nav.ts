@@ -175,9 +175,9 @@ export const practiceNav: NavArea[] = [
         href: "/practice/intellectual-property-rights/tenancy-and-eviction",
       },
       {
-        slug: "land-acquisition",
-        title: "Land Acquisition",
-        href: "/practice/intellectual-property-rights/land-acquisition",
+        slug: "intellectual-property",
+        title: "Intellectual Property",
+        href: "/practice/intellectual-property-rights/intellectual-property",
       },
     ],
   },

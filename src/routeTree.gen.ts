@@ -29,7 +29,7 @@ import { Route as PracticeCriminalMattersCrimesAgainstWomenRouteImport } from '.
 import { Route as PracticeCriminalMattersCyberCrimesLegalRepresentationRouteImport } from './routes/practice/criminal-matters/cyber-crimes-legal-representation'
 import { Route as PracticeCriminalMattersOffencesAgainstTheHumanBodyRouteImport } from './routes/practice/criminal-matters/offences-against-the-human-body'
 import { Route as PracticeIntellectualPropertyRightsIndexRouteImport } from './routes/practice/intellectual-property-rights/index'
-import { Route as PracticeIntellectualPropertyRightsLandAcquisitionRouteImport } from './routes/practice/intellectual-property-rights/land-acquisition'
+import { Route as PracticeIntellectualPropertyRightsIntellectualPropertyRouteImport } from './routes/practice/intellectual-property-rights/intellectual-property'
 import { Route as PracticeIntellectualPropertyRightsPartitionSuitsRouteImport } from './routes/practice/intellectual-property-rights/partition-suits'
 import { Route as PracticeIntellectualPropertyRightsTenancyAndEvictionRouteImport } from './routes/practice/intellectual-property-rights/tenancy-and-eviction'
 import { Route as PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRouteImport } from './routes/practice/intellectual-property-rights/title-and-ownership-disputes'
@@ -158,10 +158,10 @@ const PracticeIntellectualPropertyRightsIndexRoute =
     path: '/practice/intellectual-property-rights/',
     getParentRoute: () => rootRouteImport,
   } as any)
-const PracticeIntellectualPropertyRightsLandAcquisitionRoute =
-  PracticeIntellectualPropertyRightsLandAcquisitionRouteImport.update({
-    id: '/practice/intellectual-property-rights/land-acquisition',
-    path: '/practice/intellectual-property-rights/land-acquisition',
+const PracticeIntellectualPropertyRightsIntellectualPropertyRoute =
+  PracticeIntellectualPropertyRightsIntellectualPropertyRouteImport.update({
+    id: '/practice/intellectual-property-rights/intellectual-property',
+    path: '/practice/intellectual-property-rights/intellectual-property',
     getParentRoute: () => rootRouteImport,
   } as any)
 const PracticeIntellectualPropertyRightsPartitionSuitsRoute =
@@ -245,7 +245,7 @@ export interface FileRoutesByFullPath {
   '/practice/criminal-matters/crimes-against-women': typeof PracticeCriminalMattersCrimesAgainstWomenRoute
   '/practice/criminal-matters/cyber-crimes-legal-representation': typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRoute
   '/practice/criminal-matters/offences-against-the-human-body': typeof PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute
-  '/practice/intellectual-property-rights/land-acquisition': typeof PracticeIntellectualPropertyRightsLandAcquisitionRoute
+  '/practice/intellectual-property-rights/intellectual-property': typeof PracticeIntellectualPropertyRightsIntellectualPropertyRoute
   '/practice/intellectual-property-rights/partition-suits': typeof PracticeIntellectualPropertyRightsPartitionSuitsRoute
   '/practice/intellectual-property-rights/tenancy-and-eviction': typeof PracticeIntellectualPropertyRightsTenancyAndEvictionRoute
   '/practice/intellectual-property-rights/title-and-ownership-disputes': typeof PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRoute
@@ -278,7 +278,7 @@ export interface FileRoutesByTo {
   '/practice/criminal-matters/crimes-against-women': typeof PracticeCriminalMattersCrimesAgainstWomenRoute
   '/practice/criminal-matters/cyber-crimes-legal-representation': typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRoute
   '/practice/criminal-matters/offences-against-the-human-body': typeof PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute
-  '/practice/intellectual-property-rights/land-acquisition': typeof PracticeIntellectualPropertyRightsLandAcquisitionRoute
+  '/practice/intellectual-property-rights/intellectual-property': typeof PracticeIntellectualPropertyRightsIntellectualPropertyRoute
   '/practice/intellectual-property-rights/partition-suits': typeof PracticeIntellectualPropertyRightsPartitionSuitsRoute
   '/practice/intellectual-property-rights/tenancy-and-eviction': typeof PracticeIntellectualPropertyRightsTenancyAndEvictionRoute
   '/practice/intellectual-property-rights/title-and-ownership-disputes': typeof PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRoute
@@ -312,7 +312,7 @@ export interface FileRoutesById {
   '/practice/criminal-matters/crimes-against-women': typeof PracticeCriminalMattersCrimesAgainstWomenRoute
   '/practice/criminal-matters/cyber-crimes-legal-representation': typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRoute
   '/practice/criminal-matters/offences-against-the-human-body': typeof PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute
-  '/practice/intellectual-property-rights/land-acquisition': typeof PracticeIntellectualPropertyRightsLandAcquisitionRoute
+  '/practice/intellectual-property-rights/intellectual-property': typeof PracticeIntellectualPropertyRightsIntellectualPropertyRoute
   '/practice/intellectual-property-rights/partition-suits': typeof PracticeIntellectualPropertyRightsPartitionSuitsRoute
   '/practice/intellectual-property-rights/tenancy-and-eviction': typeof PracticeIntellectualPropertyRightsTenancyAndEvictionRoute
   '/practice/intellectual-property-rights/title-and-ownership-disputes': typeof PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRoute
@@ -347,7 +347,7 @@ export interface FileRouteTypes {
     | '/practice/criminal-matters/crimes-against-women'
     | '/practice/criminal-matters/cyber-crimes-legal-representation'
     | '/practice/criminal-matters/offences-against-the-human-body'
-    | '/practice/intellectual-property-rights/land-acquisition'
+    | '/practice/intellectual-property-rights/intellectual-property'
     | '/practice/intellectual-property-rights/partition-suits'
     | '/practice/intellectual-property-rights/tenancy-and-eviction'
     | '/practice/intellectual-property-rights/title-and-ownership-disputes'
@@ -380,7 +380,7 @@ export interface FileRouteTypes {
     | '/practice/criminal-matters/crimes-against-women'
     | '/practice/criminal-matters/cyber-crimes-legal-representation'
     | '/practice/criminal-matters/offences-against-the-human-body'
-    | '/practice/intellectual-property-rights/land-acquisition'
+    | '/practice/intellectual-property-rights/intellectual-property'
     | '/practice/intellectual-property-rights/partition-suits'
     | '/practice/intellectual-property-rights/tenancy-and-eviction'
     | '/practice/intellectual-property-rights/title-and-ownership-disputes'
@@ -413,7 +413,7 @@ export interface FileRouteTypes {
     | '/practice/criminal-matters/crimes-against-women'
     | '/practice/criminal-matters/cyber-crimes-legal-representation'
     | '/practice/criminal-matters/offences-against-the-human-body'
-    | '/practice/intellectual-property-rights/land-acquisition'
+    | '/practice/intellectual-property-rights/intellectual-property'
     | '/practice/intellectual-property-rights/partition-suits'
     | '/practice/intellectual-property-rights/tenancy-and-eviction'
     | '/practice/intellectual-property-rights/title-and-ownership-disputes'
@@ -447,7 +447,7 @@ export interface RootRouteChildren {
   PracticeCriminalMattersCrimesAgainstWomenRoute: typeof PracticeCriminalMattersCrimesAgainstWomenRoute
   PracticeCriminalMattersCyberCrimesLegalRepresentationRoute: typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRoute
   PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute: typeof PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute
-  PracticeIntellectualPropertyRightsLandAcquisitionRoute: typeof PracticeIntellectualPropertyRightsLandAcquisitionRoute
+  PracticeIntellectualPropertyRightsIntellectualPropertyRoute: typeof PracticeIntellectualPropertyRightsIntellectualPropertyRoute
   PracticeIntellectualPropertyRightsPartitionSuitsRoute: typeof PracticeIntellectualPropertyRightsPartitionSuitsRoute
   PracticeIntellectualPropertyRightsTenancyAndEvictionRoute: typeof PracticeIntellectualPropertyRightsTenancyAndEvictionRoute
   PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRoute: typeof PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRoute
@@ -605,11 +605,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PracticeIntellectualPropertyRightsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/practice/intellectual-property-rights/land-acquisition': {
-      id: '/practice/intellectual-property-rights/land-acquisition'
-      path: '/practice/intellectual-property-rights/land-acquisition'
-      fullPath: '/practice/intellectual-property-rights/land-acquisition'
-      preLoaderRoute: typeof PracticeIntellectualPropertyRightsLandAcquisitionRouteImport
+    '/practice/intellectual-property-rights/intellectual-property': {
+      id: '/practice/intellectual-property-rights/intellectual-property'
+      path: '/practice/intellectual-property-rights/intellectual-property'
+      fullPath: '/practice/intellectual-property-rights/intellectual-property'
+      preLoaderRoute: typeof PracticeIntellectualPropertyRightsIntellectualPropertyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/practice/intellectual-property-rights/partition-suits': {
@@ -717,8 +717,8 @@ const rootRouteChildren: RootRouteChildren = {
     PracticeCriminalMattersCyberCrimesLegalRepresentationRoute,
   PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute:
     PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute,
-  PracticeIntellectualPropertyRightsLandAcquisitionRoute:
-    PracticeIntellectualPropertyRightsLandAcquisitionRoute,
+  PracticeIntellectualPropertyRightsIntellectualPropertyRoute:
+    PracticeIntellectualPropertyRightsIntellectualPropertyRoute,
   PracticeIntellectualPropertyRightsPartitionSuitsRoute:
     PracticeIntellectualPropertyRightsPartitionSuitsRoute,
   PracticeIntellectualPropertyRightsTenancyAndEvictionRoute:
