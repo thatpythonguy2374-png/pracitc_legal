@@ -2,21 +2,21 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
-export const Route = createFileRoute("/practice/property-rights/land-acquisition")({
+export const Route = createFileRoute("/practice/intellectual-property-rights/tenancy-and-eviction")({
   head: () => ({
     meta: [
-      { title: "Land Acquisition — Property Rights | Practic Legal" },
-      { name: "description", content: "Challenging acquisition proceedings and pursuing fair, enhanced compensation." },
-      { property: "og:title", content: "Land Acquisition — Property Rights | Practic Legal" },
-      { property: "og:description", content: "Challenging acquisition proceedings and pursuing fair, enhanced compensation." },
+      { title: "Tenancy & Eviction — Property Rights | Practic Legal" },
+      { name: "description", content: "Landlord and tenant disputes under rent control statutes and lease agreements." },
+      { property: "og:title", content: "Tenancy & Eviction — Property Rights | Practic Legal" },
+      { property: "og:description", content: "Landlord and tenant disputes under rent control statutes and lease agreements." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: PropertyRightsLandAcquisitionPage,
+  component: PropertyRightsTenancyAndEvictionPage,
 });
 
-function PropertyRightsLandAcquisitionPage() {
+function PropertyRightsTenancyAndEvictionPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -34,10 +34,10 @@ function PropertyRightsLandAcquisitionPage() {
             <Link to="/practice/property-rights">Property Rights</Link>
           </p>
           <h1 className="mt-4 font-display text-4xl font-extrabold uppercase leading-[1.05] tracking-tight md:text-6xl">
-            Land Acquisition
+            Tenancy & Eviction
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/75">
-            Challenging acquisition proceedings and pursuing fair, enhanced compensation.
+            Landlord and tenant disputes under rent control statutes and lease agreements.
           </p>
         </div>
       </section>
@@ -51,7 +51,7 @@ function PropertyRightsLandAcquisitionPage() {
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground lg:col-span-2">
             <p>
-              Our land acquisition practice combines rigorous preparation
+              Our tenancy & eviction practice combines rigorous preparation
               with practical strategy. We assess the merits early, set
               realistic expectations, and pursue the fastest reasonable route
               to resolution — whether that is settlement, mediation, or a
@@ -76,19 +76,19 @@ function PropertyRightsLandAcquisitionPage() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
             <div className="rounded-sm border border-border bg-card p-6 text-sm leading-relaxed">
               <span className="mr-3 font-display font-bold text-primary">§</span>
-              Objections under the acquisition statute
+              Eviction petitions and defences
             </div>
             <div className="rounded-sm border border-border bg-card p-6 text-sm leading-relaxed">
               <span className="mr-3 font-display font-bold text-primary">§</span>
-              Reference and enhancement petitions
+              Arrears of rent and mesne profits
             </div>
             <div className="rounded-sm border border-border bg-card p-6 text-sm leading-relaxed">
               <span className="mr-3 font-display font-bold text-primary">§</span>
-              Writ challenges to acquisition notifications
+              Lease drafting, renewal, and termination
             </div>
             <div className="rounded-sm border border-border bg-card p-6 text-sm leading-relaxed">
               <span className="mr-3 font-display font-bold text-primary">§</span>
-              Rehabilitation and resettlement entitlements
+              Illegal occupation and trespass remedies
             </div>
           </div>
         </div>

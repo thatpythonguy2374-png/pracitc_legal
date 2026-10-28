@@ -2,21 +2,21 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
-export const Route = createFileRoute("/practice/property-rights/tenancy-and-eviction")({
+export const Route = createFileRoute("/practice/intellectual-property-rights/partition-suits")({
   head: () => ({
     meta: [
-      { title: "Tenancy & Eviction — Property Rights | Practic Legal" },
-      { name: "description", content: "Landlord and tenant disputes under rent control statutes and lease agreements." },
-      { property: "og:title", content: "Tenancy & Eviction — Property Rights | Practic Legal" },
-      { property: "og:description", content: "Landlord and tenant disputes under rent control statutes and lease agreements." },
+      { title: "Partition Suits — Property Rights | Practic Legal" },
+      { name: "description", content: "Division of ancestral and jointly held property, including succession and inheritance disputes." },
+      { property: "og:title", content: "Partition Suits — Property Rights | Practic Legal" },
+      { property: "og:description", content: "Division of ancestral and jointly held property, including succession and inheritance disputes." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: PropertyRightsTenancyAndEvictionPage,
+  component: PropertyRightsPartitionSuitsPage,
 });
 
-function PropertyRightsTenancyAndEvictionPage() {
+function PropertyRightsPartitionSuitsPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -34,10 +34,10 @@ function PropertyRightsTenancyAndEvictionPage() {
             <Link to="/practice/property-rights">Property Rights</Link>
           </p>
           <h1 className="mt-4 font-display text-4xl font-extrabold uppercase leading-[1.05] tracking-tight md:text-6xl">
-            Tenancy & Eviction
+            Partition Suits
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/75">
-            Landlord and tenant disputes under rent control statutes and lease agreements.
+            Division of ancestral and jointly held property, including succession and inheritance disputes.
           </p>
         </div>
       </section>
@@ -51,7 +51,7 @@ function PropertyRightsTenancyAndEvictionPage() {
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground lg:col-span-2">
             <p>
-              Our tenancy & eviction practice combines rigorous preparation
+              Our partition suits practice combines rigorous preparation
               with practical strategy. We assess the merits early, set
               realistic expectations, and pursue the fastest reasonable route
               to resolution — whether that is settlement, mediation, or a
@@ -76,19 +76,19 @@ function PropertyRightsTenancyAndEvictionPage() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
             <div className="rounded-sm border border-border bg-card p-6 text-sm leading-relaxed">
               <span className="mr-3 font-display font-bold text-primary">§</span>
-              Eviction petitions and defences
+              Partition suits and preliminary decrees
             </div>
             <div className="rounded-sm border border-border bg-card p-6 text-sm leading-relaxed">
               <span className="mr-3 font-display font-bold text-primary">§</span>
-              Arrears of rent and mesne profits
+              Succession certificates and probate
             </div>
             <div className="rounded-sm border border-border bg-card p-6 text-sm leading-relaxed">
               <span className="mr-3 font-display font-bold text-primary">§</span>
-              Lease drafting, renewal, and termination
+              Family settlement and release deeds
             </div>
             <div className="rounded-sm border border-border bg-card p-6 text-sm leading-relaxed">
               <span className="mr-3 font-display font-bold text-primary">§</span>
-              Illegal occupation and trespass remedies
+              Mesne profits and accounting claims
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
-export const Route = createFileRoute("/practice/property-rights/")({
+export const Route = createFileRoute("/practice/intellectual-property-rights/")({
   head: () => ({
     meta: [
       { title: "Property Rights — Practic Legal" },

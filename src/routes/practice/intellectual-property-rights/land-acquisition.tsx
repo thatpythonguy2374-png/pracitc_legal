@@ -2,21 +2,21 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
-export const Route = createFileRoute("/practice/property-rights/title-and-ownership-disputes")({
+export const Route = createFileRoute("/practice/intellectual-property-rights/land-acquisition")({
   head: () => ({
     meta: [
-      { title: "Title & Ownership Disputes — Property Rights | Practic Legal" },
-      { name: "description", content: "Establishing and defending title, and clearing encumbrances on immovable property." },
-      { property: "og:title", content: "Title & Ownership Disputes — Property Rights | Practic Legal" },
-      { property: "og:description", content: "Establishing and defending title, and clearing encumbrances on immovable property." },
+      { title: "Land Acquisition — Property Rights | Practic Legal" },
+      { name: "description", content: "Challenging acquisition proceedings and pursuing fair, enhanced compensation." },
+      { property: "og:title", content: "Land Acquisition — Property Rights | Practic Legal" },
+      { property: "og:description", content: "Challenging acquisition proceedings and pursuing fair, enhanced compensation." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: PropertyRightsTitleAndOwnershipDisputesPage,
+  component: PropertyRightsLandAcquisitionPage,
 });
 
-function PropertyRightsTitleAndOwnershipDisputesPage() {
+function PropertyRightsLandAcquisitionPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -34,10 +34,10 @@ function PropertyRightsTitleAndOwnershipDisputesPage() {
             <Link to="/practice/property-rights">Property Rights</Link>
           </p>
           <h1 className="mt-4 font-display text-4xl font-extrabold uppercase leading-[1.05] tracking-tight md:text-6xl">
-            Title & Ownership Disputes
+            Land Acquisition
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/75">
-            Establishing and defending title, and clearing encumbrances on immovable property.
+            Challenging acquisition proceedings and pursuing fair, enhanced compensation.
           </p>
         </div>
       </section>
@@ -51,7 +51,7 @@ function PropertyRightsTitleAndOwnershipDisputesPage() {
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground lg:col-span-2">
             <p>
-              Our title & ownership disputes practice combines rigorous preparation
+              Our land acquisition practice combines rigorous preparation
               with practical strategy. We assess the merits early, set
               realistic expectations, and pursue the fastest reasonable route
               to resolution — whether that is settlement, mediation, or a
@@ -76,19 +76,19 @@ function PropertyRightsTitleAndOwnershipDisputesPage() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
             <div className="rounded-sm border border-border bg-card p-6 text-sm leading-relaxed">
               <span className="mr-3 font-display font-bold text-primary">§</span>
-              Declaration of title and possession suits
+              Objections under the acquisition statute
             </div>
             <div className="rounded-sm border border-border bg-card p-6 text-sm leading-relaxed">
               <span className="mr-3 font-display font-bold text-primary">§</span>
-              Title diligence and chain-of-document review
+              Reference and enhancement petitions
             </div>
             <div className="rounded-sm border border-border bg-card p-6 text-sm leading-relaxed">
               <span className="mr-3 font-display font-bold text-primary">§</span>
-              Cancellation of forged or void instruments
+              Writ challenges to acquisition notifications
             </div>
             <div className="rounded-sm border border-border bg-card p-6 text-sm leading-relaxed">
               <span className="mr-3 font-display font-bold text-primary">§</span>
-              Adverse possession claims and defences
+              Rehabilitation and resettlement entitlements
             </div>
           </div>
         </div>

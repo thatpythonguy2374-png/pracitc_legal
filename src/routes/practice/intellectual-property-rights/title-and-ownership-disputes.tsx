@@ -2,21 +2,21 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
-export const Route = createFileRoute("/practice/property-rights/partition-suits")({
+export const Route = createFileRoute("/practice/intellectual-property-rights/title-and-ownership-disputes")({
   head: () => ({
     meta: [
-      { title: "Partition Suits — Property Rights | Practic Legal" },
-      { name: "description", content: "Division of ancestral and jointly held property, including succession and inheritance disputes." },
-      { property: "og:title", content: "Partition Suits — Property Rights | Practic Legal" },
-      { property: "og:description", content: "Division of ancestral and jointly held property, including succession and inheritance disputes." },
+      { title: "Title & Ownership Disputes — Property Rights | Practic Legal" },
+      { name: "description", content: "Establishing and defending title, and clearing encumbrances on immovable property." },
+      { property: "og:title", content: "Title & Ownership Disputes — Property Rights | Practic Legal" },
+      { property: "og:description", content: "Establishing and defending title, and clearing encumbrances on immovable property." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: PropertyRightsPartitionSuitsPage,
+  component: PropertyRightsTitleAndOwnershipDisputesPage,
 });
 
-function PropertyRightsPartitionSuitsPage() {
+function PropertyRightsTitleAndOwnershipDisputesPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -34,10 +34,10 @@ function PropertyRightsPartitionSuitsPage() {
             <Link to="/practice/property-rights">Property Rights</Link>
           </p>
           <h1 className="mt-4 font-display text-4xl font-extrabold uppercase leading-[1.05] tracking-tight md:text-6xl">
-            Partition Suits
+            Title & Ownership Disputes
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/75">
-            Division of ancestral and jointly held property, including succession and inheritance disputes.
+            Establishing and defending title, and clearing encumbrances on immovable property.
           </p>
         </div>
       </section>
@@ -51,7 +51,7 @@ function PropertyRightsPartitionSuitsPage() {
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground lg:col-span-2">
             <p>
-              Our partition suits practice combines rigorous preparation
+              Our title & ownership disputes practice combines rigorous preparation
               with practical strategy. We assess the merits early, set
               realistic expectations, and pursue the fastest reasonable route
               to resolution — whether that is settlement, mediation, or a
@@ -76,19 +76,19 @@ function PropertyRightsPartitionSuitsPage() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
             <div className="rounded-sm border border-border bg-card p-6 text-sm leading-relaxed">
               <span className="mr-3 font-display font-bold text-primary">§</span>
-              Partition suits and preliminary decrees
+              Declaration of title and possession suits
             </div>
             <div className="rounded-sm border border-border bg-card p-6 text-sm leading-relaxed">
               <span className="mr-3 font-display font-bold text-primary">§</span>
-              Succession certificates and probate
+              Title diligence and chain-of-document review
             </div>
             <div className="rounded-sm border border-border bg-card p-6 text-sm leading-relaxed">
               <span className="mr-3 font-display font-bold text-primary">§</span>
-              Family settlement and release deeds
+              Cancellation of forged or void instruments
             </div>
             <div className="rounded-sm border border-border bg-card p-6 text-sm leading-relaxed">
               <span className="mr-3 font-display font-bold text-primary">§</span>
-              Mesne profits and accounting claims
+              Adverse possession claims and defences
             </div>
           </div>
         </div>

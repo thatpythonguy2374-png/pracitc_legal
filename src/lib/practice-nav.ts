@@ -141,6 +141,11 @@ export const practiceNav: NavArea[] = [
         href: "/practice/criminal-matters/cyber-crimes-legal-representation",
       },
       {
+        slug: "offence-against-the-human-body",
+        title: "Offence Against The Human Body",
+        href: "/practice/criminal-matters/offences-against-the-human-body",
+      },
+      {
         slug: "mact-appeals",
         title: "MACT Appeals",
         href: "/practice/criminal-matters/mact-appeals",
@@ -148,31 +153,31 @@ export const practiceNav: NavArea[] = [
     ],
   },
   {
-    slug: "property-rights",
-    title: "Property Rights",
-    short: "Property",
+    slug: "intellectual-property-rights",
+    title: "Intellectual Property Rights",
+    short: "IP",
     desc: "Title, partition, tenancy, and acquisition matters for individuals, families, and developers.",
-    href: "/practice/property-rights",
+    href: "/practice/intellectual-property-rights",
     topics: [
       {
         slug: "title-and-ownership-disputes",
         title: "Title & Ownership Disputes",
-        href: "/practice/property-rights/title-and-ownership-disputes",
+        href: "/practice/intellectual-property-rights/title-and-ownership-disputes",
       },
       {
         slug: "partition-suits",
         title: "Partition Suits",
-        href: "/practice/property-rights/partition-suits",
+        href: "/practice/intellectual-property-rights/partition-suits",
       },
       {
         slug: "tenancy-and-eviction",
         title: "Tenancy & Eviction",
-        href: "/practice/property-rights/tenancy-and-eviction",
+        href: "/practice/intellectual-property-rights/tenancy-and-eviction",
       },
       {
         slug: "land-acquisition",
         title: "Land Acquisition",
-        href: "/practice/property-rights/land-acquisition",
+        href: "/practice/intellectual-property-rights/land-acquisition",
       },
     ],
   },
