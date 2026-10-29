@@ -30,9 +30,8 @@ import { Route as PracticeCriminalMattersCyberCrimesLegalRepresentationRouteImpo
 import { Route as PracticeCriminalMattersOffencesAgainstTheHumanBodyRouteImport } from './routes/practice/criminal-matters/offences-against-the-human-body'
 import { Route as PracticeIntellectualPropertyRightsIndexRouteImport } from './routes/practice/intellectual-property-rights/index'
 import { Route as PracticeIntellectualPropertyRightsIntellectualPropertyRouteImport } from './routes/practice/intellectual-property-rights/intellectual-property'
-import { Route as PracticeIntellectualPropertyRightsPartitionSuitsRouteImport } from './routes/practice/intellectual-property-rights/partition-suits'
-import { Route as PracticeIntellectualPropertyRightsTenancyAndEvictionRouteImport } from './routes/practice/intellectual-property-rights/tenancy-and-eviction'
-import { Route as PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRouteImport } from './routes/practice/intellectual-property-rights/title-and-ownership-disputes'
+import { Route as PracticeIntellectualPropertyRightsPatentRegistrationRouteImport } from './routes/practice/intellectual-property-rights/patent-registration'
+import { Route as PracticeIntellectualPropertyRightsTrademarkRegistrationRouteImport } from './routes/practice/intellectual-property-rights/trademark-registration'
 import { Route as PracticeMatrimonialMattersIndexRouteImport } from './routes/practice/matrimonial-matters/index'
 import { Route as PracticeMatrimonialMattersChildCustodyRouteImport } from './routes/practice/matrimonial-matters/child-custody'
 import { Route as PracticeMatrimonialMattersDivorceAndMutualConsentRouteImport } from './routes/practice/matrimonial-matters/divorce-and-mutual-consent'
@@ -40,6 +39,7 @@ import { Route as PracticeMatrimonialMattersDomesticViolenceRouteImport } from '
 import { Route as PracticeMatrimonialMattersMaintenanceAndAlimonyRouteImport } from './routes/practice/matrimonial-matters/maintenance-and-alimony'
 import { Route as PracticeMatrimonialMattersNullityOfMarriageRouteImport } from './routes/practice/matrimonial-matters/nullity-of-marriage'
 import { Route as PracticeMatrimonialMattersRestitutionOfConjugalRightsRouteImport } from './routes/practice/matrimonial-matters/restitution-of-conjugal-rights'
+import { Route as PracticeNiActIndexRouteImport } from './routes/practice/ni-act/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -164,26 +164,18 @@ const PracticeIntellectualPropertyRightsIntellectualPropertyRoute =
     path: '/practice/intellectual-property-rights/intellectual-property',
     getParentRoute: () => rootRouteImport,
   } as any)
-const PracticeIntellectualPropertyRightsPartitionSuitsRoute =
-  PracticeIntellectualPropertyRightsPartitionSuitsRouteImport.update({
-    id: '/practice/intellectual-property-rights/partition-suits',
-    path: '/practice/intellectual-property-rights/partition-suits',
+const PracticeIntellectualPropertyRightsPatentRegistrationRoute =
+  PracticeIntellectualPropertyRightsPatentRegistrationRouteImport.update({
+    id: '/practice/intellectual-property-rights/patent-registration',
+    path: '/practice/intellectual-property-rights/patent-registration',
     getParentRoute: () => rootRouteImport,
   } as any)
-const PracticeIntellectualPropertyRightsTenancyAndEvictionRoute =
-  PracticeIntellectualPropertyRightsTenancyAndEvictionRouteImport.update({
-    id: '/practice/intellectual-property-rights/tenancy-and-eviction',
-    path: '/practice/intellectual-property-rights/tenancy-and-eviction',
+const PracticeIntellectualPropertyRightsTrademarkRegistrationRoute =
+  PracticeIntellectualPropertyRightsTrademarkRegistrationRouteImport.update({
+    id: '/practice/intellectual-property-rights/trademark-registration',
+    path: '/practice/intellectual-property-rights/trademark-registration',
     getParentRoute: () => rootRouteImport,
   } as any)
-const PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRoute =
-  PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRouteImport.update(
-    {
-      id: '/practice/intellectual-property-rights/title-and-ownership-disputes',
-      path: '/practice/intellectual-property-rights/title-and-ownership-disputes',
-      getParentRoute: () => rootRouteImport,
-    } as any,
-  )
 const PracticeMatrimonialMattersIndexRoute =
   PracticeMatrimonialMattersIndexRouteImport.update({
     id: '/practice/matrimonial-matters/',
@@ -226,6 +218,11 @@ const PracticeMatrimonialMattersRestitutionOfConjugalRightsRoute =
     path: '/practice/matrimonial-matters/restitution-of-conjugal-rights',
     getParentRoute: () => rootRouteImport,
   } as any)
+const PracticeNiActIndexRoute = PracticeNiActIndexRouteImport.update({
+  id: '/practice/ni-act/',
+  path: '/practice/ni-act/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -246,9 +243,8 @@ export interface FileRoutesByFullPath {
   '/practice/criminal-matters/cyber-crimes-legal-representation': typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRoute
   '/practice/criminal-matters/offences-against-the-human-body': typeof PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute
   '/practice/intellectual-property-rights/intellectual-property': typeof PracticeIntellectualPropertyRightsIntellectualPropertyRoute
-  '/practice/intellectual-property-rights/partition-suits': typeof PracticeIntellectualPropertyRightsPartitionSuitsRoute
-  '/practice/intellectual-property-rights/tenancy-and-eviction': typeof PracticeIntellectualPropertyRightsTenancyAndEvictionRoute
-  '/practice/intellectual-property-rights/title-and-ownership-disputes': typeof PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRoute
+  '/practice/intellectual-property-rights/patent-registration': typeof PracticeIntellectualPropertyRightsPatentRegistrationRoute
+  '/practice/intellectual-property-rights/trademark-registration': typeof PracticeIntellectualPropertyRightsTrademarkRegistrationRoute
   '/practice/matrimonial-matters/child-custody': typeof PracticeMatrimonialMattersChildCustodyRoute
   '/practice/matrimonial-matters/divorce-and-mutual-consent': typeof PracticeMatrimonialMattersDivorceAndMutualConsentRoute
   '/practice/matrimonial-matters/domestic-violence': typeof PracticeMatrimonialMattersDomesticViolenceRoute
@@ -259,6 +255,7 @@ export interface FileRoutesByFullPath {
   '/practice/criminal-matters/': typeof PracticeCriminalMattersIndexRoute
   '/practice/intellectual-property-rights/': typeof PracticeIntellectualPropertyRightsIndexRoute
   '/practice/matrimonial-matters/': typeof PracticeMatrimonialMattersIndexRoute
+  '/practice/ni-act/': typeof PracticeNiActIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -279,9 +276,8 @@ export interface FileRoutesByTo {
   '/practice/criminal-matters/cyber-crimes-legal-representation': typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRoute
   '/practice/criminal-matters/offences-against-the-human-body': typeof PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute
   '/practice/intellectual-property-rights/intellectual-property': typeof PracticeIntellectualPropertyRightsIntellectualPropertyRoute
-  '/practice/intellectual-property-rights/partition-suits': typeof PracticeIntellectualPropertyRightsPartitionSuitsRoute
-  '/practice/intellectual-property-rights/tenancy-and-eviction': typeof PracticeIntellectualPropertyRightsTenancyAndEvictionRoute
-  '/practice/intellectual-property-rights/title-and-ownership-disputes': typeof PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRoute
+  '/practice/intellectual-property-rights/patent-registration': typeof PracticeIntellectualPropertyRightsPatentRegistrationRoute
+  '/practice/intellectual-property-rights/trademark-registration': typeof PracticeIntellectualPropertyRightsTrademarkRegistrationRoute
   '/practice/matrimonial-matters/child-custody': typeof PracticeMatrimonialMattersChildCustodyRoute
   '/practice/matrimonial-matters/divorce-and-mutual-consent': typeof PracticeMatrimonialMattersDivorceAndMutualConsentRoute
   '/practice/matrimonial-matters/domestic-violence': typeof PracticeMatrimonialMattersDomesticViolenceRoute
@@ -292,6 +288,7 @@ export interface FileRoutesByTo {
   '/practice/criminal-matters': typeof PracticeCriminalMattersIndexRoute
   '/practice/intellectual-property-rights': typeof PracticeIntellectualPropertyRightsIndexRoute
   '/practice/matrimonial-matters': typeof PracticeMatrimonialMattersIndexRoute
+  '/practice/ni-act': typeof PracticeNiActIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -313,9 +310,8 @@ export interface FileRoutesById {
   '/practice/criminal-matters/cyber-crimes-legal-representation': typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRoute
   '/practice/criminal-matters/offences-against-the-human-body': typeof PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute
   '/practice/intellectual-property-rights/intellectual-property': typeof PracticeIntellectualPropertyRightsIntellectualPropertyRoute
-  '/practice/intellectual-property-rights/partition-suits': typeof PracticeIntellectualPropertyRightsPartitionSuitsRoute
-  '/practice/intellectual-property-rights/tenancy-and-eviction': typeof PracticeIntellectualPropertyRightsTenancyAndEvictionRoute
-  '/practice/intellectual-property-rights/title-and-ownership-disputes': typeof PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRoute
+  '/practice/intellectual-property-rights/patent-registration': typeof PracticeIntellectualPropertyRightsPatentRegistrationRoute
+  '/practice/intellectual-property-rights/trademark-registration': typeof PracticeIntellectualPropertyRightsTrademarkRegistrationRoute
   '/practice/matrimonial-matters/child-custody': typeof PracticeMatrimonialMattersChildCustodyRoute
   '/practice/matrimonial-matters/divorce-and-mutual-consent': typeof PracticeMatrimonialMattersDivorceAndMutualConsentRoute
   '/practice/matrimonial-matters/domestic-violence': typeof PracticeMatrimonialMattersDomesticViolenceRoute
@@ -326,6 +322,7 @@ export interface FileRoutesById {
   '/practice/criminal-matters/': typeof PracticeCriminalMattersIndexRoute
   '/practice/intellectual-property-rights/': typeof PracticeIntellectualPropertyRightsIndexRoute
   '/practice/matrimonial-matters/': typeof PracticeMatrimonialMattersIndexRoute
+  '/practice/ni-act/': typeof PracticeNiActIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -348,9 +345,8 @@ export interface FileRouteTypes {
     | '/practice/criminal-matters/cyber-crimes-legal-representation'
     | '/practice/criminal-matters/offences-against-the-human-body'
     | '/practice/intellectual-property-rights/intellectual-property'
-    | '/practice/intellectual-property-rights/partition-suits'
-    | '/practice/intellectual-property-rights/tenancy-and-eviction'
-    | '/practice/intellectual-property-rights/title-and-ownership-disputes'
+    | '/practice/intellectual-property-rights/patent-registration'
+    | '/practice/intellectual-property-rights/trademark-registration'
     | '/practice/matrimonial-matters/child-custody'
     | '/practice/matrimonial-matters/divorce-and-mutual-consent'
     | '/practice/matrimonial-matters/domestic-violence'
@@ -361,6 +357,7 @@ export interface FileRouteTypes {
     | '/practice/criminal-matters/'
     | '/practice/intellectual-property-rights/'
     | '/practice/matrimonial-matters/'
+    | '/practice/ni-act/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -381,9 +378,8 @@ export interface FileRouteTypes {
     | '/practice/criminal-matters/cyber-crimes-legal-representation'
     | '/practice/criminal-matters/offences-against-the-human-body'
     | '/practice/intellectual-property-rights/intellectual-property'
-    | '/practice/intellectual-property-rights/partition-suits'
-    | '/practice/intellectual-property-rights/tenancy-and-eviction'
-    | '/practice/intellectual-property-rights/title-and-ownership-disputes'
+    | '/practice/intellectual-property-rights/patent-registration'
+    | '/practice/intellectual-property-rights/trademark-registration'
     | '/practice/matrimonial-matters/child-custody'
     | '/practice/matrimonial-matters/divorce-and-mutual-consent'
     | '/practice/matrimonial-matters/domestic-violence'
@@ -394,6 +390,7 @@ export interface FileRouteTypes {
     | '/practice/criminal-matters'
     | '/practice/intellectual-property-rights'
     | '/practice/matrimonial-matters'
+    | '/practice/ni-act'
   id:
     | '__root__'
     | '/'
@@ -414,9 +411,8 @@ export interface FileRouteTypes {
     | '/practice/criminal-matters/cyber-crimes-legal-representation'
     | '/practice/criminal-matters/offences-against-the-human-body'
     | '/practice/intellectual-property-rights/intellectual-property'
-    | '/practice/intellectual-property-rights/partition-suits'
-    | '/practice/intellectual-property-rights/tenancy-and-eviction'
-    | '/practice/intellectual-property-rights/title-and-ownership-disputes'
+    | '/practice/intellectual-property-rights/patent-registration'
+    | '/practice/intellectual-property-rights/trademark-registration'
     | '/practice/matrimonial-matters/child-custody'
     | '/practice/matrimonial-matters/divorce-and-mutual-consent'
     | '/practice/matrimonial-matters/domestic-violence'
@@ -427,6 +423,7 @@ export interface FileRouteTypes {
     | '/practice/criminal-matters/'
     | '/practice/intellectual-property-rights/'
     | '/practice/matrimonial-matters/'
+    | '/practice/ni-act/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -448,9 +445,8 @@ export interface RootRouteChildren {
   PracticeCriminalMattersCyberCrimesLegalRepresentationRoute: typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRoute
   PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute: typeof PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute
   PracticeIntellectualPropertyRightsIntellectualPropertyRoute: typeof PracticeIntellectualPropertyRightsIntellectualPropertyRoute
-  PracticeIntellectualPropertyRightsPartitionSuitsRoute: typeof PracticeIntellectualPropertyRightsPartitionSuitsRoute
-  PracticeIntellectualPropertyRightsTenancyAndEvictionRoute: typeof PracticeIntellectualPropertyRightsTenancyAndEvictionRoute
-  PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRoute: typeof PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRoute
+  PracticeIntellectualPropertyRightsPatentRegistrationRoute: typeof PracticeIntellectualPropertyRightsPatentRegistrationRoute
+  PracticeIntellectualPropertyRightsTrademarkRegistrationRoute: typeof PracticeIntellectualPropertyRightsTrademarkRegistrationRoute
   PracticeMatrimonialMattersChildCustodyRoute: typeof PracticeMatrimonialMattersChildCustodyRoute
   PracticeMatrimonialMattersDivorceAndMutualConsentRoute: typeof PracticeMatrimonialMattersDivorceAndMutualConsentRoute
   PracticeMatrimonialMattersDomesticViolenceRoute: typeof PracticeMatrimonialMattersDomesticViolenceRoute
@@ -461,6 +457,7 @@ export interface RootRouteChildren {
   PracticeCriminalMattersIndexRoute: typeof PracticeCriminalMattersIndexRoute
   PracticeIntellectualPropertyRightsIndexRoute: typeof PracticeIntellectualPropertyRightsIndexRoute
   PracticeMatrimonialMattersIndexRoute: typeof PracticeMatrimonialMattersIndexRoute
+  PracticeNiActIndexRoute: typeof PracticeNiActIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -612,25 +609,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PracticeIntellectualPropertyRightsIntellectualPropertyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/practice/intellectual-property-rights/partition-suits': {
-      id: '/practice/intellectual-property-rights/partition-suits'
-      path: '/practice/intellectual-property-rights/partition-suits'
-      fullPath: '/practice/intellectual-property-rights/partition-suits'
-      preLoaderRoute: typeof PracticeIntellectualPropertyRightsPartitionSuitsRouteImport
+    '/practice/intellectual-property-rights/patent-registration': {
+      id: '/practice/intellectual-property-rights/patent-registration'
+      path: '/practice/intellectual-property-rights/patent-registration'
+      fullPath: '/practice/intellectual-property-rights/patent-registration'
+      preLoaderRoute: typeof PracticeIntellectualPropertyRightsPatentRegistrationRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/practice/intellectual-property-rights/tenancy-and-eviction': {
-      id: '/practice/intellectual-property-rights/tenancy-and-eviction'
-      path: '/practice/intellectual-property-rights/tenancy-and-eviction'
-      fullPath: '/practice/intellectual-property-rights/tenancy-and-eviction'
-      preLoaderRoute: typeof PracticeIntellectualPropertyRightsTenancyAndEvictionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/practice/intellectual-property-rights/title-and-ownership-disputes': {
-      id: '/practice/intellectual-property-rights/title-and-ownership-disputes'
-      path: '/practice/intellectual-property-rights/title-and-ownership-disputes'
-      fullPath: '/practice/intellectual-property-rights/title-and-ownership-disputes'
-      preLoaderRoute: typeof PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRouteImport
+    '/practice/intellectual-property-rights/trademark-registration': {
+      id: '/practice/intellectual-property-rights/trademark-registration'
+      path: '/practice/intellectual-property-rights/trademark-registration'
+      fullPath: '/practice/intellectual-property-rights/trademark-registration'
+      preLoaderRoute: typeof PracticeIntellectualPropertyRightsTrademarkRegistrationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/practice/matrimonial-matters/': {
@@ -682,6 +672,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PracticeMatrimonialMattersRestitutionOfConjugalRightsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/practice/ni-act/': {
+      id: '/practice/ni-act/'
+      path: '/practice/ni-act'
+      fullPath: '/practice/ni-act/'
+      preLoaderRoute: typeof PracticeNiActIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -719,12 +716,10 @@ const rootRouteChildren: RootRouteChildren = {
     PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute,
   PracticeIntellectualPropertyRightsIntellectualPropertyRoute:
     PracticeIntellectualPropertyRightsIntellectualPropertyRoute,
-  PracticeIntellectualPropertyRightsPartitionSuitsRoute:
-    PracticeIntellectualPropertyRightsPartitionSuitsRoute,
-  PracticeIntellectualPropertyRightsTenancyAndEvictionRoute:
-    PracticeIntellectualPropertyRightsTenancyAndEvictionRoute,
-  PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRoute:
-    PracticeIntellectualPropertyRightsTitleAndOwnershipDisputesRoute,
+  PracticeIntellectualPropertyRightsPatentRegistrationRoute:
+    PracticeIntellectualPropertyRightsPatentRegistrationRoute,
+  PracticeIntellectualPropertyRightsTrademarkRegistrationRoute:
+    PracticeIntellectualPropertyRightsTrademarkRegistrationRoute,
   PracticeMatrimonialMattersChildCustodyRoute:
     PracticeMatrimonialMattersChildCustodyRoute,
   PracticeMatrimonialMattersDivorceAndMutualConsentRoute:
@@ -742,6 +737,7 @@ const rootRouteChildren: RootRouteChildren = {
   PracticeIntellectualPropertyRightsIndexRoute:
     PracticeIntellectualPropertyRightsIndexRoute,
   PracticeMatrimonialMattersIndexRoute: PracticeMatrimonialMattersIndexRoute,
+  PracticeNiActIndexRoute: PracticeNiActIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -160,26 +160,29 @@ export const practiceNav: NavArea[] = [
     href: "/practice/intellectual-property-rights",
     topics: [
       {
-        slug: "title-and-ownership-disputes",
-        title: "Title & Ownership Disputes",
-        href: "/practice/intellectual-property-rights/title-and-ownership-disputes",
-      },
-      {
-        slug: "partition-suits",
-        title: "Partition Suits",
-        href: "/practice/intellectual-property-rights/partition-suits",
-      },
-      {
-        slug: "tenancy-and-eviction",
-        title: "Tenancy & Eviction",
-        href: "/practice/intellectual-property-rights/tenancy-and-eviction",
-      },
-      {
         slug: "intellectual-property",
         title: "Intellectual Property",
         href: "/practice/intellectual-property-rights/intellectual-property",
       },
+      {
+        slug: "patent-registration",
+        title: "Patent Registration",
+        href: "/practice/intellectual-property-rights/patent-registration",
+      },
+      {
+        slug: "trademark-registration",
+        title: "Trademark Registration",
+        href: "/practice/intellectual-property-rights/trademark-registration",
+      },
     ],
+  },
+  {
+    slug: "ni-act",
+    title: "NI Act",
+    short: "IP",
+    desc: "Title, partition, tenancy, and acquisition matters for individuals, families, and developers.",
+    href: "/practice/ni-act",
+    topics: [],
   },
 ];
 

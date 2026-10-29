@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import Reveal from "@/components/Reveal";
-import { Stagger, StaggerItem } from "@/components/Stagger";
 import DisclaimerSection from "@/components/Disclaimer";
 
 export const Route = createFileRoute("/practice/criminal-matters/crimes-against-women")({

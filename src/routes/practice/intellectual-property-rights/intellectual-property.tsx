@@ -14,7 +14,7 @@ export const Route = createFileRoute(
       {
         name: "description",
         content:
-          "Legal assistance in crimes against women, including domestic violence, harassment, cruelty, dowry-related offences, and representation before trial and appellate courts.",
+          "Legal assistance in intellectual property matters, including trademark and copyright infringement, patent disputes, brand protection, intellectual property enforcement, and representation before relevant authorities and judicial forums.",
       },
       {
         property: "og:title",
@@ -23,7 +23,7 @@ export const Route = createFileRoute(
       {
         property: "og:description",
         content:
-          "Legal assistance in crimes against women, including domestic violence, harassment, cruelty, dowry-related offences, and representation before trial and appellate courts.",
+          "Legal assistance in intellectual property matters, including trademark and copyright infringement, patent disputes, brand protection, intellectual property enforcement, and representation before relevant authorities and judicial forums.",
       },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -260,6 +260,61 @@ function RouteComponent() {
           </Reveal>
         </div>
       </section>
+
+      <div className="bg-secondary/40">
+        <section className="mx-auto max-w-7xl px-6 py-20">
+          <Reveal>
+            <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+              {/* Left Content */}
+              <div>
+                <p className="eyebrow">Strategic Legal Support</p>
+
+                <h2 className="section-title mt-3 text-3xl md:text-4xl">Our Approach</h2>
+
+                <span className="mt-4 block h-1 w-16 bg-primary" />
+
+                <p className="mt-8 leading-relaxed text-muted-foreground">
+                  Every intellectual property dispute requires a careful balance between legal
+                  rights and commercial objectives. Our approach focuses on protecting intellectual
+                  assets, addressing infringement risks, and developing effective legal strategies
+                  that safeguard innovation, creativity, and commercial interests.
+                </p>
+              </div>
+
+              {/* Right Content */}
+              <div className="space-y-10">
+                {[
+                  {
+                    no: "01",
+                    title: "Intellectual Property Assessment & Risk Evaluation",
+                    desc: "Thorough assessment of intellectual property rights, ownership, registrations, and potential infringement risks to identify appropriate legal remedies.",
+                  },
+                  {
+                    no: "02",
+                    title: "Strategic Enforcement & Asset Protection",
+                    desc: "Strategic enforcement and defence of intellectual property rights, safeguarding commercial goodwill, brand identity, creative works, and innovation.",
+                  },
+                  {
+                    no: "03",
+                    title: "Business-Oriented Legal Solutions",
+                    desc: "Practical, commercially focused legal strategies tailored to protect intellectual assets, resolve disputes, and support long-term business objectives.",
+                  },
+                ].map((service) => (
+                  <div key={service.no} className="flex gap-6">
+                    <span className="text-3xl font-bold text-primary">{service.no}</span>
+
+                    <div>
+                      <h3 className="font-display text-xl font-bold">{service.title}</h3>
+
+                      <p className="mt-2 leading-relaxed text-muted-foreground">{service.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </section>
+      </div>
 
       <DisclaimerSection />
       <SiteFooter />

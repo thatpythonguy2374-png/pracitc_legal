@@ -5,10 +5,18 @@ import { SiteFooter } from "@/components/SiteFooter";
 export const Route = createFileRoute("/practice/intellectual-property-rights/")({
   head: () => ({
     meta: [
-      { title: "Property Rights — Practic Legal" },
-      { name: "description", content: "Title, partition, tenancy, and acquisition matters for individuals, families, and developers." },
+      { title: " Intellectual Property Rights — Practic Legal" },
+      {
+        name: "description",
+        content:
+          "Legal assistance in intellectual property matters, including trademark and copyright infringement, patent disputes, brand protection, intellectual property enforcement, and representation before relevant authorities and judicial forums.",
+      },
       { property: "og:title", content: "Property Rights — Practic Legal" },
-      { property: "og:description", content: "Title, partition, tenancy, and acquisition matters for individuals, families, and developers." },
+      {
+        property: "og:description",
+        content:
+          "Legal assistance in intellectual property matters, including trademark and copyright infringement, patent disputes, brand protection, intellectual property enforcement, and representation before relevant authorities and judicial forums.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -17,10 +25,24 @@ export const Route = createFileRoute("/practice/intellectual-property-rights/")(
 });
 
 const topics = [
-  { title: "Title & Ownership Disputes", summary: "Establishing and defending title, and clearing encumbrances on immovable property.", href: "/practice/property-rights/title-and-ownership-disputes" },
-  { title: "Partition Suits", summary: "Division of ancestral and jointly held property, including succession and inheritance disputes.", href: "/practice/property-rights/partition-suits" },
-  { title: "Tenancy & Eviction", summary: "Landlord and tenant disputes under rent control statutes and lease agreements.", href: "/practice/property-rights/tenancy-and-eviction" },
-  { title: "Land Acquisition", summary: "Challenging acquisition proceedings and pursuing fair, enhanced compensation.", href: "/practice/property-rights/land-acquisition" }
+  {
+    title: "Intellectual Property",
+    summary:
+      "Legal assistance in intellectual property matters, including trademark and copyright infringement, patent disputes, brand protection, intellectual property enforcement, and representation before relevant authorities and judicial forums.",
+    href: "/practice/intellectual-property-rights/intellectual-property",
+  },
+  {
+    title: "Patent Registration",
+    summary:
+      "Whether you are an inventor, entrepreneur, startup, researcher or company, protecting your invention is essential to preserving your competitive advantage.",
+    href: "/practice/intellectual-property-rights/patent-registration",
+  },
+  {
+    title: "Trademark Registration",
+    summary:
+      "It distinguishes your goods or services from those of others and helps build brand recognition, customer trust and commercial goodwill.",
+    href: "/practice/intellectual-property-rights/trademark-registration",
+  },
 ];
 
 function PropertyRightsPage() {
@@ -38,10 +60,11 @@ function PropertyRightsPage() {
         <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-28">
           <p className="eyebrow text-primary">Practice Area</p>
           <h1 className="mt-4 font-display text-4xl font-extrabold uppercase leading-[1.05] tracking-tight md:text-6xl">
-            Property Rights
+            Intellectual Property Rights
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/75">
-            Title, partition, tenancy, and acquisition matters for individuals, families, and developers.
+            Intellectual Property (IP) is among the most valuable assets of an individual or
+            business.
           </p>
         </div>
       </section>
