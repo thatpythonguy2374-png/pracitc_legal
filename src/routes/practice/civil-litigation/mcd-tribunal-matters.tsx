@@ -101,6 +101,21 @@ function CivilLitigationMcdTribunalMattersPage() {
                   their property or business interests. Timely filing of an appeal is crucial, as
                   municipal actions may continue unless appropriate relief is obtained.
                 </p>
+                <p className="text-[19px] pt-4">
+                  Orders passed by the Municipal Corporation of Delhi (MCD) can have serious
+                  consequences for property owners, builders, occupiers and businesses. Demolition
+                  notices, sealing orders, unauthorized construction proceedings and other municipal
+                  actions often require immediate legal intervention to protect valuable property
+                  rights and prevent irreversible losses.
+                </p>
+                <p className="text-[19px] pt-4">
+                  The orders passed by MCD can be challenged before the MCD Appellate Tribunal,
+                  which is a statutory forum empowered to hears appeals against certain orders and
+                  actions taken by municipal authorities. Aggrieved individuals and entities may
+                  approach the Tribunal to challenge municipal decisions affecting their property or
+                  business interests. Timely filing of an appeal is crucial, as municipal actions
+                  may continue unless appropriate relief is obtained.
+                </p>
               </Reveal>
             </div>
           </div>
@@ -162,19 +177,18 @@ function CivilLitigationMcdTribunalMattersPage() {
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
                 <h3 className="font-display text-xl font-bold">Demolition Orders</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Municipal authorities may issue demolition orders in respect of alleged
-                  unauthorized constructions or violations of building regulations. We assist
-                  clients in challenging such orders and protecting their rights before the
-                  Tribunal.
+                  Authority may issue a demolition order in respect of alleged unauthorized
+                  constructions or violations of building regulations, such order can be challenged
+                  before the Tribunal for protection of rights.
                 </p>
               </div>
 
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
                 <h3 className="font-display text-xl font-bold">Sealing Orders</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Commercial establishments and properties may be sealed for alleged violations of
-                  municipal laws. We provide legal representation for seeking relief against sealing
-                  actions and pursuing de-sealing of premises.
+                  Commercial establishments and properties may be sealed via sealing orders for
+                  alleged violations of municipal laws, such orders can be challenged before the
+                  Tribunal for protection rights and de-sealing of property.
                 </p>
               </div>
 
@@ -184,16 +198,16 @@ function CivilLitigationMcdTribunalMattersPage() {
                 </h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
                   Disputes often arise concerning allegations of unauthorized construction,
-                  deviations from sanctioned plans and building regulation violations. We advise and
-                  represent clients throughout the adjudicatory process
+                  deviations from sanctioned plans and building regulation violations, such actions
+                  of authorities can be challenged before the Tribunal.
                 </p>
               </div>
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
                 <h3 className="font-display text-xl font-bold">Show Cause Notices</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Property owners frequently receive notices requiring them to explain alleged
-                  violations. Early legal intervention can significantly impact the outcome of
-                  proceedings.
+                  Property owners might receive notice from the authorities, requiring them to
+                  explain alleged violations of municipal bye-laws, such show cause notices issued
+                  by the authorities can be challenged before the Tribunal.
                 </p>
               </div>
 

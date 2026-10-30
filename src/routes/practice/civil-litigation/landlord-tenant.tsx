@@ -62,9 +62,9 @@ function CivilLitigationLandlordTenantPage() {
             </p>
 
             <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
-              LANDLORD &
+              Landlord &
               <br />
-              TENANT LITIGATION
+              Tenant Litigation
             </h1>
 
             <div className="w-20 h-[2px] bg-orange-400 my-6" />
@@ -97,21 +97,27 @@ function CivilLitigationLandlordTenantPage() {
             <div className="space-y-8 text-base leading-relaxed text-muted-foreground lg:col-span-8">
               <Reveal>
                 <p className="text-[19px]">
-                  Landlord–tenant disputes may arise from diverse circumstances. We represent
-                  landlords and tenants in matters relating to:
+                  Disputes between landlords and tenants can arise due to non-payment of rent,
+                  unlawful eviction, unauthorized occupation, breach of tenancy terms and
+                  disagreements regarding possession of premises. Such disputes often require prompt
+                  legal intervention to protect respective rights and effective legal remedies as
+                  applicable under the relevant laws.
+                </p>
+                <p className="text-[19px] pt-5">
+                  There are common landlord-tenant dispute which may arise between the parties
+                  concerning
                 </p>
 
                 <Stagger className="grid gap-x-10 gap-y-4 md:grid-cols-2 pt-6 ps-8">
                   {[
-                    "Recovery of arrears of rent",
-                    "Eviction of tenants",
-                    "Unauthorized occupation of premises",
-                    "Breach of lease or tenancy agreements",
-                    "Recovery of possession of property",
-                    "Disputes regarding security deposits",
-                    "Illegal or forceful eviction",
                     "Termination of tenancy",
                     "Commercial lease disputes",
+                    "Recovery of arrears of rent",
+                    " Illegal or forceful eviction",
+                    "Recovery of possession of property",
+                    "Unauthorized occupation of premises",
+                    "Disputes regarding security deposits",
+                    "Breach of lease or tenancy agreements",
                     "Rent enhancement and tenancy-related disagreements",
                   ].map((item) => (
                     <StaggerItem key={item}>
@@ -149,13 +155,15 @@ function CivilLitigationLandlordTenantPage() {
                 <h3 className="text-xl font-semibold mb-4 text-primary">Services for Landlords</h3>
                 <div className="space-y-3 text-gray-600 text-sm">
                   {[
-                    "Eviction proceedings against defaulting tenants",
-                    "Recovery of unpaid rent and mesne profits",
-                    "Legal notices for termination of tenancy",
+                    "Eviction proceedings",
+                    "Claim for Damages to property",
+                    "Compensation for mental harassment",
                     "Recovery of possession of property",
+                    "Compensation for unauthorized occupation",
+                    "Legal notices for termination of tenancy",
+                    "Recovery of unpaid rent and mesne profits",
                     "Enforcement of lease and tenancy agreements",
-                    "Injunctions against unauthorized occupation",
-                    "Representation before courts and authorities",
+                    "Injunctions against unauthorized use or occupation",
                   ].map((item) => (
                     <StaggerItem key={item}>
                       <div className="flex items-start gap-3">
@@ -175,12 +183,16 @@ function CivilLitigationLandlordTenantPage() {
                 <h3 className="text-xl font-semibold mb-4 text-primary">Services for Tenants</h3>
                 <div className="space-y-3 text-gray-600 text-sm">
                   {[
-                    "Protection against unlawful eviction",
-                    "Enforcement of tenancy rights",
+                    "Recovery of possession",
+                    "Damages and mesne profits",
                     "Recovery of security deposits",
-                    "Maintenance and habitability disputes",
-                    "Challenges to illegal demands",
-                    "Defence against eviction proceedings",
+                    "Enforcement of tenancy rights",
+                    "Protection against unlawful eviction",
+                    "Protection from forceful dis-possession",
+                    "Compensation for unauthorized occupation",
+                    "Challenges to illegal demands and actions",
+                    "Resolution of commercial tenancy disputes",
+                    "Disputes relating to maintenance and habitability",
                   ].map((item) => (
                     <StaggerItem key={item}>
                       <div className="flex items-start gap-3">
@@ -201,12 +213,12 @@ function CivilLitigationLandlordTenantPage() {
                 </h3>
                 <div className="space-y-3 text-gray-600 text-sm">
                   {[
-                    "Lease interpretation and enforcement",
-                    "Breach of lease covenants",
                     "Lock-in period disputes",
                     "Commercial rent recovery",
+                    "Breach of lease covenants",
                     "Termination and renewal issues",
                     "Possession and occupation disputes",
+                    "Lease interpretation and enforcement",
                   ].map((item) => (
                     <StaggerItem key={item}>
                       <div className="flex items-start gap-3">

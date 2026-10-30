@@ -98,24 +98,22 @@ function CivilLitigationBuilderBuyerDisputesPage() {
             <div className="space-y-8 text-base leading-relaxed text-muted-foreground lg:col-span-8">
               <Reveal>
                 <p className="text-[19px]">
-                  Purchasing a home is often one of the most significant financial investments an
-                  individual makes. Unfortunately, delays in possession, construction defects, false
-                  representations, and breaches of contractual obligations can result in complex
-                  disputes between builders and homebuyers. Our team advises and represents clients
-                  in matters involving:
+                  Purchasing a home is one of the most significant financial investments an
+                  individual makes. Unfortunately, delay in handing over of possession, construction
+                  defects, false representations and breach of contractual obligations can lead to
+                  serious disputes between builders and buyers such as.
                 </p>
 
                 <Stagger className="grid gap-x-10 gap-y-4 md:grid-cols-2 pt-6 ps-8">
                   {[
-                    "Delay in handing over possession of property",
                     "Non-completion of construction projects",
-                    "Construction defects and poor workmanship",
-                    "Unilateral changes to approved plans or specifications",
+                    " Construction defects and poor workmanship",
+                    " Unilateral changes to approved plans or specifications",
                     "Delay in obtaining statutory approvals",
-                    "Wrongful cancellation of allotments",
-                    "Failure to provide promised amenities and facilities",
+                    " Wrongful cancellation of allotments",
+                    " Failure to provide promised amenities and facilities",
                     "Illegal demands for additional charges",
-                    "Misrepresentation regarding project features or timelines",
+                    " Misrepresentation regarding project features or timelines",
                     "Refund disputes and compensation claims",
                   ].map((item) => (
                     <StaggerItem key={item}>
@@ -140,27 +138,33 @@ function CivilLitigationBuilderBuyerDisputesPage() {
 
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Possession of Property</h3>
+                <h3 className="font-display text-xl font-bold">Consumer Courts</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Legal action to compel developers to hand over possession of residential or
-                  commercial properties in accordance with contractual commitments and statutory
-                  obligations.
+                  If the project is covered under RERA then it is obligatory to approach and lodge
+                  consumer complaint before appropriate consumer forum whereas if the project does
+                  not fall within the rigors of RERA then it is volition of buyer whether or not to
+                  approach consumer forum. The consumer courts follow summary procedure i.e. the
+                  complaint is decided summarily on the basis of pleadings (and documents filed
+                  therewith) of the parties.
                 </p>
               </div>
 
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Refund & Compensation</h3>
+                <h3 className="font-display text-xl font-bold">Civil Courts</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Assisting homebuyers in recovering the amounts paid together with applicable
-                  interest and compensation for delays, cancellations, or breaches by builders.
+                  As stated above, if the project does not fall within the contours of RERA then a
+                  buyer can also approach a Civil Court, which has wide and ample powers to summon,
+                  record evidence and decree the civil suit.
                 </p>
               </div>
 
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Construction Defects</h3>
+                <h3 className="font-display text-xl font-bold">Criminal Courts</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Pursuing claims relating to structural defects, poor workmanship, deviations from
-                  approved plans, and deficiencies in construction quality.
+                  In cases where there has been deliberate mis-representation, fraudulent
+                  concealment, malafide usage of poor quality construction materials,
+                  mis-appropriation of funds, the aggrieved buyer can also avail criminal
+                  prosecution against the builder.
                 </p>
               </div>
 
@@ -170,16 +174,18 @@ function CivilLitigationBuilderBuyerDisputesPage() {
                 </h3>
 
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  We assist clients in enforcing contractual and statutory obligations, seeking
-                  injunctions where necessary, and ensuring compliance with commitments made by
-                  builders and developers.
+                  Depending on the facts of the case, the below stated legal remedies may be
+                  available to aggrieved buyers
                 </p>
 
                 <ul className="mt-6 space-y-3 text-muted-foreground">
+                  <li>• Possession</li>
+                  <li>• Refund of amount alongwith Interest</li>
+                  <li>• Compensation towards mental harassment and delayed possession</li>
+                  <li>• Rectification of construction defects</li>
+                  <li>• Enforcement of contractual terms &amp; obligations</li>
+                  <li>• Injunctions against unlawful actions by the builder</li>
                   <li>• Enforcement of Builder-Buyer Agreement obligations</li>
-                  <li>• Injunctions against unlawful construction or transfers</li>
-                  <li>• Execution of orders passed by RERA and Consumer Commissions</li>
-                  <li>• Legal notices and settlement negotiations</li>
                 </ul>
               </div>
 
@@ -199,61 +205,6 @@ function CivilLitigationBuilderBuyerDisputesPage() {
             </div>
           </Reveal>
         </div>
-      </section>
-
-      <section className="bg-secondary/40 py-20">
-        <Reveal>
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
-              {/* Left */}
-              <div className="lg:col-span-4">
-                <p className="eyebrow">Consumer Protection</p>
-
-                <h2 className="section-title mt-3 text-3xl md:text-4xl">Consumer Complaints</h2>
-
-                <span className="mt-4 block h-1 w-16 bg-primary" />
-              </div>
-
-              {/* Right */}
-              <Stagger className="lg:col-span-8 space-y-6 text-muted-foreground leading-relaxed">
-                {/* Paragraph */}
-                <StaggerItem>
-                  <p className="text-[19px]">
-                    Builders who fail to fulfill their obligations may be held liable under consumer
-                    protection laws. Homebuyers can approach the appropriate Consumer Commission for
-                    relief in cases involving:
-                  </p>
-                </StaggerItem>
-
-                {/* List */}
-                <div className="grid gap-x-10 gap-y-4 md:grid-cols-2 pt-6 ps-8 pb-6">
-                  {[
-                    "Deficiency in service",
-                    "Unfair trade practices",
-                    "Delay in possession",
-                    "Failure to deliver promised facilities",
-                    "Construction and quality-related defects",
-                  ].map((item) => (
-                    <StaggerItem key={item}>
-                      <div className="flex items-start gap-3">
-                        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
-                        <p>{item}</p>
-                      </div>
-                    </StaggerItem>
-                  ))}
-                </div>
-
-                {/* Bottom paragraph */}
-                <StaggerItem>
-                  <p>
-                    Consumer proceedings often provide an effective mechanism for seeking
-                    compensation and other reliefs.
-                  </p>
-                </StaggerItem>
-              </Stagger>
-            </div>
-          </div>
-        </Reveal>
       </section>
 
       <div className="bg-secondary/40">

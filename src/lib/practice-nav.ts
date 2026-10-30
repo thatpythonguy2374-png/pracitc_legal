@@ -73,10 +73,11 @@ export const practiceNav: NavArea[] = [
         href: "/practice/civil-litigation/rwa-election-matters",
       },
       {
-        slug: "probate-of-will-5",
-        title: "Probate of Will",
-        href: "/practice/civil-litigation/probate-of-will-5",
+        slug: "succession-certificate",
+        title: "Succession Certificate",
+        href: "/practice/civil-litigation/succession-certificate",
       },
+    
     ],
   },
   {
@@ -146,9 +147,24 @@ export const practiceNav: NavArea[] = [
         href: "/practice/criminal-matters/offences-against-the-human-body",
       },
       {
-        slug: "mact-appeals",
-        title: "MACT Appeals",
-        href: "/practice/criminal-matters/mact-appeals",
+        slug: "offences-aganist-property",
+        title: "Offences Aganist Property",
+        href: "/practice/criminal-matters/offences-aganist-property",
+      },
+      {
+        slug: "criminal-appeals",
+        title: "Criminal Appeals",
+        href: "/practice/criminal-matters/criminal-appeals",
+      },
+      {
+        slug: "economic-offences",
+        title: "Economic Offences",
+        href: "/practice/criminal-matters/economic-offences",
+      },
+      {
+        slug: "white-collar-crimes",
+        title: "White Collar Crimes",
+        href: "/practice/criminal-matters/white-collar-crimes",
       },
     ],
   },

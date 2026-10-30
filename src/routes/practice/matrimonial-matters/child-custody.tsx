@@ -94,9 +94,13 @@ function MatrimonialMattersChildCustodyPage() {
               <Reveal>
                 <p className="text-[19px]">
                   Child custody refers to the legal rights and responsibilities relating to the
-                  care, upbringing, and welfare of a minor child. Custody disputes commonly arise
+                  care, upbringing and welfare of a minor child. Custody disputes commonly arise
                   during divorce, judicial separation, annulment or between parents living
-                  separately.
+                  separately. Child custody disputes are among the most sensitive aspects of
+                  matrimonial litigation. While parents may have divergent views regarding the
+                  upbringing of a child, the paramount consideration for every court is the welfare
+                  and best interests of the child. Every case is decided on its own facts, with the
+                  child’s welfare being the paramount consideration.
                 </p>
                 <p className="text-[19px] pt-4">
                   Child custody disputes are among the most sensitive aspects of matrimonial
@@ -122,7 +126,7 @@ function MatrimonialMattersChildCustodyPage() {
                 <h3 className="font-display text-xl font-bold">Physical Custody</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
                   The child resides primarily with one parent, while the other parent may be granted
-                  visitation or access rights.
+                  visitation or access rights
                 </p>
               </div>
 
@@ -131,7 +135,7 @@ function MatrimonialMattersChildCustodyPage() {
                 <p className="mt-4 text-muted-foreground leading-relaxed">
                   Both parents share the responsibility of raising the child, with custody being
                   exercised according to a schedule determined by the court or mutually agreed
-                  between the parties.
+                  between the parties
                 </p>
               </div>
 
@@ -139,7 +143,7 @@ function MatrimonialMattersChildCustodyPage() {
                 <h3 className="font-display text-xl font-bold">Legal Custody</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
                   The parent or parents are given the authority to make important decisions
-                  concerning the child’s education, healthcare, upbringing and welfare.
+                  concerning the child’s education, healthcare, upbringing and welfare
                 </p>
               </div>
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
@@ -147,15 +151,15 @@ function MatrimonialMattersChildCustodyPage() {
                 <p className="mt-4 text-muted-foreground leading-relaxed">
                   Even where one parent is granted custody, the other parent may be entitled to
                   reasonable visitation or interaction with the child, unless restricted by the
-                  court in exceptional circumstances.
+                  court in exceptional circumstances
                 </p>
               </div>
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
                 <h3 className="font-display text-xl font-bold">Guardianship Matters</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Apart from custody disputes between parents, we also advise and represent clients
-                  in guardianship proceedings relating to minors where appointment or declaration of
-                  a legal guardian becomes necessary under applicable law.
+                  Apart from custody disputes between parents, there might be situation for seeking
+                  guardianship proceedings relating to minors where appointment or declaration of a
+                  legal guardian becomes necessary under applicable law.
                 </p>
               </div>
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
@@ -163,11 +167,9 @@ function MatrimonialMattersChildCustodyPage() {
                   Mediation and Amicable Resolution
                 </h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Where appropriate, we encourage parents to resolve custody and parenting issues
-                  through negotiation or mediation. Amicable arrangements often reduce conflict and
-                  help create a stable environment for the child. However, where settlement is not
-                  possible, we provide diligent preparation and effective representation before the
-                  Family Court to protect our clients’ rights and the child’s welfare.
+                  Where appropriate, courts encourage parents to resolve custody and parenting
+                  issues through negotiation or mediation. Amicable arrangements often reduce
+                  conflict and help create a stable environment for the child.
                 </p>
               </div>
 
@@ -179,13 +181,14 @@ function MatrimonialMattersChildCustodyPage() {
                 </p>
 
                 <ul className="mt-6 space-y-3 text-muted-foreground">
-                  <li>• The welfare and best interests of the child</li>
                   <li>• Age and needs of the child</li>
-                  <li>• Emotional and psychological well-being</li>
-                  <li>• Educational requirements</li>
+                  <li>• Educational requirements of child</li>
                   <li>• Financial stability of the parents</li>
                   <li>• Character and conduct of the parties</li>
+                  <li>• Welfare and best interests of the child</li>
+                  <li>• Emotional and psychological well-being of child</li>
                   <li>• Existing relationship between the child and each parent</li>
+                  <li>Any other relevant circumstances affecting the child’s welfare</li>
                   <li>• Any other relevant circumstances affecting the child’s welfare</li>
                   <li>
                     • Wishes of the child, where appropriate considering the child’s age and

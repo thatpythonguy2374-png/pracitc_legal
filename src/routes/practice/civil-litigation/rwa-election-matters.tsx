@@ -125,22 +125,26 @@ function CivilLitigationRwaElectionMatters() {
                 <p className="text-[19px]">
                   Free and fair elections are essential for the effective functioning of any
                   Resident Welfare Association. Election-related disputes can adversely affect the
-                  administration of the community and often require prompt legal intervention, where
-                  we assist clients in matters involving:
+                  administration of the community and often require prompt legal intervention. The
+                  disputes which may entail in such matters can be enumerated as
                 </p>
 
                 <Stagger className="grid gap-x-10 gap-y-4 md:grid-cols-2 pt-6 ps-8 text-justify">
                   {[
+                    "Membership and Voting Rights",
                     "Challenges to RWA election results",
+                    "Mismanagement and abuse of authority",
                     "Disputes regarding voter eligibility",
-                    "Membership-related disputes affecting voting rights",
+                    "Unauthorized resolutions and decisions",
                     "Allegations of election irregularities",
                     "Violations of election rules and bylaws",
-                    "Appointment and functioning of election officers",
-                    "	Conduct of Annual General Meetings (AGMs) and Special General Meetings (SGMs)",
                     "Challenges to unauthorized office bearer",
-                    "Membership and Voting Rights",
-                    "Disputes frequently arise regarding the inclusion or exclusion of members from electoral rolls and decision-making processes.",
+                    "Financial transparency and accountability issues",
+                    "Appointment and functioning of election officers",
+                    "Disputes among office bearers and committee members",
+                    "Membership-related disputes affecting voting rights",
+                    "Conduct of Annual General Meetings (AGMs) and Special General Meetings (SGMs)",
+                    "Disputes with respect to inclusion or exclusion of members from electoral rolls and decision making processes",
                   ].map((item) => (
                     <StaggerItem key={item}>
                       <div className="flex items-start gap-3">
@@ -237,9 +241,9 @@ function CivilLitigationRwaElectionMatters() {
                 <Stagger className="mt-6 space-y-3 text-muted-foreground">
                   {[
                     " Protect voting and membership rights",
-                    "Ensure compliance with applicable laws and bylaws",
-                    "Prevent unlawful actions by office bearers",
                     "Preserve transparency and accountability",
+                    "Prevent unlawful actions by office bearers",
+                    "Ensure compliance with applicable laws and bylaws",
                     "Facilitate fair and lawful administration of the association",
                   ].map((item) => (
                     <StaggerItem key={item}>

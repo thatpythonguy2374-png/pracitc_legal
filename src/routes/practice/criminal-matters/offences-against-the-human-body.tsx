@@ -102,14 +102,14 @@ function RouteComponent() {
                   Offences against the human body are among the most serious offences under criminal
                   law, as they directly affect an individual’s life, physical integrity, personal
                   liberty and dignity. Such cases often involve complex questions of fact, medical
-                  evidence, eyewitness testimony, forensic material and procedural safeguards.
+                  evidence, eyewitness testimony, forensic material and procedural safeguards. Some
+                  of such offences can be enumerated as
                 </p>
               </Reveal>
             </div>
           </div>
         </section>
       </div>
-
       <section className="bg-secondary/40 py-20">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
@@ -124,14 +124,14 @@ function RouteComponent() {
                   fair prosecution of offenders. We assist complainants in:
                 </p>
                 <ul className="mt-6 space-y-3 text-muted-foreground">
-                  <li>• Legal consultation and case assessment</li>
-                  <li>• Protection of victims’ legal rights throughout the proceedings</li>
-                  <li>• Criminal appeals and revision proceedings</li>
-                  <li>• Conducting prosecution before criminal courts</li>
-                  <li>• Opposing bail applications where appropriate </li>
-                  <li>• Representation during police investigation</li>
                   <li>• Drafting criminal complaints</li>
                   <li>• Assistance in registration of FIRs</li>
+                  <li>• Legal consultation and case assessment</li>
+                  <li>• Criminal appeals and revision proceedings</li>
+                  <li>• Representation during police investigation</li>
+                  <li>• Conducting prosecution before criminal courts</li>
+                  <li>• Opposing bail applications where appropriate </li>
+                  <li>• Protection of victims’ legal rights throughout the proceedings</li>
                 </ul>
                 <p className="text-muted-foreground pt-5">
                   Our objective is to ensure that victims receive effective legal assistance while
@@ -148,13 +148,13 @@ function RouteComponent() {
                   representation by:
                 </p>
                 <ul className="mt-6 space-y-3 text-muted-foreground">
+                  <li>• Representation during trial</li>
+                  <li>• Appeals and Revision Petitions</li>
+                  <li>• Preparing an effective defence strategy</li>
+                  <li>• Cross-examination of prosecution witnesses</li>
+                  <li>• Quashing proceedings where legally maintainable</li>
                   <li>• Advising clients before and during investigation</li>
                   <li>• Filing Anticipatory and Regular Bail applications</li>
-                  <li>• Preparing an effective defence strategy</li>
-                  <li>• Representation during trial</li>
-                  <li>• Cross-examination of prosecution witnesses</li>
-                  <li>• Appeals and Revision Petitions</li>
-                  <li>• Quashing proceedings where legally maintainable</li>
                 </ul>
                 <p className="text-muted-foreground pt-5">
                   Our defence strategy is based upon a careful examination of the evidence, medical
@@ -250,34 +250,61 @@ function RouteComponent() {
           </Reveal>
         </div>
       </section>
-      <div className="space-y-10">
-        {[
-          {
-            no: "01",
-            title: "Consultation & Pre-Litigation Assistance",
-            desc: "Legal consultation and case assessment, drafting of criminal complaints, assistance in FIR registration, and guidance at the initial stages of criminal proceedings.",
-          },
-          {
-            no: "02",
-            title: "Bail, Investigation & Trial",
-            desc: "Anticipatory bail and regular bail applications, representation during investigation, trial before Criminal Courts, cross-examination, and final arguments.",
-          },
-          {
-            no: "03",
-            title: "Appeals, Revision & Quashing",
-            desc: "Representation in criminal appeals and revision petitions, along with applications for quashing of criminal proceedings where legally maintainable.",
-          },
-        ].map((service) => (
-          <div key={service.no} className="flex gap-6">
-            <span className="text-3xl font-bold text-primary">{service.no}</span>
 
-            <div>
-              <h3 className="font-display text-xl font-bold">{service.title}</h3>
+      <div className="bg-secondary/40">
+        <section className="mx-auto max-w-7xl px-6 py-20">
+          <Reveal>
+            <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+              <div>
+                <p className="eyebrow">Strategic Criminal Defence</p>
 
-              <p className="mt-2 leading-relaxed text-muted-foreground">{service.desc}</p>
+                <h2 className="section-title mt-3 text-3xl md:text-4xl">Our Approach</h2>
+
+                <span className="mt-4 block h-1 w-16 bg-primary" />
+
+                <p className="mt-8 leading-relaxed text-muted-foreground">
+                  Every criminal case involving offences against the human body demands meticulous
+                  preparation, careful examination of evidence, and a strategic legal approach. At
+                  Practic Legal, we focus on analysing the facts, evaluating medical and forensic
+                  material, protecting our clients' legal and constitutional rights, and developing
+                  effective courtroom strategies. Our approach combines practical legal advice,
+                  thorough case assessment, and focused advocacy tailored to the circumstances of
+                  each matter.
+                </p>
+              </div>
+
+              <div className="space-y-10">
+                {[
+                  {
+                    no: "01",
+                    title: "Factual, Medical & Forensic Analysis",
+                    desc: "Conducting a thorough analysis of the facts and available evidence, including medical reports, forensic findings, witness statements, and other relevant case materials.",
+                  },
+                  {
+                    no: "02",
+                    title: "Rights Protection & Strategic Advocacy",
+                    desc: "Safeguarding applicable legal and constitutional rights while developing a well-prepared litigation strategy and presenting effective arguments before the competent courts.",
+                  },
+                  {
+                    no: "03",
+                    title: "Case Assessment & Legal Consultation",
+                    desc: "Providing practical, solution-oriented legal advice through detailed case assessment, evaluation of legal options, and guidance tailored to the specific circumstances of each case.",
+                  },
+                ].map((service) => (
+                  <div key={service.no} className="flex gap-6">
+                    <span className="text-3xl font-bold text-primary">{service.no}</span>
+
+                    <div>
+                      <h3 className="font-display text-xl font-bold">{service.title}</h3>
+
+                      <p className="mt-2 leading-relaxed text-muted-foreground">{service.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          </Reveal>
+        </section>
       </div>
 
       <DisclaimerSection />

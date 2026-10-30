@@ -6,9 +6,17 @@ export const Route = createFileRoute("/practice/civil-litigation/")({
   head: () => ({
     meta: [
       { title: "Civil Litigation — Practic Legal" },
-      { name: "description", content: "Representation before trial courts, tribunals, and appellate forums in civil and commercial disputes." },
+      {
+        name: "description",
+        content:
+          "Representation before trial courts, tribunals, and appellate forums in civil and commercial disputes.",
+      },
       { property: "og:title", content: "Civil Litigation — Practic Legal" },
-      { property: "og:description", content: "Representation before trial courts, tribunals, and appellate forums in civil and commercial disputes." },
+      {
+        property: "og:description",
+        content:
+          "Representation before trial courts, tribunals, and appellate forums in civil and commercial disputes.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -17,16 +25,66 @@ export const Route = createFileRoute("/practice/civil-litigation/")({
 });
 
 const topics = [
-  { title: "Builder Buyer Disputes", summary: "Filing and defending civil suits for recovery of money, damages, and specific performance of contracts.", href: "/practice/civil-litigation/builder-buyer-disputes" },
-  { title: "Insurance Claims", summary: "Urgent applications to preserve the status quo, restrain third parties, and protect assets pending trial.", href: "/practice/civil-litigation/insurance-claims" },
-  { title: "Landlord Tenant", summary: "Appellate advocacy before district courts, High Courts, and the Supreme Court on questions of fact and law.", href: "/practice/civil-litigation/landlord-tenant" },
-  { title: "MCD Tribunal Matters", summary: "Turning decrees into results through attachment, sale, garnishee, and enforcement strategy.", href: "/practice/civil-litigation/mcd-tribunal-matters" },
-  { title: "Probate of Will", summary: "Turning decrees into results through attachment, sale, garnishee, and enforcement strategy.", href: "/practice/civil-litigation/probate-of-will" },
-  { title: "Property Disputes", summary: "Turning decrees into results through attachment, sale, garnishee, and enforcement strategy.", href: "/practice/civil-litigation/property-disputes" },
-  { title: "Probate of Will", summary: "Turning decrees into results through attachment, sale, garnishee, and enforcement strategy.", href: "/practice/civil-litigation/probate-of-will-2" },
-  { title: "Probate of Will", summary: "Turning decrees into results through attachment, sale, garnishee, and enforcement strategy.", href: "/practice/civil-litigation/probate-of-will-3" },
-  { title: "Probate of Will", summary: "Turning decrees into results through attachment, sale, garnishee, and enforcement strategy.", href: "/practice/civil-litigation/probate-of-will-4" },
-  { title: "Probate of Will", summary: "Turning decrees into results through attachment, sale, garnishee, and enforcement strategy.", href: "/practice/civil-litigation/probate-of-will-5" }
+  {
+    title: "Builder Buyer Disputes",
+    summary:
+      "Filing and defending civil suits for recovery of money, damages, and specific performance of contracts.",
+    href: "/practice/civil-litigation/builder-buyer-disputes",
+  },
+  {
+    title: "Insurance Claims",
+    summary:
+      "Urgent applications to preserve the status quo, restrain third parties, and protect assets pending trial.",
+    href: "/practice/civil-litigation/insurance-claims",
+  },
+  {
+    title: "Landlord Tenant",
+    summary:
+      "Appellate advocacy before district courts, High Courts, and the Supreme Court on questions of fact and law.",
+    href: "/practice/civil-litigation/landlord-tenant",
+  },
+  {
+    title: "MCD Tribunal Matters",
+    summary:
+      "Helping you handle municipal corporation notices, sealing orders, and property tax disputes before the Appellate Tribunal.",
+    href: "/practice/civil-litigation/mcd-tribunal-matters",
+  },
+  {
+    title: "Probate of Will",
+    summary:
+      "Guiding you through estate distribution, getting letters of administration or probate from court, and settling family will disputes.",
+    href: "/practice/civil-litigation/probate-of-will",
+  },
+  {
+    title: "Property Disputes",
+    summary:
+      "Resolving messy title issues, property division, tenant-landlord fights, and real estate agreement battles.",
+    href: "/practice/civil-litigation/property-disputes",
+  },
+  {
+    title: "Public Nuisance Litigation",
+    summary:
+      "Taking legal action against community nuisances, illegal encroachments, and environmental hazards that affect your neighborhood.",
+    href: "/practice/civil-litigation/public-nuisance-litigation",
+  },
+  {
+    title: "Recovery Suits",
+    summary:
+      "Filing fast-track commercial or civil suits to get back pending invoices, unpaid loans, and money owed to you.",
+    href: "/practice/civil-litigation/recovery-suits",
+  },
+  {
+    title: "RWA Election Matters",
+    summary:
+      "Sorting out Resident Welfare Association election fights, managing committee deadlocks, and dealing with illegal takeovers.",
+    href: "/practice/civil-litigation/rwa-election-matters",
+  },
+  {
+    title: "Succession Certificate",
+    summary:
+      "Sorting out Resident Welfare Association election fights, managing committee deadlocks, and dealing with illegal takeovers.",
+    href: "/practice/civil-litigation/succession-certificate",
+  },
 ];
 
 function CivilLitigationPage() {
@@ -47,7 +105,8 @@ function CivilLitigationPage() {
             Civil Litigation
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/75">
-            Representation before trial courts, tribunals, and appellate forums in civil and commercial disputes.
+            Representation before trial courts, tribunals, and appellate forums in civil and
+            commercial disputes.
           </p>
         </div>
       </section>

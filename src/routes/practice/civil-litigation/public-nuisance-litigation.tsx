@@ -96,11 +96,28 @@ function CivilLitigationPublicNuisancLitigation() {
             <div className="space-y-8 text-base leading-relaxed text-muted-foreground lg:col-span-8">
               <Reveal>
                 <p className="text-[19px]">
-                  Public spaces, roads, parks, water bodies and common amenities are meant for the
-                  benefit and use of the general public. When unlawful acts interfere with these
-                  rights and cause inconvenience, danger or injury to the public at large, legal
-                  action may be initiated to remove the nuisance and safeguard public interests.
+                  A public nuisance is an act or omission that causes common injury, danger,
+                  annoyance or inconvenience to the public or to a considerable section of the
+                  community, examples may include
                 </p>
+                <Stagger className="grid gap-x-10 gap-y-4 md:grid-cols-2 pt-2 ps-8">
+                  {[
+                    "Illegal occupation of public land",
+                    "Pollution and environmental hazards",
+                    "Illegal construction affecting public rights",
+                    "Obstruction of access routes and common areas",
+                    "Interference with public utilities and amenities",
+                    "Activities causing danger to public health or safety",
+                    "Unauthorized encroachments on public roads and pathways",
+                  ].map((item) => (
+                    <StaggerItem key={item}>
+                      <div className="flex items-start gap-3">
+                        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                        <p>{item}</p>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </Stagger>
               </Reveal>
             </div>
           </div>
@@ -264,12 +281,21 @@ function CivilLitigationPublicNuisancLitigation() {
 
                   <p className="mt-4 text-muted-foreground leading-relaxed">
                     Section 91 provides a mechanism for seeking relief against public nuisances and
-                    other wrongful acts affecting the public, wherein proceedings may be initiated:
+                    other wrongful acts affecting the public, wherein proceedings may be initiated
+                    among other by two or more persons with the permission (leave) of the Court. The
+                    objective is to prevent or remove acts that adversely affect public rights and
+                    interests, even where individual damage may not be separately established.
+                    Depending on the facts of the case, the reliefs which may be sought can be
+                    enumerated as
                   </p>
 
                   <ul className="mt-6 space-y-3 text-muted-foreground">
-                    <li>• By the Advocate General </li>
-                    <li>• By two or more persons with the permission (leave) of the Court.</li>
+                    <li>• Permanent injunctions</li>
+                    <li>• Mandatory injunctions directing removal of the nuisance</li>
+                    <li>• Restraining unlawful activities</li>
+                    <li>• Removal of encroachments and obstructions</li>
+                    <li>• Protection of public access and common rights</li>
+                    <li>• Other appropriate directions or reliefs</li>
                   </ul>
                   <p className="mt-4 text-muted-foreground leading-relaxed">
                     The objective is to prevent or remove acts that adversely affect public rights

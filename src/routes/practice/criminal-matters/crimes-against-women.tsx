@@ -113,9 +113,9 @@ function RouteComponent() {
               <div className="rounded-sm border border-border bg-card p-8 md:col-span-2 transition-all hover:-translate-y-1 hover:border-primary">
                 <h3 className="font-display text-xl font-bold"> For Victims</h3>
                 <p className="text-muted-foreground pt-5">
-                  We assist women in seeking appropriate legal remedies in matters involving
-                  offences affecting their safety, dignity and personal liberty. Our services
-                  include:
+                  As a victim, it is imperative to have effective representation from the threshold
+                  as any laxity during the initial period can lead to failure of prosecution and
+                  acquittal of accused at later stages. Such effective representation may include
                 </p>
                 <ul className="mt-6 space-y-3 text-muted-foreground">
                   <li>• Legal consultation and case assessment</li>
@@ -133,10 +133,10 @@ function RouteComponent() {
                   Criminal allegations involving offences against women can have significant legal
                   and personal consequences. Every accused person is entitled to a fair
                   investigation and legal representation in accordance with the principles of
-                  natural justice. We provide legal assistance in:
+                  natural justice. The remedies which may be availed to accused
                 </p>
                 <ul className="mt-6 space-y-3 text-muted-foreground">
-                  <li>• Pre-arrest legal consultation </li>
+                  <li>• Pre arrest legal consultation </li>
                   <li>• Appeals and revision proceedings</li>
                   <li>• Defence before criminal courts</li>
                   <li>• Representation during investigation</li>

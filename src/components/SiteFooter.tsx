@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { practiceNav } from "@/lib/practice-nav";
+import logo from "./public/logo.png";
 
 export function SiteFooter() {
   return (
@@ -10,13 +11,9 @@ export function SiteFooter() {
           {/* BRAND */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="bg-primary h-10 w-10 flex items-center justify-center font-bold text-primary-foreground">
-                P
+              <div className="mb-6 inline-block rounded-sm bg-grey px-4 py-3">
+                <img src={logo} alt="Practic Legal" className="h-14 w-auto" />
               </div>
-
-              <span className="font-display text-lg font-bold uppercase tracking-widest">
-                Practic <span className="text-primary">Legal</span>
-              </span>
             </div>
 
             <p className="text-white/70 text-sm leading-relaxed mb-8">

@@ -100,8 +100,32 @@ function RouteComponent() {
                   has transformed the way individuals and businesses communicate and conduct
                   transactions. Unfortunately, it has also led to a significant rise in cyber
                   crimes, resulting in financial loss, identity theft, reputational harm and
-                  unauthorized access to sensitive information.
+                  unauthorized access to sensitive information. Some examples of cyber crimes may
+                  include:
                 </p>
+                <Stagger className="grid gap-x-10 gap-y-4 md:grid-cols-2 pt-2 ps-8">
+                  {[
+                    "Identity Theft",
+                    "Online Financial Fraud",
+                    "Email and Account Hacking",
+                    "Cyber Extortion and Blackmail",
+                    "Cyber Stalking and Online Harassment",
+                    "Cases involving repeated online harassment, intimidation, threats or unwanted electronic communication",
+                    "Cases involving unauthorized electronic transfers, payment fraud, ATM fraud, card cloning and digital wallet misuse",
+                    "Threats to publish private information, ransomware demands, online intimidation and other forms of digital extortion",
+                    "Unauthorized use of personal information, identity documents, banking credentials or digital identities for unlawful purposes",
+                    "Social Media Offences such as misuse of social media platforms, including fake profiles, impersonation and unlawful online activities",
+                    "Data Theft of confidential business information, customer databases, proprietary information and Unauthorized Access to computer systems",
+                    "Online Defamation including defamatory publications, false allegations, malicious online content and reputational harm through digital platforms",
+                  ].map((item) => (
+                    <StaggerItem key={item}>
+                      <div className="flex items-start gap-3">
+                        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                        <p>{item}</p>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </Stagger>
               </Reveal>
             </div>
           </div>
@@ -125,13 +149,13 @@ function RouteComponent() {
                 </p>
 
                 <ul className="mt-6 space-y-3 text-muted-foreground">
-                  <li>• Legal consultation and case assessment</li>
                   <li>• Representation during investigation</li>
-                  <li>• Criminal appeals and revision proceedings</li>
                   <li>• Representation before criminal courts</li>
                   <li>• Opposing bail applications where appropriate </li>
+                  <li>• Registration of Cyber Crime complaints and FIRs</li>
                   <li>• Recovery-related legal proceedings where available </li>
                   <li>• Assistance in registration of Cyber Crime complaints and FIRs</li>
+                  <li>• Coordination with Cyber Crime Cells and investigating agencies</li>
                   <li>• Coordination with Cyber Crime Cells and investigating agencies</li>
                 </ul>
                 <p className="text-muted-foreground pt-5">
@@ -144,8 +168,8 @@ function RouteComponent() {
                 <p className="text-muted-foreground pt-5">
                   Cyber crime allegations often arise from business disputes, online communications,
                   employment relationships, digital transactions and social media activity. Every
-                  accused person is entitled to a fair investigation and legal defence. We provide
-                  legal representation in:
+                  accused person is entitled to a fair investigation and legal defence. An effective
+                  legal representation for accused may include:
                 </p>
                 <ul className="mt-6 space-y-3 text-muted-foreground">
                   <li>• Pre-investigation legal advice</li>

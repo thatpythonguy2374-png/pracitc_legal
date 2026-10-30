@@ -69,7 +69,9 @@ function MatrimonialMattersDomesticViolencePage() {
             <div className="w-20 h-[2px] bg-orange-400 my-6" />
 
             <p className="text-lg md:text-xl text-white/80 leading-relaxed">
-              Domestic violence extends beyond physical abuse.
+              Domestic violence extends beyond physical abuse. It can include emotional, verbal,
+              economic, sexual and psychological abuse that adversely affects the safety, dignity
+              and well-being of an individual
             </p>
           </div>
         </div>
@@ -104,6 +106,7 @@ function MatrimonialMattersDomesticViolencePage() {
                 <p className="text-[19px]">
                   The Protection of Women from Domestic Violence Act, 2005 provides legal remedies
                   to women who have experienced domestic violence within a domestic relationship.
+                  Domestic violence may include
                 </p>
 
                 <h3 className="font-display text-xl font-bold pt-5 text-black">
@@ -111,11 +114,11 @@ function MatrimonialMattersDomesticViolencePage() {
                 </h3>
                 <Stagger className="grid gap-x-10 gap-y-4 md:grid-cols-2 pt-6 ps-8">
                   {[
-                    "Physical abuse",
-                    "Emotional and verbal abuse",
-                    "Psychological abuse",
                     "Sexual abuse",
                     "Economic abuse",
+                    "Physical abuse",
+                    "Psychological abuse",
+                    "Emotional and verbal abuse",
                     "Harassment relating to financial demands or property",
                     "Deprivation of financial resources or access to the shared household",
                   ].map((item) => (
@@ -139,48 +142,48 @@ function MatrimonialMattersDomesticViolencePage() {
       <section className="bg-secondary/40 py-20">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
-            <p className="eyebrow">Protection</p>
-            <h2 className="section-title mt-3 text-3xl md:text-4xl">Legal Remedies Available</h2>
+            <h2 className="section-title mt-3 text-3xl md:text-4xl"> Legal Assistance </h2>
             <span className="mt-4 block h-1 w-16 bg-primary" />
 
-            <div className="mt-12 grid gap-6 md:grid-cols-3">
+            <div className="mt-12 grid gap-6 md:grid-cols-4">
               <div className="rounded-sm border border-border bg-card p-8 md:col-span-2 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">
-                  Enforcement of Builder Obligations
-                </h3>
-
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                  We assist clients in enforcing contractual and statutory obligations, seeking
-                  injunctions where necessary, and ensuring compliance with commitments made by
-                  builders and developers.
+                <h3 className="font-display text-xl font-bold">Representation for Complainants</h3>
+                <p className="text-muted-foreground pt-5">
+                  An aggrieved person may seek may seek legal assistance in the form of
                 </p>
-
                 <ul className="mt-6 space-y-3 text-muted-foreground">
-                  <li>• Enforcement of Builder-Buyer Agreement obligations</li>
-                  <li>• Injunctions against unlawful construction or transfers</li>
-                  <li>• Execution of orders passed by RERA and Consumer Commissions</li>
-                  <li>• Legal notices and settlement negotiations</li>
+                  <li>• Enforcement of court orders</li>
+                  <li>• Child custody-related relief</li>
+                  <li>• Applications for interim relief</li>
+                  <li>• Protection and residence orders</li>
+                  <li>• Monetary relief and compensation claims</li>
+                  <li>• Representation before the Magistrate’s Court</li>
+                  <li>• Drafting and filing Domestic Violence applications</li>
+                  <li>• Legal advice regarding rights under the Domestic Violence Act</li>
                 </ul>
               </div>
-
-              <div className="flex flex-col justify-center rounded-sm bg-primary p-8 text-center text-primary-foreground">
-                <p className="text-lg italic">
-                  "Protecting your investment through strategic legal advocacy."
+              <div className="rounded-sm border border-border bg-card p-8 md:col-span-2 transition-all hover:-translate-y-1 hover:border-primary">
+                <h3 className="font-display text-xl font-bold">Representation for Respondents</h3>
+                <p className="text-muted-foreground pt-5">
+                  Domestic Violence proceedings may involve disputed questions of fact requiring
+                  careful legal examination. Respondents are entitled to defend the allegations and
+                  present their evidence before the court. A respondent may seek legal assistance in
+                  the form of
                 </p>
-
-                <Link
-                  to="/"
-                  hash="contact"
-                  className="mt-8 inline-flex items-center justify-center rounded-sm border border-primary-foreground px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-colors hover:bg-primary-foreground hover:text-primary"
-                >
-                  Consult an Expert
-                </Link>
+                <ul className="mt-6 space-y-3 text-muted-foreground">
+                  <li>• Appeals against adverse orders</li>
+                  <li>• Contesting interim applications</li>
+                  <li>• Challenging interim and final orders</li>
+                  <li>• Filing written statements and replies</li>
+                  <li>• Negotiated settlements wherever appropriate</li>
+                  <li>• Representation during evidence and hearings</li>
+                  <li>• Defence against Domestic Violence complaints</li>
+                </ul>
               </div>
             </div>
           </Reveal>
         </div>
       </section>
-
       <section className="bg-secondary/40 py-20">
         <Reveal>
           <div className="mx-auto max-w-7xl px-6">
@@ -189,7 +192,9 @@ function MatrimonialMattersDomesticViolencePage() {
               <div className="lg:col-span-4">
                 <p className="eyebrow">Consumer Protection</p>
 
-                <h2 className="section-title mt-3 text-3xl md:text-4xl">Consumer Complaints</h2>
+                <h2 className="section-title mt-3 text-3xl md:text-4xl">
+                  Related Matrimonial Proceedings
+                </h2>
 
                 <span className="mt-4 block h-1 w-16 bg-primary" />
               </div>
@@ -199,20 +204,21 @@ function MatrimonialMattersDomesticViolencePage() {
                 {/* Paragraph */}
                 <StaggerItem>
                   <p className="text-[19px]">
-                    Builders who fail to fulfill their obligations may be held liable under consumer
-                    protection laws. Homebuyers can approach the appropriate Consumer Commission for
-                    relief in cases involving:
+                    Domestic Violence proceedings often run alongside other matrimonial disputes,
+                    such as:
                   </p>
                 </StaggerItem>
 
                 {/* List */}
                 <div className="grid gap-x-10 gap-y-4 md:grid-cols-2 pt-6 ps-8 pb-6">
                   {[
-                    "Deficiency in service",
-                    "Unfair trade practices",
-                    "Delay in possession",
-                    "Failure to deliver promised facilities",
-                    "Construction and quality-related defects",
+                    "Divorce proceeding",
+                    "Maintenance claims",
+                    "Child custody disputes",
+                    "Proceedings relating to stridhan",
+                    "Settlement and mediation proceedings",
+                    "Protection of property and residence rights",
+                    "Criminal complaints arising out of matrimonial disputes",
                   ].map((item) => (
                     <StaggerItem key={item}>
                       <div className="flex items-start gap-3">
@@ -237,22 +243,24 @@ function MatrimonialMattersDomesticViolencePage() {
       </section>
 
       <div className="bg-secondary/40">
-        <section className=" mx-auto max-w-7xl px-6 py-20">
+        <section className="mx-auto max-w-7xl px-6 py-20">
           <Reveal>
             <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
               <div>
-                <p className="eyebrow">Comprehensive Assistance</p>
+                <p className="eyebrow">Sensitive & Strategic Legal Support</p>
 
-                <h2 className="section-title mt-3 text-3xl md:text-4xl">Our Services</h2>
+                <h2 className="section-title mt-3 text-3xl md:text-4xl">Our Approach</h2>
 
                 <span className="mt-4 block h-1 w-16 bg-primary" />
 
                 <p className="mt-8 leading-relaxed text-muted-foreground">
-                  We provide end-to-end legal assistance to homebuyers facing disputes with builders
-                  and developers. From reviewing agreements and issuing legal notices to
-                  representing clients before RERA Authorities, Consumer Commissions, and Civil
-                  Courts, our team focuses on protecting your investment and securing timely legal
-                  remedies.
+                  Domestic violence matters involve sensitive personal and family issues that
+                  require careful, confidential, and considered legal handling. At Practic Legal, we
+                  recognize that every case presents unique facts and circumstances. Our approach
+                  combines client-focused legal advice, thorough assessment of facts and evidence,
+                  and strategic litigation or negotiation to develop practical solutions tailored to
+                  each client's objectives, while providing strong advocacy before the competent
+                  courts.
                 </p>
               </div>
 
@@ -260,18 +268,18 @@ function MatrimonialMattersDomesticViolencePage() {
                 {[
                   {
                     no: "01",
-                    title: "Review & Legal Advisory",
-                    desc: "Detailed examination of Builder-Buyer Agreements, project documentation, and legal risks before initiating proceedings.",
+                    title: "Confidential Advice & Case Assessment",
+                    desc: "Providing confidential, client-focused legal advice and carefully examining the facts, available evidence, and individual circumstances to identify appropriate legal options and remedies.",
                   },
                   {
                     no: "02",
-                    title: "Litigation & Representation",
-                    desc: "Representation before RERA Authorities, Consumer Commissions, and Civil Courts for possession, refund, compensation, and contractual disputes.",
+                    title: "Strategic Litigation & Negotiation",
+                    desc: "Developing tailored legal strategies and pursuing appropriate litigation, negotiation, or settlement options based on the circumstances of each matter and the client's objectives.",
                   },
                   {
                     no: "03",
-                    title: "Negotiation & Settlement",
-                    desc: "Strategic settlement discussions and mediation aimed at resolving disputes efficiently while protecting your legal interests.",
+                    title: "Courtroom Advocacy & Practical Solutions",
+                    desc: "Providing effective representation before competent courts and pursuing practical legal remedies that safeguard clients' rights and address their specific legal and personal concerns.",
                   },
                 ].map((service) => (
                   <div key={service.no} className="flex gap-6">

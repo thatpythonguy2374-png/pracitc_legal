@@ -18,16 +18,20 @@ import { Route as PracticeCivilLitigationInsuranceClaimsRouteImport } from './ro
 import { Route as PracticeCivilLitigationLandlordTenantRouteImport } from './routes/practice/civil-litigation/landlord-tenant'
 import { Route as PracticeCivilLitigationMcdTribunalMattersRouteImport } from './routes/practice/civil-litigation/mcd-tribunal-matters'
 import { Route as PracticeCivilLitigationProbateOfWillRouteImport } from './routes/practice/civil-litigation/probate-of-will'
-import { Route as PracticeCivilLitigationProbateOfWill5RouteImport } from './routes/practice/civil-litigation/probate-of-will-5'
 import { Route as PracticeCivilLitigationPropertyDisputesRouteImport } from './routes/practice/civil-litigation/property-disputes'
 import { Route as PracticeCivilLitigationPublicNuisanceLitigationRouteImport } from './routes/practice/civil-litigation/public-nuisance-litigation'
 import { Route as PracticeCivilLitigationRecoverySuitsRouteImport } from './routes/practice/civil-litigation/recovery-suits'
 import { Route as PracticeCivilLitigationRwaElectionMattersRouteImport } from './routes/practice/civil-litigation/rwa-election-matters'
+import { Route as PracticeCivilLitigationSuccessionCertificateRouteImport } from './routes/practice/civil-litigation/succession-certificate'
 import { Route as PracticeCriminalMattersIndexRouteImport } from './routes/practice/criminal-matters/index'
 import { Route as PracticeCriminalMattersBailAndAnticipatoryRouteImport } from './routes/practice/criminal-matters/bail-and-anticipatory'
 import { Route as PracticeCriminalMattersCrimesAgainstWomenRouteImport } from './routes/practice/criminal-matters/crimes-against-women'
+import { Route as PracticeCriminalMattersCriminalAppealsRouteImport } from './routes/practice/criminal-matters/criminal-appeals'
 import { Route as PracticeCriminalMattersCyberCrimesLegalRepresentationRouteImport } from './routes/practice/criminal-matters/cyber-crimes-legal-representation'
+import { Route as PracticeCriminalMattersEconomicOffencesRouteImport } from './routes/practice/criminal-matters/economic-offences'
 import { Route as PracticeCriminalMattersOffencesAgainstTheHumanBodyRouteImport } from './routes/practice/criminal-matters/offences-against-the-human-body'
+import { Route as PracticeCriminalMattersOffencesAganistPropertyRouteImport } from './routes/practice/criminal-matters/offences-aganist-property'
+import { Route as PracticeCriminalMattersWhiteCollarCrimesRouteImport } from './routes/practice/criminal-matters/white-collar-crimes'
 import { Route as PracticeIntellectualPropertyRightsIndexRouteImport } from './routes/practice/intellectual-property-rights/index'
 import { Route as PracticeIntellectualPropertyRightsIntellectualPropertyRouteImport } from './routes/practice/intellectual-property-rights/intellectual-property'
 import { Route as PracticeIntellectualPropertyRightsPatentRegistrationRouteImport } from './routes/practice/intellectual-property-rights/patent-registration'
@@ -92,12 +96,6 @@ const PracticeCivilLitigationProbateOfWillRoute =
     path: '/practice/civil-litigation/probate-of-will',
     getParentRoute: () => rootRouteImport,
   } as any)
-const PracticeCivilLitigationProbateOfWill5Route =
-  PracticeCivilLitigationProbateOfWill5RouteImport.update({
-    id: '/practice/civil-litigation/probate-of-will-5',
-    path: '/practice/civil-litigation/probate-of-will-5',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const PracticeCivilLitigationPropertyDisputesRoute =
   PracticeCivilLitigationPropertyDisputesRouteImport.update({
     id: '/practice/civil-litigation/property-disputes',
@@ -122,6 +120,12 @@ const PracticeCivilLitigationRwaElectionMattersRoute =
     path: '/practice/civil-litigation/rwa-election-matters',
     getParentRoute: () => rootRouteImport,
   } as any)
+const PracticeCivilLitigationSuccessionCertificateRoute =
+  PracticeCivilLitigationSuccessionCertificateRouteImport.update({
+    id: '/practice/civil-litigation/succession-certificate',
+    path: '/practice/civil-litigation/succession-certificate',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PracticeCriminalMattersIndexRoute =
   PracticeCriminalMattersIndexRouteImport.update({
     id: '/practice/criminal-matters/',
@@ -140,16 +144,40 @@ const PracticeCriminalMattersCrimesAgainstWomenRoute =
     path: '/practice/criminal-matters/crimes-against-women',
     getParentRoute: () => rootRouteImport,
   } as any)
+const PracticeCriminalMattersCriminalAppealsRoute =
+  PracticeCriminalMattersCriminalAppealsRouteImport.update({
+    id: '/practice/criminal-matters/criminal-appeals',
+    path: '/practice/criminal-matters/criminal-appeals',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PracticeCriminalMattersCyberCrimesLegalRepresentationRoute =
   PracticeCriminalMattersCyberCrimesLegalRepresentationRouteImport.update({
     id: '/practice/criminal-matters/cyber-crimes-legal-representation',
     path: '/practice/criminal-matters/cyber-crimes-legal-representation',
     getParentRoute: () => rootRouteImport,
   } as any)
+const PracticeCriminalMattersEconomicOffencesRoute =
+  PracticeCriminalMattersEconomicOffencesRouteImport.update({
+    id: '/practice/criminal-matters/economic-offences',
+    path: '/practice/criminal-matters/economic-offences',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute =
   PracticeCriminalMattersOffencesAgainstTheHumanBodyRouteImport.update({
     id: '/practice/criminal-matters/offences-against-the-human-body',
     path: '/practice/criminal-matters/offences-against-the-human-body',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PracticeCriminalMattersOffencesAganistPropertyRoute =
+  PracticeCriminalMattersOffencesAganistPropertyRouteImport.update({
+    id: '/practice/criminal-matters/offences-aganist-property',
+    path: '/practice/criminal-matters/offences-aganist-property',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PracticeCriminalMattersWhiteCollarCrimesRoute =
+  PracticeCriminalMattersWhiteCollarCrimesRouteImport.update({
+    id: '/practice/criminal-matters/white-collar-crimes',
+    path: '/practice/criminal-matters/white-collar-crimes',
     getParentRoute: () => rootRouteImport,
   } as any)
 const PracticeIntellectualPropertyRightsIndexRoute =
@@ -233,15 +261,19 @@ export interface FileRoutesByFullPath {
   '/practice/civil-litigation/landlord-tenant': typeof PracticeCivilLitigationLandlordTenantRoute
   '/practice/civil-litigation/mcd-tribunal-matters': typeof PracticeCivilLitigationMcdTribunalMattersRoute
   '/practice/civil-litigation/probate-of-will': typeof PracticeCivilLitigationProbateOfWillRoute
-  '/practice/civil-litigation/probate-of-will-5': typeof PracticeCivilLitigationProbateOfWill5Route
   '/practice/civil-litigation/property-disputes': typeof PracticeCivilLitigationPropertyDisputesRoute
   '/practice/civil-litigation/public-nuisance-litigation': typeof PracticeCivilLitigationPublicNuisanceLitigationRoute
   '/practice/civil-litigation/recovery-suits': typeof PracticeCivilLitigationRecoverySuitsRoute
   '/practice/civil-litigation/rwa-election-matters': typeof PracticeCivilLitigationRwaElectionMattersRoute
+  '/practice/civil-litigation/succession-certificate': typeof PracticeCivilLitigationSuccessionCertificateRoute
   '/practice/criminal-matters/bail-and-anticipatory': typeof PracticeCriminalMattersBailAndAnticipatoryRoute
   '/practice/criminal-matters/crimes-against-women': typeof PracticeCriminalMattersCrimesAgainstWomenRoute
+  '/practice/criminal-matters/criminal-appeals': typeof PracticeCriminalMattersCriminalAppealsRoute
   '/practice/criminal-matters/cyber-crimes-legal-representation': typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRoute
+  '/practice/criminal-matters/economic-offences': typeof PracticeCriminalMattersEconomicOffencesRoute
   '/practice/criminal-matters/offences-against-the-human-body': typeof PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute
+  '/practice/criminal-matters/offences-aganist-property': typeof PracticeCriminalMattersOffencesAganistPropertyRoute
+  '/practice/criminal-matters/white-collar-crimes': typeof PracticeCriminalMattersWhiteCollarCrimesRoute
   '/practice/intellectual-property-rights/intellectual-property': typeof PracticeIntellectualPropertyRightsIntellectualPropertyRoute
   '/practice/intellectual-property-rights/patent-registration': typeof PracticeIntellectualPropertyRightsPatentRegistrationRoute
   '/practice/intellectual-property-rights/trademark-registration': typeof PracticeIntellectualPropertyRightsTrademarkRegistrationRoute
@@ -266,15 +298,19 @@ export interface FileRoutesByTo {
   '/practice/civil-litigation/landlord-tenant': typeof PracticeCivilLitigationLandlordTenantRoute
   '/practice/civil-litigation/mcd-tribunal-matters': typeof PracticeCivilLitigationMcdTribunalMattersRoute
   '/practice/civil-litigation/probate-of-will': typeof PracticeCivilLitigationProbateOfWillRoute
-  '/practice/civil-litigation/probate-of-will-5': typeof PracticeCivilLitigationProbateOfWill5Route
   '/practice/civil-litigation/property-disputes': typeof PracticeCivilLitigationPropertyDisputesRoute
   '/practice/civil-litigation/public-nuisance-litigation': typeof PracticeCivilLitigationPublicNuisanceLitigationRoute
   '/practice/civil-litigation/recovery-suits': typeof PracticeCivilLitigationRecoverySuitsRoute
   '/practice/civil-litigation/rwa-election-matters': typeof PracticeCivilLitigationRwaElectionMattersRoute
+  '/practice/civil-litigation/succession-certificate': typeof PracticeCivilLitigationSuccessionCertificateRoute
   '/practice/criminal-matters/bail-and-anticipatory': typeof PracticeCriminalMattersBailAndAnticipatoryRoute
   '/practice/criminal-matters/crimes-against-women': typeof PracticeCriminalMattersCrimesAgainstWomenRoute
+  '/practice/criminal-matters/criminal-appeals': typeof PracticeCriminalMattersCriminalAppealsRoute
   '/practice/criminal-matters/cyber-crimes-legal-representation': typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRoute
+  '/practice/criminal-matters/economic-offences': typeof PracticeCriminalMattersEconomicOffencesRoute
   '/practice/criminal-matters/offences-against-the-human-body': typeof PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute
+  '/practice/criminal-matters/offences-aganist-property': typeof PracticeCriminalMattersOffencesAganistPropertyRoute
+  '/practice/criminal-matters/white-collar-crimes': typeof PracticeCriminalMattersWhiteCollarCrimesRoute
   '/practice/intellectual-property-rights/intellectual-property': typeof PracticeIntellectualPropertyRightsIntellectualPropertyRoute
   '/practice/intellectual-property-rights/patent-registration': typeof PracticeIntellectualPropertyRightsPatentRegistrationRoute
   '/practice/intellectual-property-rights/trademark-registration': typeof PracticeIntellectualPropertyRightsTrademarkRegistrationRoute
@@ -300,15 +336,19 @@ export interface FileRoutesById {
   '/practice/civil-litigation/landlord-tenant': typeof PracticeCivilLitigationLandlordTenantRoute
   '/practice/civil-litigation/mcd-tribunal-matters': typeof PracticeCivilLitigationMcdTribunalMattersRoute
   '/practice/civil-litigation/probate-of-will': typeof PracticeCivilLitigationProbateOfWillRoute
-  '/practice/civil-litigation/probate-of-will-5': typeof PracticeCivilLitigationProbateOfWill5Route
   '/practice/civil-litigation/property-disputes': typeof PracticeCivilLitigationPropertyDisputesRoute
   '/practice/civil-litigation/public-nuisance-litigation': typeof PracticeCivilLitigationPublicNuisanceLitigationRoute
   '/practice/civil-litigation/recovery-suits': typeof PracticeCivilLitigationRecoverySuitsRoute
   '/practice/civil-litigation/rwa-election-matters': typeof PracticeCivilLitigationRwaElectionMattersRoute
+  '/practice/civil-litigation/succession-certificate': typeof PracticeCivilLitigationSuccessionCertificateRoute
   '/practice/criminal-matters/bail-and-anticipatory': typeof PracticeCriminalMattersBailAndAnticipatoryRoute
   '/practice/criminal-matters/crimes-against-women': typeof PracticeCriminalMattersCrimesAgainstWomenRoute
+  '/practice/criminal-matters/criminal-appeals': typeof PracticeCriminalMattersCriminalAppealsRoute
   '/practice/criminal-matters/cyber-crimes-legal-representation': typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRoute
+  '/practice/criminal-matters/economic-offences': typeof PracticeCriminalMattersEconomicOffencesRoute
   '/practice/criminal-matters/offences-against-the-human-body': typeof PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute
+  '/practice/criminal-matters/offences-aganist-property': typeof PracticeCriminalMattersOffencesAganistPropertyRoute
+  '/practice/criminal-matters/white-collar-crimes': typeof PracticeCriminalMattersWhiteCollarCrimesRoute
   '/practice/intellectual-property-rights/intellectual-property': typeof PracticeIntellectualPropertyRightsIntellectualPropertyRoute
   '/practice/intellectual-property-rights/patent-registration': typeof PracticeIntellectualPropertyRightsPatentRegistrationRoute
   '/practice/intellectual-property-rights/trademark-registration': typeof PracticeIntellectualPropertyRightsTrademarkRegistrationRoute
@@ -335,15 +375,19 @@ export interface FileRouteTypes {
     | '/practice/civil-litigation/landlord-tenant'
     | '/practice/civil-litigation/mcd-tribunal-matters'
     | '/practice/civil-litigation/probate-of-will'
-    | '/practice/civil-litigation/probate-of-will-5'
     | '/practice/civil-litigation/property-disputes'
     | '/practice/civil-litigation/public-nuisance-litigation'
     | '/practice/civil-litigation/recovery-suits'
     | '/practice/civil-litigation/rwa-election-matters'
+    | '/practice/civil-litigation/succession-certificate'
     | '/practice/criminal-matters/bail-and-anticipatory'
     | '/practice/criminal-matters/crimes-against-women'
+    | '/practice/criminal-matters/criminal-appeals'
     | '/practice/criminal-matters/cyber-crimes-legal-representation'
+    | '/practice/criminal-matters/economic-offences'
     | '/practice/criminal-matters/offences-against-the-human-body'
+    | '/practice/criminal-matters/offences-aganist-property'
+    | '/practice/criminal-matters/white-collar-crimes'
     | '/practice/intellectual-property-rights/intellectual-property'
     | '/practice/intellectual-property-rights/patent-registration'
     | '/practice/intellectual-property-rights/trademark-registration'
@@ -368,15 +412,19 @@ export interface FileRouteTypes {
     | '/practice/civil-litigation/landlord-tenant'
     | '/practice/civil-litigation/mcd-tribunal-matters'
     | '/practice/civil-litigation/probate-of-will'
-    | '/practice/civil-litigation/probate-of-will-5'
     | '/practice/civil-litigation/property-disputes'
     | '/practice/civil-litigation/public-nuisance-litigation'
     | '/practice/civil-litigation/recovery-suits'
     | '/practice/civil-litigation/rwa-election-matters'
+    | '/practice/civil-litigation/succession-certificate'
     | '/practice/criminal-matters/bail-and-anticipatory'
     | '/practice/criminal-matters/crimes-against-women'
+    | '/practice/criminal-matters/criminal-appeals'
     | '/practice/criminal-matters/cyber-crimes-legal-representation'
+    | '/practice/criminal-matters/economic-offences'
     | '/practice/criminal-matters/offences-against-the-human-body'
+    | '/practice/criminal-matters/offences-aganist-property'
+    | '/practice/criminal-matters/white-collar-crimes'
     | '/practice/intellectual-property-rights/intellectual-property'
     | '/practice/intellectual-property-rights/patent-registration'
     | '/practice/intellectual-property-rights/trademark-registration'
@@ -401,15 +449,19 @@ export interface FileRouteTypes {
     | '/practice/civil-litigation/landlord-tenant'
     | '/practice/civil-litigation/mcd-tribunal-matters'
     | '/practice/civil-litigation/probate-of-will'
-    | '/practice/civil-litigation/probate-of-will-5'
     | '/practice/civil-litigation/property-disputes'
     | '/practice/civil-litigation/public-nuisance-litigation'
     | '/practice/civil-litigation/recovery-suits'
     | '/practice/civil-litigation/rwa-election-matters'
+    | '/practice/civil-litigation/succession-certificate'
     | '/practice/criminal-matters/bail-and-anticipatory'
     | '/practice/criminal-matters/crimes-against-women'
+    | '/practice/criminal-matters/criminal-appeals'
     | '/practice/criminal-matters/cyber-crimes-legal-representation'
+    | '/practice/criminal-matters/economic-offences'
     | '/practice/criminal-matters/offences-against-the-human-body'
+    | '/practice/criminal-matters/offences-aganist-property'
+    | '/practice/criminal-matters/white-collar-crimes'
     | '/practice/intellectual-property-rights/intellectual-property'
     | '/practice/intellectual-property-rights/patent-registration'
     | '/practice/intellectual-property-rights/trademark-registration'
@@ -435,15 +487,19 @@ export interface RootRouteChildren {
   PracticeCivilLitigationLandlordTenantRoute: typeof PracticeCivilLitigationLandlordTenantRoute
   PracticeCivilLitigationMcdTribunalMattersRoute: typeof PracticeCivilLitigationMcdTribunalMattersRoute
   PracticeCivilLitigationProbateOfWillRoute: typeof PracticeCivilLitigationProbateOfWillRoute
-  PracticeCivilLitigationProbateOfWill5Route: typeof PracticeCivilLitigationProbateOfWill5Route
   PracticeCivilLitigationPropertyDisputesRoute: typeof PracticeCivilLitigationPropertyDisputesRoute
   PracticeCivilLitigationPublicNuisanceLitigationRoute: typeof PracticeCivilLitigationPublicNuisanceLitigationRoute
   PracticeCivilLitigationRecoverySuitsRoute: typeof PracticeCivilLitigationRecoverySuitsRoute
   PracticeCivilLitigationRwaElectionMattersRoute: typeof PracticeCivilLitigationRwaElectionMattersRoute
+  PracticeCivilLitigationSuccessionCertificateRoute: typeof PracticeCivilLitigationSuccessionCertificateRoute
   PracticeCriminalMattersBailAndAnticipatoryRoute: typeof PracticeCriminalMattersBailAndAnticipatoryRoute
   PracticeCriminalMattersCrimesAgainstWomenRoute: typeof PracticeCriminalMattersCrimesAgainstWomenRoute
+  PracticeCriminalMattersCriminalAppealsRoute: typeof PracticeCriminalMattersCriminalAppealsRoute
   PracticeCriminalMattersCyberCrimesLegalRepresentationRoute: typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRoute
+  PracticeCriminalMattersEconomicOffencesRoute: typeof PracticeCriminalMattersEconomicOffencesRoute
   PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute: typeof PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute
+  PracticeCriminalMattersOffencesAganistPropertyRoute: typeof PracticeCriminalMattersOffencesAganistPropertyRoute
+  PracticeCriminalMattersWhiteCollarCrimesRoute: typeof PracticeCriminalMattersWhiteCollarCrimesRoute
   PracticeIntellectualPropertyRightsIntellectualPropertyRoute: typeof PracticeIntellectualPropertyRightsIntellectualPropertyRoute
   PracticeIntellectualPropertyRightsPatentRegistrationRoute: typeof PracticeIntellectualPropertyRightsPatentRegistrationRoute
   PracticeIntellectualPropertyRightsTrademarkRegistrationRoute: typeof PracticeIntellectualPropertyRightsTrademarkRegistrationRoute
@@ -525,13 +581,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PracticeCivilLitigationProbateOfWillRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/practice/civil-litigation/probate-of-will-5': {
-      id: '/practice/civil-litigation/probate-of-will-5'
-      path: '/practice/civil-litigation/probate-of-will-5'
-      fullPath: '/practice/civil-litigation/probate-of-will-5'
-      preLoaderRoute: typeof PracticeCivilLitigationProbateOfWill5RouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/practice/civil-litigation/property-disputes': {
       id: '/practice/civil-litigation/property-disputes'
       path: '/practice/civil-litigation/property-disputes'
@@ -560,6 +609,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PracticeCivilLitigationRwaElectionMattersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/practice/civil-litigation/succession-certificate': {
+      id: '/practice/civil-litigation/succession-certificate'
+      path: '/practice/civil-litigation/succession-certificate'
+      fullPath: '/practice/civil-litigation/succession-certificate'
+      preLoaderRoute: typeof PracticeCivilLitigationSuccessionCertificateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/practice/criminal-matters/': {
       id: '/practice/criminal-matters/'
       path: '/practice/criminal-matters'
@@ -581,6 +637,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PracticeCriminalMattersCrimesAgainstWomenRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/practice/criminal-matters/criminal-appeals': {
+      id: '/practice/criminal-matters/criminal-appeals'
+      path: '/practice/criminal-matters/criminal-appeals'
+      fullPath: '/practice/criminal-matters/criminal-appeals'
+      preLoaderRoute: typeof PracticeCriminalMattersCriminalAppealsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/practice/criminal-matters/cyber-crimes-legal-representation': {
       id: '/practice/criminal-matters/cyber-crimes-legal-representation'
       path: '/practice/criminal-matters/cyber-crimes-legal-representation'
@@ -588,11 +651,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PracticeCriminalMattersCyberCrimesLegalRepresentationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/practice/criminal-matters/economic-offences': {
+      id: '/practice/criminal-matters/economic-offences'
+      path: '/practice/criminal-matters/economic-offences'
+      fullPath: '/practice/criminal-matters/economic-offences'
+      preLoaderRoute: typeof PracticeCriminalMattersEconomicOffencesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/practice/criminal-matters/offences-against-the-human-body': {
       id: '/practice/criminal-matters/offences-against-the-human-body'
       path: '/practice/criminal-matters/offences-against-the-human-body'
       fullPath: '/practice/criminal-matters/offences-against-the-human-body'
       preLoaderRoute: typeof PracticeCriminalMattersOffencesAgainstTheHumanBodyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/practice/criminal-matters/offences-aganist-property': {
+      id: '/practice/criminal-matters/offences-aganist-property'
+      path: '/practice/criminal-matters/offences-aganist-property'
+      fullPath: '/practice/criminal-matters/offences-aganist-property'
+      preLoaderRoute: typeof PracticeCriminalMattersOffencesAganistPropertyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/practice/criminal-matters/white-collar-crimes': {
+      id: '/practice/criminal-matters/white-collar-crimes'
+      path: '/practice/criminal-matters/white-collar-crimes'
+      fullPath: '/practice/criminal-matters/white-collar-crimes'
+      preLoaderRoute: typeof PracticeCriminalMattersWhiteCollarCrimesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/practice/intellectual-property-rights/': {
@@ -696,8 +780,6 @@ const rootRouteChildren: RootRouteChildren = {
     PracticeCivilLitigationMcdTribunalMattersRoute,
   PracticeCivilLitigationProbateOfWillRoute:
     PracticeCivilLitigationProbateOfWillRoute,
-  PracticeCivilLitigationProbateOfWill5Route:
-    PracticeCivilLitigationProbateOfWill5Route,
   PracticeCivilLitigationPropertyDisputesRoute:
     PracticeCivilLitigationPropertyDisputesRoute,
   PracticeCivilLitigationPublicNuisanceLitigationRoute:
@@ -706,14 +788,24 @@ const rootRouteChildren: RootRouteChildren = {
     PracticeCivilLitigationRecoverySuitsRoute,
   PracticeCivilLitigationRwaElectionMattersRoute:
     PracticeCivilLitigationRwaElectionMattersRoute,
+  PracticeCivilLitigationSuccessionCertificateRoute:
+    PracticeCivilLitigationSuccessionCertificateRoute,
   PracticeCriminalMattersBailAndAnticipatoryRoute:
     PracticeCriminalMattersBailAndAnticipatoryRoute,
   PracticeCriminalMattersCrimesAgainstWomenRoute:
     PracticeCriminalMattersCrimesAgainstWomenRoute,
+  PracticeCriminalMattersCriminalAppealsRoute:
+    PracticeCriminalMattersCriminalAppealsRoute,
   PracticeCriminalMattersCyberCrimesLegalRepresentationRoute:
     PracticeCriminalMattersCyberCrimesLegalRepresentationRoute,
+  PracticeCriminalMattersEconomicOffencesRoute:
+    PracticeCriminalMattersEconomicOffencesRoute,
   PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute:
     PracticeCriminalMattersOffencesAgainstTheHumanBodyRoute,
+  PracticeCriminalMattersOffencesAganistPropertyRoute:
+    PracticeCriminalMattersOffencesAganistPropertyRoute,
+  PracticeCriminalMattersWhiteCollarCrimesRoute:
+    PracticeCriminalMattersWhiteCollarCrimesRoute,
   PracticeIntellectualPropertyRightsIntellectualPropertyRoute:
     PracticeIntellectualPropertyRightsIntellectualPropertyRoute,
   PracticeIntellectualPropertyRightsPatentRegistrationRoute:

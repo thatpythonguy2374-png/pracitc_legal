@@ -69,9 +69,9 @@ function RouteComponent() {
             <div className="w-20 h-[2px] bg-orange-400 my-6" />
 
             <p className="text-lg md:text-xl text-white/80 leading-relaxed">
-              Criminal defence, bail and anticipatory bail applications, and representation in
-              criminal proceedings before trial courts, appellate courts, and other competent
-              authorities.
+              An arrest or an apprehension of arrest can have serious personal, professional and
+              legal consequences. The law provides remedies in form of bail and anticipatory bail to
+              safeguard an individual’s liberty while ensuring fair administration of justice.
             </p>
           </div>
         </div>
@@ -84,7 +84,7 @@ function RouteComponent() {
               <Reveal>
                 <p className="eyebrow">Overview</p>
 
-                <h2 className="section-title mt-3 text-3xl md:text-4xl">Child Custody</h2>
+                <h2 className="section-title mt-3 text-3xl md:text-4xl">Bail & Anticipatory</h2>
 
                 <span className="mt-4 block h-1 w-16 bg-primary" />
               </Reveal>
@@ -94,17 +94,10 @@ function RouteComponent() {
             <div className="space-y-8 text-base leading-relaxed text-muted-foreground lg:col-span-8">
               <Reveal>
                 <p className="text-[19px]">
-                  Child custody refers to the legal rights and responsibilities relating to the
-                  care, upbringing, and welfare of a minor child. Custody disputes commonly arise
-                  during divorce, judicial separation, annulment or between parents living
-                  separately.
-                </p>
-                <p className="text-[19px] pt-4">
-                  Child custody disputes are among the most sensitive aspects of matrimonial
-                  litigation. While parents may have divergent views regarding the upbringing of a
-                  child, the paramount consideration for every court is the welfare and best
-                  interests of the child. Every case is decided on its own facts, with the child’s
-                  welfare being the overriding consideration.
+                  An arrest or an apprehension of arrest can have serious personal, professional and
+                  legal consequences. The law provides remedies in form of bail and anticipatory
+                  bail to safeguard an individual’s liberty while ensuring fair administration of
+                  justice.
                 </p>
               </Reveal>
             </div>
@@ -114,98 +107,99 @@ function RouteComponent() {
       <section className="bg-secondary/40 py-20">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
+            <h2 className="section-title mt-3 text-3xl md:text-4xl"> Legal Assistance </h2>
+            <span className="mt-4 block h-1 w-16 bg-primary" />
+
+            <div className="mt-12 grid gap-6 md:grid-cols-4">
+              <div className="rounded-sm border border-border bg-card p-8 md:col-span-2 transition-all hover:-translate-y-1 hover:border-primary">
+                <h3 className="font-display text-xl font-bold"> Representation for the Accused</h3>
+                <p className="text-muted-foreground pt-5">
+                  We assist accused persons at every stage by providing:
+                </p>
+                <ul className="mt-6 space-y-3 text-muted-foreground">
+                  <li>• Immediate legal consultation</li>
+                  <li>• Case evaluation before arrest </li>
+                  <li>• Preparation and filing of bail applications</li>
+                  <li>• Representation during bail hearings </li>
+                  <li>• Legal assistance during investigation </li>
+                  <li>• Advice regarding compliance with bail conditions </li>
+                  <li>• Representation before appellate courts where required </li>
+                </ul>
+              </div>
+              <div className="rounded-sm border border-border bg-card p-8 md:col-span-2 transition-all hover:-translate-y-1 hover:border-primary">
+                <h3 className="font-display text-xl font-bold">Representation for Complainants</h3>
+                <p className="text-muted-foreground pt-5">
+                  We also represent complainants in bail proceedings by:
+                </p>
+                <ul className="mt-6 space-y-3 text-muted-foreground">
+                  <li>• Opposing anticipatory and regular bail applications </li>
+                  <li>• Presenting objections before the court</li>
+                  <li>• Protecting the interests of victims</li>
+                  <li>• Seeking appropriate conditions on grant of bail</li>
+                  <li>• Filing applications for cancellation of bail where legally justified</li>
+                </ul>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+      <section className="bg-secondary/40 py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal>
             <p className="eyebrow">Protection</p>
             <h2 className="section-title mt-3 text-3xl md:text-4xl">Matters We Handle </h2>
             <span className="mt-4 block h-1 w-16 bg-primary" />
 
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Physical Custody</h3>
+                <h3 className="font-display text-xl font-bold">Bail</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  The child resides primarily with one parent, while the other parent may be granted
-                  visitation or access rights.
+                  Bail is a legal mechanism through which a person accused of an offence is released
+                  from custody upon such conditions as may be imposed by the court. The object of
+                  bail is to balance personal liberty of the accused with the interests of justice
+                  and the need to ensure accused’s presence during investigation and trial. Every
+                  bail application is decided on its own facts, taking into account nature of the
+                  offence, evidence available, stage of investigation and other relevant
+                  circumstances.
                 </p>
               </div>
 
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Joint Custody</h3>
+                <h3 className="font-display text-xl font-bold">Anticipatory Bail</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Both parents share the responsibility of raising the child, with custody being
-                  exercised according to a schedule determined by the court or mutually agreed
-                  between the parties.
+                  Anticipatory Bail is a legal remedy available to a person who has reasonable
+                  apprehension to believe that they he may be arrested for a non-bailable offence.
+                  If granted, anticipatory bail protects the person from being taken into custody,
+                  subject to such conditions as the court may impose. Timely legal advice is
+                  crucial, as an application for anticipatory bail should ordinarily be made before
+                  arrest.
                 </p>
               </div>
 
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Legal Custody</h3>
+                <h3 className="font-display text-xl font-bold">Regular Bail</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  The parent or parents are given the authority to make important decisions
-                  concerning the child’s education, healthcare, upbringing and welfare.
+                  A person who has already been arrested may apply for Regular Bail before the
+                  competent court. The court considers various factors while deciding the
+                  application.
                 </p>
               </div>
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Visitation Rights</h3>
+                <h3 className="font-display text-xl font-bold">Interim Bail</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Even where one parent is granted custody, the other parent may be entitled to
-                  reasonable visitation or interaction with the child, unless restricted by the
-                  court in exceptional circumstances.
+                  In appropriate circumstances, courts may grant Interim Bail as a temporary measure
+                  until the final disposal of bail application or for a limited period based on the
+                  facts and circumstances of the case.
                 </p>
               </div>
               <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Guardianship Matters</h3>
+                <h3 className="font-display text-xl font-bold">Cancellation of Bail</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Apart from custody disputes between parents, we also advise and represent clients
-                  in guardianship proceedings relating to minors where appointment or declaration of
-                  a legal guardian becomes necessary under applicable law.
+                  Where circumstances warrant, a victim or complainant may prefer an application
+                  seeking cancellation of bail granted to an accused person. Courts may consider
+                  cancellation where there is misuse of liberty, violation of bail conditions,
+                  intimidation of witnesses or other legally recognized grounds.
                 </p>
-              </div>
-              <div className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">
-                  Mediation and Amicable Resolution
-                </h3>
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Where appropriate, we encourage parents to resolve custody and parenting issues
-                  through negotiation or mediation. Amicable arrangements often reduce conflict and
-                  help create a stable environment for the child. However, where settlement is not
-                  possible, we provide diligent preparation and effective representation before the
-                  Family Court to protect our clients’ rights and the child’s welfare.
-                </p>
-              </div>
-
-              <div className="rounded-sm border border-border bg-card p-8 md:col-span-2 transition-all hover:-translate-y-1 hover:border-primary">
-                <h3 className="font-display text-xl font-bold">Factors considered by Courts</h3>
-
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                  While deciding custody matters, courts generally consider:
-                </p>
-
-                <ul className="mt-6 space-y-3 text-muted-foreground">
-                  <li>• The welfare and best interests of the child</li>
-                  <li>• Age and needs of the child</li>
-                  <li>• Emotional and psychological well-being</li>
-                  <li>• Educational requirements</li>
-                  <li>• Financial stability of the parents</li>
-                  <li>• Character and conduct of the parties</li>
-                  <li>• Existing relationship between the child and each parent</li>
-                  <li>• Any other relevant circumstances affecting the child’s welfare</li>
-                  <li>
-                    • Wishes of the child, where appropriate considering the child’s age and
-                    maturity
-                  </li>
-                </ul>
-              </div>
-              <div className="flex flex-col justify-center rounded-sm bg-primary p-8 text-center text-primary-foreground">
-                <p className="text-lg italic">
-                  "Protecting your investment through strategic legal advocacy."
-                </p>
-
-                <Link
-                  to="/"
-                  hash="contact"
-                  className="mt-8 inline-flex items-center justify-center rounded-sm border border-primary-foreground px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-colors hover:bg-primary-foreground hover:text-primary"
-                >
-                  Consult an Expert
-                </Link>
               </div>
             </div>
           </Reveal>

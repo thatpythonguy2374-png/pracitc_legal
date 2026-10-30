@@ -2,9 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import Reveal from "@/components/Reveal";
-import { Stagger, StaggerItem } from "@/components/Stagger";
 import DisclaimerSection from "@/components/Disclaimer";
-import PropertySection from "@/components/PropertyDisputesSection";
 
 export const Route = createFileRoute("/practice/civil-litigation/property-disputes")({
   head: () => ({
@@ -32,7 +30,6 @@ function CivilLitigationPropertyDisputesPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
-
       <section className="relative min-h-screen flex items-center overflow-hidden text-white">
         {/* Background Image */}
         <div
@@ -76,7 +73,6 @@ function CivilLitigationPropertyDisputesPage() {
           </div>
         </div>
       </section>
-
       <div className="bg-secondary/40">
         <section className=" mx-auto max-w-7xl px-6 py-20 ">
           <div className="grid gap-12 lg:grid-cols-12 lg:items-start ">
@@ -96,44 +92,152 @@ function CivilLitigationPropertyDisputesPage() {
               <Reveal>
                 <p className="text-[19px]">
                   Property disputes can be complex, emotionally challenging and financially
-                  significant. Whether arising from family disagreements, ownership conflicts,
+                  straining. Whether arising from family disagreements, ownership conflicts,
                   unlawful occupation or competing claims over title, timely legal intervention is
-                  essential to safeguard your rights and interests.
+                  essential to safeguard one’s rights and interests.
                 </p>
               </Reveal>
             </div>
           </div>
         </section>
       </div>
+      <section className="bg-secondary/40 py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal>
+            <h2 className="section-title mt-3 text-3xl md:text-4xl"> Legal Assistance </h2>
+            <span className="mt-4 block h-1 w-16 bg-primary" />
 
-      <PropertySection />
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="rounded-sm border border-border bg-card p-10 lg:p-16">
-          <p className="eyebrow">Next step</p>
-          <h2 className="section-title mt-3 text-3xl md:text-4xl">Discuss Your Matter</h2>
-          <span className="mt-4 block h-1 w-16 bg-primary" />
-          <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            Share the facts of your case and a member of our team will respond within one business
-            day with an honest view of your options.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              to="/"
-              hash="contact"
-              className="inline-flex items-center rounded-sm bg-primary px-7 py-3 text-sm font-semibold uppercase tracking-widest text-primary-foreground transition-transform hover:-translate-y-0.5"
-            >
-              Get In Touch
-            </Link>
-            <Link
-              to="/practice/civil-litigation"
-              className="inline-flex items-center rounded-sm border border-border px-7 py-3 text-sm font-semibold uppercase tracking-widest transition-colors hover:border-primary hover:text-primary"
-            >
-              Back to Civil Litigation
-            </Link>
-          </div>
+            <div className="mt-12 grid gap-6 md:grid-cols-4">
+              <div className="rounded-sm border border-border bg-card p-8 md:col-span-2 transition-all hover:-translate-y-1 hover:border-primary">
+                <h3 className="font-display text-xl font-bold"> Partition Suits</h3>
+                <p className="text-muted-foreground pt-5">
+                  Disputes among co-owners, family members or legal heirs often arise regarding the
+                  division of jointly owned property. A Partition Suit enables a co-owner/co-sharer
+                  to seek effective legal division of property and obtain their rightful share, the
+                  remedies available to a person may include
+                </p>
+                <ul className="mt-6 space-y-3 text-muted-foreground">
+                  <li>• Division of ancestral and jointly owned properties</li>
+                  <li>• Claims involving inherited property </li>
+                  <li>• Determination &amp; Declaration of ownership shares</li>
+                  <li>• Injunctions to prevent unauthorized sale or transfer </li>
+                </ul>
+              </div>
+              <div className="rounded-sm border border-border bg-card p-8 md:col-span-2 transition-all hover:-translate-y-1 hover:border-primary">
+                <h3 className="font-display text-xl font-bold">
+                  Trespassing and Illegal Occupation
+                </h3>
+                <p className="text-muted-foreground pt-5">
+                  Unauthorized entry, occupation or interference with lawful possession of property
+                  rights can lead to significant legal complications. Property owners have the right
+                  to seek legal remedies against trespassers and unlawful occupants, which may
+                  include
+                </p>
+                <ul className="mt-6 space-y-3 text-muted-foreground">
+                  <li>• Civil actions against trespassers </li>
+                  <li>• Injunction proceedings</li>
+                  <li>• Protection of possession and ownership rights</li>
+                  <li>• Removal of unauthorized occupants</li>
+                  <li>• Legal notices and enforcement actions</li>
+                </ul>
+              </div>
+              <div className="rounded-sm border border-border bg-card p-8 md:col-span-2 transition-all hover:-translate-y-1 hover:border-primary">
+                <h3 className="font-display text-xl font-bold">Title Disputes</h3>
+                <p className="text-muted-foreground pt-5">
+                  A title dispute arises when ownership of a property is challenged or when multiple
+                  parties simultaneously claim rights over the same property. Such disputes often
+                  involve complex questions relating to rival ownership documents, inheritance,
+                  transfers and registrations. The remedies available to a person may include
+                </p>
+                <ul className="mt-6 space-y-3 text-muted-foreground">
+                  <li>• Declaration of ownership rights </li>
+                  <li>• Rectification of property records</li>
+                  <li>• Thorough legal research on title of property</li>
+                  <li>• Disputes concerning inheritance and succession</li>
+                  <li>• Verification and examination of title documents</li>
+                  <li>
+                    • Challenges to sale deeds, gift deeds, relinquishment deeds and other transfer
+                    documents
+                  </li>
+                </ul>
+              </div>
+              <div className="rounded-sm border border-border bg-card p-8 md:col-span-2 transition-all hover:-translate-y-1 hover:border-primary">
+                <h3 className="font-display text-xl font-bold">Recovery of Possession</h3>
+                <p className="text-muted-foreground pt-5">
+                  When a person is unlawfully dispossessed of property or when possession is
+                  wrongfully withheld, legal proceedings may be initiated to recover possession
+                  through the courts and for such purpose a person may seek
+                </p>
+                <ul className="mt-6 space-y-3 text-muted-foreground">
+                  <li>• Suits for recovery of possession </li>
+                  <li>• Eviction-related proceedings</li>
+                  <li>• Restoration of lawful possession</li>
+                  <li>• Enforcement of property rights</li>
+                  <li>• Execution of court orders and decrees</li>
+                </ul>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
+      <div className="bg-secondary/40">
+        <section className="mx-auto max-w-7xl px-6 py-20">
+          <Reveal>
+            <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+              <div>
+                <p className="eyebrow">Strategic Legal Guidance</p>
+
+                <h2 className="section-title mt-3 text-3xl md:text-4xl">Our Approach</h2>
+
+                <span className="mt-4 block h-1 w-16 bg-primary" />
+
+                <p className="mt-8 leading-relaxed text-muted-foreground">
+                  Property disputes often involve complex legal and practical considerations. At
+                  Practic Legal, we carefully evaluate the facts, review ownership documents, assess
+                  litigation risks, and develop legal strategies tailored to each client's
+                  objectives. Our focus is on protecting ownership and possession rights, minimizing
+                  legal and financial risks, pursuing efficient dispute resolution, and providing
+                  clear legal guidance with effective representation before competent courts and
+                  relevant forums.
+                </p>
+              </div>
+
+              <div className="space-y-10">
+                {[
+                  {
+                    no: "01",
+                    title: "Ownership & Possession Protection",
+                    desc: "Careful examination of ownership documents, property rights, and possession claims to safeguard clients' legal interests and minimize potential legal and financial risks.",
+                  },
+                  {
+                    no: "02",
+                    title: "Strategic Dispute Resolution",
+                    desc: "Developing tailored legal strategies to resolve property disputes efficiently through negotiation, settlement, or litigation, based on the facts and circumstances of each case.",
+                  },
+                  {
+                    no: "03",
+                    title: "Legal Advisory & Court Representation",
+                    desc: "Providing clear, practical legal guidance and strong representation before competent courts and relevant forums to protect property interests and pursue appropriate legal remedies.",
+                  },
+                ].map((service) => (
+                  <div key={service.no} className="flex gap-6">
+                    <span className="text-3xl font-bold text-primary">{service.no}</span>
+
+                    <div>
+                      <h3 className="font-display text-xl font-bold">{service.title}</h3>
+
+                      <p className="mt-2 leading-relaxed text-muted-foreground">{service.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </section>
+      </div>
+
+      <DisclaimerSection />
       <SiteFooter />
     </div>
   );

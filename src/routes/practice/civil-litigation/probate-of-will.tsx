@@ -70,7 +70,9 @@ function CivilLitigationProbateOfWillPage() {
             <div className="w-20 h-[2px] bg-orange-400 my-6" />
 
             <p className="text-lg md:text-xl text-white/80 leading-relaxed">
-              Protecting heirs against disputes, delays and challenges in probate proceedings.
+              The most convenient way of for a person to distribute his/her owned assets and
+              properties is by way of execution of a Will, which reflects the final wishes of a
+              person regarding distribution of his assets after his death.
             </p>
           </div>
         </div>
@@ -97,8 +99,9 @@ function CivilLitigationProbateOfWillPage() {
                   Probate is a judicial certification granted by a competent court confirming the
                   validity and authenticity of a Will. It authorizes the executor named in the Will
                   to administer the estate and distribute the assets in accordance with the wishes
-                  of the deceased. A probate order serves as conclusive proof of the executor's
-                  authority and facilitates the transfer and management of the deceased's assets.
+                  of the deceased. A probate order serves as conclusive proof of the executor&#39;s
+                  authority and facilitates the transfer and management of the deceased&#39;s
+                  assets.
                 </p>
               </Reveal>
             </div>
@@ -124,11 +127,10 @@ function CivilLitigationProbateOfWillPage() {
               <Reveal>
                 <p className="text-[19px]">
                   The requirement of probate depends upon the nature of property, the location of
-                  the assets and the applicable legal provisions. Probate is commonly sought where:
+                  the assets and the applicable legal provisions. Probate is commonly sought where
                 </p>
                 <Stagger className="grid gap-x-10 gap-y-4 md:grid-cols-2 pt-6 ps-8">
                   {[
-                    "The deceased had executed and left a valid Will",
                     "The executor seeks legal authority to administer the estate",
                     "Financial institutions or authorities require probate before releasing assets",
                     "The Will is likely to be contested by legal heirs or interested parties",
@@ -170,11 +172,11 @@ function CivilLitigationProbateOfWillPage() {
                 </p>
                 <Stagger className="grid gap-x-10 gap-y-4 md:grid-cols-2 pt-6 ps-8">
                   {[
-                    " Lack of testamentary capacity",
-                    "Undue influence or coercion",
                     "Fraud or forgery",
-                    "Improper execution of the Will",
-                    "Suspicious circumstances surrounding its preparation",
+                    "Undue influence or coercion",
+                    " Lack of testamentary capacity",
+                    " Improper execution of the Will",
+                    " Suspicious circumstances surrounding its preparation",
                   ].map((item) => (
                     <StaggerItem key={item}>
                       <div className="flex items-start gap-3">

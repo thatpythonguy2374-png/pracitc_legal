@@ -96,19 +96,19 @@ function CivilLitigationRecoverySuits() {
                 <p className="text-[19px] text-justify">
                   A Recovery Suit is a civil proceeding filed before the competent court seeking
                   recovery of money that is legally due and payable. Such claims inter alia may
-                  arise from:
+                  arise from
                 </p>
               </Reveal>
               <div className="space-y-8 text-base leading-relaxed text-muted-foreground lg:col-span-8">
                 <Reveal>
                   <Stagger className="grid gap-x-10 gap-y-4 md:grid-cols-2 pt-6 ps-8">
                     {[
-                      "Unpaid invoices and business transactions",
-                      "Friendly loans and personal borrowings",
-                      "Breach of contractual payment obligations",
+                      "Loan and credit disputes",
                       "Supply of goods and services",
                       "Outstanding professional fees",
-                      "Loan and credit disputes",
+                      "Friendly loans and personal borrowings",
+                      "Unpaid invoices and business transactions",
+                      "Breach of contractual payment obligations",
                       "Cheque dishonour and related commercial transactions",
                     ].map((item) => (
                       <StaggerItem key={item}>
@@ -149,7 +149,7 @@ function CivilLitigationRecoverySuits() {
                   {[
                     " A debtor fails or refuses to make payment despite repeated demands",
                     "Subject to the fact that the claim is within the prescribed period of limitation as per applicable law",
-                    "The amount due is supported by documents, agreements, invoices, acknowledgments, or other form of evidence (not limited solely to documentary form)",
+                    "The amount due is supported by documents, agreements, invoices, acknowledgments or other form of evidence (not limited solely to documentary form)",
                   ].map((item) => (
                     <StaggerItem key={item}>
                       <div className="flex items-start gap-3">
