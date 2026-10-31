@@ -6,9 +6,17 @@ export const Route = createFileRoute("/practice/matrimonial-matters/")({
   head: () => ({
     meta: [
       { title: "Matrimonial Matters — Practic Legal" },
-      { name: "description", content: "Sensitive, discreet counsel on divorce, maintenance, custody, and protection from domestic violence." },
+      {
+        name: "description",
+        content:
+          "Sensitive, discreet counsel on divorce, maintenance, custody, and protection from domestic violence.",
+      },
       { property: "og:title", content: "Matrimonial Matters — Practic Legal" },
-      { property: "og:description", content: "Sensitive, discreet counsel on divorce, maintenance, custody, and protection from domestic violence." },
+      {
+        property: "og:description",
+        content:
+          "Sensitive, discreet counsel on divorce, maintenance, custody, and protection from domestic violence.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -17,10 +25,42 @@ export const Route = createFileRoute("/practice/matrimonial-matters/")({
 });
 
 const topics = [
-  { title: "Divorce & Mutual Consent", summary: "Contested and mutual-consent divorce petitions handled with discretion and a focus on settlement.", href: "/practice/matrimonial-matters/divorce-and-mutual-consent" },
-  { title: "Maintenance & Alimony", summary: "Claims and defences for interim maintenance, permanent alimony, and enforcement of maintenance orders.", href: "/practice/matrimonial-matters/maintenance-and-alimony" },
-  { title: "Child Custody", summary: "Custody, guardianship, and visitation matters guided always by the welfare of the child.", href: "/practice/matrimonial-matters/child-custody" },
-  { title: "Domestic Violence", summary: "Protection, residence, and monetary relief under the Protection of Women from Domestic Violence Act.", href: "/practice/matrimonial-matters/domestic-violence" }
+  {
+    title: "Divorce & Mutual Consent",
+    summary:
+      "Contested and mutual-consent divorce petitions handled with discretion and a focus on settlement.",
+    href: "/practice/matrimonial-matters/divorce-and-mutual-consent",
+  },
+  {
+    title: "Maintenance & Alimony",
+    summary:
+      "Claims and defences for interim maintenance, permanent alimony, and enforcement of maintenance orders.",
+    href: "/practice/matrimonial-matters/maintenance-and-alimony",
+  },
+  {
+    title: "Child Custody",
+    summary:
+      "Custody, guardianship, and visitation matters guided always by the welfare of the child.",
+    href: "/practice/matrimonial-matters/child-custody",
+  },
+  {
+    title: "Domestic Violence",
+    summary:
+      "Protection, residence, and monetary relief under the Protection of Women from Domestic Violence Act.",
+    href: "/practice/matrimonial-matters/domestic-violence",
+  },
+  {
+    title: "Nullity Of Marriage",
+    summary:
+      "Nullity of marriage, or annulment, is a legal declaration by a court stating that a marriage never legally existed.",
+    href: "/practice/matrimonial-matters/nullity-of-marriage",
+  },
+  {
+    title: "Restitution Of Conjugal Rights",
+    summary:
+      "Restitution of conjugal rights is a legal remedy that orders a deserting spouse to return to the matrimonial home and resume cohabitation",
+    href: "/practice/matrimonial-matters/restitution-of-conjugal-rights",
+  },
 ];
 
 function MatrimonialMattersPage() {
@@ -41,7 +81,8 @@ function MatrimonialMattersPage() {
             Matrimonial Matters
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/75">
-            Sensitive, discreet counsel on divorce, maintenance, custody, and protection from domestic violence.
+            Sensitive, discreet counsel on divorce, maintenance, custody, and protection from
+            domestic violence.
           </p>
         </div>
       </section>

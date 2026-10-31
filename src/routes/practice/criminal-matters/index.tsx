@@ -31,23 +31,48 @@ const topics = [
       "Criminal defence, bail and anticipatory bail applications, and representation in criminal proceedings before trial courts, appellate courts, and other competent authorities.",
     href: "/practice/criminal-matters/bail-and-anticipatory",
   },
+
   {
-    title: "Maintenance & Alimony",
+    title: "Crimes Against Women",
     summary:
-      "Claims and defences for interim maintenance, permanent alimony, and enforcement of maintenance orders.",
-    href: "/practice/matrimonial-matters/maintenance-and-alimony",
+      "Legal assistance in crimes against women, including domestic violence, harassment, cruelty, dowry-related offences, and representation before trial and appellate courts.",
+    href: "/practice/matrimonial-matters/crimes-against-women",
   },
   {
-    title: "Child Custody",
+    title: "Cyber Crimes",
     summary:
-      "Custody, guardianship, and visitation matters guided always by the welfare of the child.",
-    href: "/practice/matrimonial-matters/child-custody",
+      "Legal assistance and representation in cyber crime matters, including online offences, cyber fraud, hacking, identity theft, and other technology-related crimes before competent authorities and courts.",
+    href: "/practice/matrimonial-matters/cyber-crimes-legal-representation",
   },
   {
-    title: "Domestic Violence",
+    title: "Criminal Appeals",
     summary:
-      "Protection, residence, and monetary relief under the Protection of Women from Domestic Violence Act.",
-    href: "/practice/matrimonial-matters/domestic-violence",
+      "A judgment of a criminal court does not entail end of legal proceedings rather the law provides various appellate and revisional remedies to challenge convictions.",
+    href: "/practice/matrimonial-matters/criminal-appeals",
+  },
+  {
+    title: "Economic Offences",
+    summary:
+      "Economic offences involve financial misconduct, fraud, misappropriation of funds and violations of laws governing commercial and financial transactions.",
+    href: "/practice/matrimonial-matters/economic-offences",
+  },
+  {
+    title: "Offences Aganist The Human Body",
+    summary:
+      "Offences against the human body are among the most serious offences under criminal law, as they directly affect an individual’s life, physical integrity, personal liberty and dignity. ",
+    href: "/practice/matrimonial-matters/offences-against-the-human-body",
+  },
+  {
+    title: "Offences Aganist Property",
+    summary:
+      "Property-related offences can have significant financial and legal consequences for individuals, businesses and institutions.",
+    href: "/practice/matrimonial-matters/offences-aganist-property",
+  },
+  {
+    title: "White Collar Crimes",
+    summary:
+      "White Collar Crimes are non-violent offences typically involving financial fraud, breach of trust, forgery, corporate misconduct and economic deception.",
+    href: "/practice/matrimonial-matters/white-collar-crimes",
   },
 ];
 
