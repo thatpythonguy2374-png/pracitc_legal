@@ -25,7 +25,7 @@ export default function DisclaimerModal() {
         <>
           {/* BACKDROP */}
           <motion.div
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -33,17 +33,17 @@ export default function DisclaimerModal() {
 
           {/* MODAL */}
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center px-4"
+            className="fixed inset-0 z-[100] flex items-center justify-center px-3 py-4 sm:px-4"
             initial={{ opacity: 0, scale: 0.95, y: 40 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 40 }}
             transition={{ duration: 0.4 }}
           >
             {/* 👇 THIS BOX WAS MISSING */}
-            <div className="max-w-xl w-full bg-[var(--ink)] border border-white/10 p-8 shadow-xl rounded-md">
-              <h2 className="text-xl font-bold mb-4 text-white">Disclaimer</h2>
+            <div className="flex max-h-[90svh] w-full max-w-xl flex-col bg-[var(--ink)] border border-white/10 p-5 shadow-xl rounded-md sm:p-8">
+              <h2 className="text-lg sm:text-xl font-bold mb-4 text-white">Disclaimer</h2>
 
-              <div className="text-white/70 text-sm leading-relaxed space-y-4 max-h-[60vh] overflow-y-auto pr-2">
+              <div className="min-h-0 flex-1 text-white/70 text-sm leading-relaxed space-y-4 overflow-y-auto overscroll-contain pr-2">
                 <p>
                   In accordance with the rules and regulations prescribed by the Bar Council of
                   India, advocates and law firms are prohibited from soliciting work or advertising
@@ -99,10 +99,10 @@ export default function DisclaimerModal() {
                 </p>
               </div>
 
-              <div className="mt-6 flex justify-end">
+              <div className="mt-5 flex shrink-0 justify-end sm:mt-6">
                 <button
                   onClick={handleAccept}
-                  className="bg-primary text-primary-foreground px-5 py-2 text-sm hover:opacity-90 transition"
+                  className="w-full bg-primary text-primary-foreground px-5 py-3 text-sm hover:opacity-90 transition sm:w-auto sm:py-2"
                 >
                   I Agree
                 </button>

@@ -45,7 +45,7 @@ function Home() {
 
 function Hero() {
   return (
-    <section className="relative min-h-[92vh] overflow-hidden bg-[var(--ink)] text-[var(--ink-foreground)]">
+    <section className="relative min-h-[85svh] overflow-hidden bg-[var(--ink)] text-[var(--ink-foreground)] md:min-h-[92vh]">
       {/* Background */}
       <div
         className="absolute inset-0 opacity-30"
@@ -57,7 +57,7 @@ function Hero() {
         }}
       />
 
-      <div className="relative mx-auto flex min-h-[92vh] max-w-7xl items-center px-6">
+      <div className="relative mx-auto flex min-h-[85svh] max-w-7xl items-center px-6 py-20 md:min-h-[92vh]">
         <div className="max-w-3xl">
           <div className="flex items-center gap-4">
             <span className="h-px w-14 bg-primary" />
@@ -65,7 +65,7 @@ function Hero() {
             <p className="eyebrow text-primary">Established Expertise</p>
           </div>
 
-          <h1 className="mt-8 font-display text-2xl font-extrabold uppercase leading-[1.02] tracking-tight md:text-7xl xl:text-5xl">
+          <h1 className="mt-8 font-display text-2xl font-extrabold uppercase leading-[1.02] tracking-tight min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             Practical Solutions.
             <br />
             Strategic Advocacy.
@@ -73,24 +73,24 @@ function Hero() {
             <span className="text-primary">Real Results.</span>
           </h1>
 
-          <p className="mt-10 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/75 sm:text-lg md:mt-10 md:text-xl">
             Specializing in Civil Litigation, Consumer Rights, Corporate Advisory, and Real Estate
             Law while delivering strategic legal solutions with integrity, precision, and commercial
             insight.
           </p>
 
-          <div className="mt-14 flex flex-wrap gap-5">
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:gap-5 md:mt-14">
             <Link
               to="/"
               hash="contact"
-              className="inline-flex items-center rounded-sm bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary-foreground transition-all duration-300 hover:-translate-y-1"
+              className="inline-flex items-center justify-center rounded-sm bg-primary px-6 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground transition-all duration-300 hover:-translate-y-1 sm:px-8 sm:text-sm"
             >
               Consult Our Experts
             </Link>
 
             <a
               href="#practice"
-              className="inline-flex items-center rounded-sm border border-white/20 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:border-primary hover:bg-white/5"
+              className="inline-flex items-center justify-center rounded-sm border border-white/20 px-6 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:border-primary hover:bg-white/5 sm:px-8 sm:text-sm"
             >
               View Practice Areas
             </a>
@@ -105,14 +105,14 @@ function Hero() {
 
 function PracticeAreas() {
   return (
-    <section id="practice" className="bg-background py-28">
+    <section id="practice" className="bg-background py-16 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
 
         <div className="max-w-3xl">
           <p className="eyebrow text-primary">Our Expertise</p>
 
-          <h2 className="section-title mt-4 text-4xl font-bold md:text-6xl">
+          <h2 className="section-title mt-4 text-3xl font-bold sm:text-4xl md:text-6xl">
             Legal Services
             <br />
             Tailored To
@@ -128,12 +128,12 @@ function PracticeAreas() {
 
         {/* Cards */}
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-12 grid gap-6 md:mt-20 md:grid-cols-2 md:gap-8 xl:grid-cols-4">
           {practiceNav.map((practice) => (
             <Link
               key={practice.slug}
               to={practice.href}
-              className="group relative overflow-hidden rounded-sm border border-border bg-card p-8 transition-all duration-500 hover:-translate-y-2 hover:border-primary hover:shadow-2xl"
+              className="group relative overflow-hidden rounded-sm border border-border bg-card p-6 transition-all duration-500 hover:-translate-y-2 hover:border-primary hover:shadow-2xl sm:p-8"
             >
               {/* Gold Line */}
 
@@ -147,7 +147,7 @@ function PracticeAreas() {
 
               {/* Title */}
 
-              <h3 className="mt-8 font-display text-2xl font-bold uppercase leading-tight transition-colors duration-300 group-hover:text-primary">
+              <h3 className="mt-8 font-display text-xl font-bold uppercase leading-tight transition-colors duration-300 group-hover:text-primary sm:text-2xl">
                 {practice.title}
               </h3>
 
@@ -224,14 +224,14 @@ function WhyChooseUs() {
   ];
 
   return (
-    <section className="bg-[var(--ink)] py-28 text-[var(--ink-foreground)]">
-      <div className="mx-auto grid max-w-7xl gap-20 px-6 lg:grid-cols-2 lg:items-start">
+    <section className="bg-[var(--ink)] py-16 text-[var(--ink-foreground)] md:py-28">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-start lg:gap-20">
         {/* Left */}
 
-        <div className="sticky top-28">
+        <div className="lg:sticky lg:top-28">
           <p className="eyebrow text-primary">Why Partner With Us</p>
 
-          <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-6xl">
+          <h2 className="mt-4 font-display text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">
             Trusted Legal
             <br />
             Counsel Built
@@ -254,19 +254,21 @@ function WhyChooseUs() {
 
         {/* Right */}
 
-        <div className="grid gap-8">
+        <div className="grid gap-5 sm:gap-8">
           {features.map((feature) => (
             <div
               key={feature.number}
-              className="group rounded-sm border border-white/10 bg-white/[0.03] p-8 transition-all duration-500 hover:border-primary hover:bg-white/[0.05]"
+              className="group rounded-sm border border-white/10 bg-white/[0.03] p-6 transition-all duration-500 hover:border-primary hover:bg-white/[0.05] sm:p-8"
             >
-              <div className="flex items-start gap-6">
-                <div className="font-display text-5xl font-black text-primary/30 transition-all duration-500 group-hover:text-primary">
+              <div className="flex flex-col items-start gap-3 sm:flex-row sm:gap-6">
+                <div className="font-display text-4xl font-black text-primary/30 transition-all duration-500 group-hover:text-primary sm:text-5xl">
                   {feature.number}
                 </div>
 
                 <div>
-                  <h3 className="font-display text-2xl font-bold uppercase">{feature.title}</h3>
+                  <h3 className="font-display text-xl font-bold uppercase sm:text-2xl">
+                    {feature.title}
+                  </h3>
 
                   <p className="mt-5 leading-8 text-white/65">{feature.body}</p>
                 </div>
@@ -300,12 +302,12 @@ function AboutFirm() {
   ];
 
   return (
-    <section id="about" className="bg-secondary/30 py-28">
+    <section id="about" className="bg-secondary/30 py-16 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-20 lg:grid-cols-2 lg:items-center">
+        <div className="grid gap-16 lg:grid-cols-2 lg:items-center lg:gap-20">
           {/* Image */}
 
-          <div className="relative">
+          <div className="relative mb-10 lg:mb-0">
             <div className="aspect-[4/5] overflow-hidden rounded-sm border border-border bg-gradient-to-br from-muted via-secondary to-card shadow-2xl">
               {/* Replace this with an actual office/team image */}
 
@@ -322,8 +324,8 @@ function AboutFirm() {
 
             {/* Floating Card */}
 
-            <div className="absolute -bottom-8 -right-8 rounded-sm border border-primary/20 bg-card p-8 shadow-xl">
-              <h3 className="font-display text-5xl font-black text-primary">30+</h3>
+            <div className="absolute -bottom-6 right-4 rounded-sm border border-primary/20 bg-card p-5 shadow-xl sm:-bottom-8 sm:-right-4 sm:p-8 lg:-right-8">
+              <h3 className="font-display text-4xl font-black text-primary sm:text-5xl">30+</h3>
 
               <p className="mt-2 text-sm uppercase tracking-[0.25em] text-muted-foreground">
                 Years of Experience
@@ -336,7 +338,7 @@ function AboutFirm() {
           <div>
             <p className="eyebrow text-primary">About Practic Legal</p>
 
-            <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-6xl">
+            <h2 className="mt-4 font-display text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">
               Trusted Legal
               <br />
               Advisors For
@@ -365,12 +367,14 @@ function AboutFirm() {
 
             {/* Statistics */}
 
-            <div className="mt-14 grid grid-cols-2 gap-8">
+            <div className="mt-10 grid grid-cols-2 gap-6 sm:gap-8 md:mt-14">
               {stats.map((item) => (
                 <div key={item.label} className="border-l-2 border-primary pl-5">
-                  <div className="font-display text-4xl font-black text-primary">{item.value}</div>
+                  <div className="font-display text-3xl font-black text-primary sm:text-4xl">
+                    {item.value}
+                  </div>
 
-                  <div className="mt-2 text-sm uppercase tracking-[0.15em] text-muted-foreground">
+                  <div className="mt-2 text-xs uppercase tracking-[0.15em] text-muted-foreground sm:text-sm">
                     {item.label}
                   </div>
                 </div>
@@ -386,7 +390,7 @@ function FinalCTA() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-[var(--ink)] py-32 text-[var(--ink-foreground)]"
+      className="relative overflow-hidden bg-[var(--ink)] py-20 text-[var(--ink-foreground)] md:py-32"
     >
       {/* Background Glow */}
 
@@ -403,7 +407,7 @@ function FinalCTA() {
       <div className="relative mx-auto max-w-5xl px-6 text-center">
         <p className="eyebrow text-primary">Let's Discuss Your Matter</p>
 
-        <h2 className="mt-6 font-display text-4xl font-bold leading-tight md:text-6xl">
+        <h2 className="mt-6 font-display text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">
           Trusted Legal Advice
           <br />
           Starts With A
@@ -411,23 +415,23 @@ function FinalCTA() {
           Conversation
         </h2>
 
-        <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-white/70">
+        <p className="mx-auto mt-8 max-w-3xl text-base leading-8 text-white/70 sm:text-lg">
           Whether you're facing a complex dispute, planning a business transaction, or seeking
           strategic legal guidance, our team is ready to provide practical advice tailored to your
           objectives.
         </p>
 
-        <div className="mt-14 flex flex-wrap justify-center gap-6">
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center sm:gap-6 md:mt-14">
           <Link
             to="/contact"
-            className="rounded-sm bg-primary px-10 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            className="rounded-sm bg-primary px-6 py-4 text-center text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:px-10 sm:text-sm"
           >
             Schedule Consultation
           </Link>
 
           <Link
             to="/practice"
-            className="rounded-sm border border-white/20 px-10 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:border-primary hover:bg-white/5"
+            className="rounded-sm border border-white/20 px-6 py-4 text-center text-xs font-semibold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:border-primary hover:bg-white/5 sm:px-10 sm:text-sm"
           >
             Explore Practice Areas
           </Link>
@@ -435,11 +439,11 @@ function FinalCTA() {
 
         {/* Contact Strip */}
 
-        <div className="mt-20 grid gap-10 border-t border-white/10 pt-10 md:grid-cols-3">
+        <div className="mt-14 grid gap-8 border-t border-white/10 pt-10 md:mt-20 md:grid-cols-3 md:gap-10">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-primary">Email</p>
 
-            <p className="mt-3 text-white/80">hello@practiclegal.com</p>
+            <p className="mt-3 break-words text-white/80">hello@practiclegal.com</p>
           </div>
 
           <div>

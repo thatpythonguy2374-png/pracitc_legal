@@ -36,43 +36,43 @@ const topics = [
     title: "Crimes Against Women",
     summary:
       "Legal assistance in crimes against women, including domestic violence, harassment, cruelty, dowry-related offences, and representation before trial and appellate courts.",
-    href: "/practice/matrimonial-matters/crimes-against-women",
+    href: "/practice/criminal-matters/crimes-against-women",
   },
   {
     title: "Cyber Crimes",
     summary:
       "Legal assistance and representation in cyber crime matters, including online offences, cyber fraud, hacking, identity theft, and other technology-related crimes before competent authorities and courts.",
-    href: "/practice/matrimonial-matters/cyber-crimes-legal-representation",
+    href: "/practice/criminal-matters/cyber-crimes-legal-representation",
   },
   {
     title: "Criminal Appeals",
     summary:
       "A judgment of a criminal court does not entail end of legal proceedings rather the law provides various appellate and revisional remedies to challenge convictions.",
-    href: "/practice/matrimonial-matters/criminal-appeals",
+    href: "/practice/criminal-matters/criminal-appeals",
   },
   {
     title: "Economic Offences",
     summary:
       "Economic offences involve financial misconduct, fraud, misappropriation of funds and violations of laws governing commercial and financial transactions.",
-    href: "/practice/matrimonial-matters/economic-offences",
+    href: "/practice/criminal-matters/economic-offences",
   },
   {
     title: "Offences Aganist The Human Body",
     summary:
       "Offences against the human body are among the most serious offences under criminal law, as they directly affect an individual’s life, physical integrity, personal liberty and dignity. ",
-    href: "/practice/matrimonial-matters/offences-against-the-human-body",
+    href: "/practice/criminal-matters/offences-against-the-human-body",
   },
   {
     title: "Offences Aganist Property",
     summary:
       "Property-related offences can have significant financial and legal consequences for individuals, businesses and institutions.",
-    href: "/practice/matrimonial-matters/offences-aganist-property",
+    href: "/practice/criminal-matters/offences-aganist-property",
   },
   {
     title: "White Collar Crimes",
     summary:
       "White Collar Crimes are non-violent offences typically involving financial fraud, breach of trust, forgery, corporate misconduct and economic deception.",
-    href: "/practice/matrimonial-matters/white-collar-crimes",
+    href: "/practice/criminal-matters/white-collar-crimes",
   },
 ];
 

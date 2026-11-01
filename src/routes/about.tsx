@@ -93,13 +93,13 @@ function PageHero() {
             "radial-gradient(circle at 20% 30%, oklch(0.66 0.135 55 / 0.35), transparent 50%), radial-gradient(circle at 80% 70%, oklch(0.4 0.05 60 / 0.4), transparent 55%)",
         }}
       />
-      <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-32">
         <p className="eyebrow text-primary">About the Firm</p>
-        <h1 className="mt-4 font-display text-5xl font-extrabold uppercase leading-[1.05] tracking-tight md:text-6xl">
+        <h1 className="mt-4 font-display text-3xl font-extrabold uppercase leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
           Counsel Built on <br />
           <span className="text-primary">Three Decades</span> of Trust
         </h1>
-        <p className="mt-8 max-w-2xl text-lg leading-relaxed text-[var(--ink-foreground)]/75">
+        <p className="mt-8 max-w-2xl text-base leading-relaxed text-[var(--ink-foreground)]/75 sm:text-lg">
           Practic Legal was founded in 1993 with a single conviction — that clients deserve a law
           firm that thinks like a business partner, not just a legal vendor. That belief still
           shapes how we work today.
@@ -111,7 +111,7 @@ function PageHero() {
 
 function Story() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
+    <section className="mx-auto max-w-7xl px-6 py-16 md:py-24">
       <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
         <div>
           <p className="eyebrow">Our Story</p>
@@ -145,18 +145,18 @@ function Story() {
 
 function Values() {
   return (
-    <section className="bg-secondary/50 py-24">
+    <section className="bg-secondary/50 py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <p className="eyebrow">What we stand for</p>
-          <h2 className="section-title mt-3 text-4xl md:text-5xl">Our Values</h2>
+          <h2 className="section-title mt-3 text-3xl sm:text-4xl md:text-5xl">Our Values</h2>
           <span className="mx-auto mt-4 block h-1 w-16 bg-primary" />
         </div>
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {values.map((v) => (
             <article
               key={v.title}
-              className="rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-primary hover:shadow-xl"
+              className="rounded-sm border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-primary hover:shadow-xl sm:p-8"
             >
               <div className="mb-6 grid h-14 w-14 place-items-center rounded-sm bg-primary/10 font-display text-2xl font-bold text-primary">
                 ◆
@@ -173,12 +173,12 @@ function Values() {
 
 function Timeline() {
   return (
-    <section className="bg-[var(--ink)] py-24 text-[var(--ink-foreground)]">
+    <section className="bg-[var(--ink)] py-16 text-[var(--ink-foreground)] md:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-12 lg:grid-cols-3">
           <div>
             <p className="eyebrow">The Journey</p>
-            <h2 className="section-title mt-3 text-4xl md:text-5xl">Milestones</h2>
+            <h2 className="section-title mt-3 text-3xl sm:text-4xl md:text-5xl">Milestones</h2>
             <span className="mt-4 block h-1 w-16 bg-primary" />
             <p className="mt-6 max-w-sm text-base leading-relaxed text-white/70">
               A snapshot of the moments that shaped the firm — from a small Delhi office to a
@@ -202,11 +202,13 @@ function Timeline() {
 
 function Leadership() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
+    <section className="mx-auto max-w-7xl px-6 py-16 md:py-24">
       <div className="flex flex-wrap items-end justify-between gap-6">
         <div>
           <p className="eyebrow">Leadership</p>
-          <h2 className="section-title mt-3 text-4xl md:text-5xl">The People Behind the Firm</h2>
+          <h2 className="section-title mt-3 text-3xl sm:text-4xl md:text-5xl">
+            The People Behind the Firm
+          </h2>
           <span className="mt-4 block h-1 w-16 bg-primary" />
         </div>
         <Link
@@ -234,7 +236,7 @@ function Leadership() {
 
 function CTA() {
   return (
-    <section className="bg-secondary/50 py-20">
+    <section className="bg-secondary/50 py-14 md:py-20">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <p className="eyebrow">Work with us</p>
         <h2 className="section-title mt-3 text-3xl md:text-4xl">

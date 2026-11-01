@@ -65,13 +65,13 @@ function HeroSection() {
 
           <p className="eyebrow text-primary">Get In Touch</p>
 
-          <h1 className="mt-6 font-display text-5xl font-black leading-tight md:text-7xl">
+          <h1 className="mt-6 font-display text-4xl font-black leading-tight sm:text-5xl md:text-7xl">
             Contact
             <br />
             Our Experts
           </h1>
 
-          <p className="mt-8 text-lg leading-8 text-white/75 md:text-xl">
+          <p className="mt-8 text-base leading-8 text-white/75 sm:text-lg md:text-xl">
             Reach out to our legal team for a confidential consultation regarding your matter. We
             combine strategic thinking, legal precision and unwavering advocacy.
           </p>
@@ -116,21 +116,21 @@ function ContactSection() {
   }) {
     return (
       <div className="flex items-start gap-5">
-        <div className="flex h-14 w-14 items-center justify-center rounded-sm bg-primary/10 text-primary">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-sm bg-primary/10 text-primary sm:h-14 sm:w-14">
           {icon}
         </div>
 
-        <div>
+        <div className="min-w-0">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">{title}</p>
 
-          <p className="mt-2 leading-7 text-muted-foreground">{value}</p>
+          <p className="mt-2 break-words leading-7 text-muted-foreground">{value}</p>
         </div>
       </div>
     );
   }
   return (
-    <section className="bg-background py-28">
-      <div className="mx-auto grid max-w-7xl gap-20 px-6 lg:grid-cols-12">
+    <section className="overflow-x-clip bg-background py-16 md:py-28">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-12 lg:gap-20">
         {/* LEFT */}
 
         <motion.div
@@ -144,7 +144,7 @@ function ContactSection() {
 
           <p className="eyebrow text-primary">Contact Information</p>
 
-          <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">
+          <h2 className="mt-4 font-display text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
             Establish A
             <br />
             Professional
@@ -159,7 +159,7 @@ function ContactSection() {
 
           {/* Address */}
 
-          <div className="mt-14 space-y-8">
+          <div className="mt-10 space-y-6 md:mt-14 md:space-y-8">
             <InfoCard icon={<MapPin size={22} />} title="Office Address" value="New Delhi, India" />
 
             <InfoCard icon={<Phone size={22} />} title="Phone" value="+91 11 0000 0000" />
@@ -169,7 +169,7 @@ function ContactSection() {
 
           {/* Quote */}
 
-          <div className="mt-16 border-l-4 border-primary bg-card p-8">
+          <div className="mt-10 border-l-4 border-primary bg-card p-6 sm:p-8 md:mt-16">
             <h3 className="font-display text-2xl font-bold">Global Reach.</h3>
 
             <p className="mt-5 leading-8 text-muted-foreground italic">
@@ -188,21 +188,21 @@ function ContactSection() {
           transition={{ duration: 0.7 }}
           className="lg:col-span-7"
         >
-          <div className="rounded-sm border border-border bg-card p-8 shadow-xl md:p-12">
+          <div className="rounded-sm border border-border bg-card p-5 shadow-xl sm:p-8 md:p-12">
             <h3 className="font-display text-3xl font-bold">Request A Consultation</h3>
 
             <p className="mt-3 text-muted-foreground">
               Complete the form below and one of our legal experts will contact you shortly.
             </p>
 
-            <form className="mt-10 space-y-8">
-              <div className="grid gap-8 md:grid-cols-2">
+            <form className="mt-8 space-y-6 md:mt-10 md:space-y-8">
+              <div className="grid gap-6 md:grid-cols-2 md:gap-8">
                 <InputField label="Full Name" placeholder="John Doe" />
 
                 <InputField label="Email" placeholder="john@example.com" type="email" />
               </div>
 
-              <div className="grid gap-8 md:grid-cols-2">
+              <div className="grid gap-6 md:grid-cols-2 md:gap-8">
                 <InputField label="Phone Number" placeholder="+91 98765 43210" />
 
                 <div>
@@ -238,7 +238,7 @@ function ContactSection() {
                 />
               </div>
 
-              <button className="group inline-flex items-center gap-4 rounded-sm bg-primary px-10 py-4 font-semibold uppercase tracking-[0.2em] text-primary-foreground transition-all hover:-translate-y-1">
+              <button className="group inline-flex w-full items-center justify-center gap-4 rounded-sm bg-primary px-6 py-4 font-semibold uppercase tracking-[0.2em] text-primary-foreground transition-all hover:-translate-y-1 sm:w-auto sm:px-10">
                 Send Message
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </button>
@@ -272,14 +272,14 @@ function ValuesSection() {
   ];
 
   return (
-    <section className="bg-secondary/20 py-28">
+    <section className="bg-secondary/20 py-16 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <div className="mx-auto mb-6 h-1 w-20 bg-primary" />
 
           <p className="eyebrow text-primary">Why Clients Trust Us</p>
 
-          <h2 className="mt-4 font-display text-4xl font-bold md:text-6xl">
+          <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl md:text-6xl">
             Commitment To
             <br />
             Professional Excellence
@@ -291,7 +291,7 @@ function ValuesSection() {
           </p>
         </div>
 
-        <div className="mt-20 grid gap-8 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:mt-20 md:gap-8 lg:grid-cols-3">
           {values.map((value, index) => (
             <motion.div
               key={value.number}
@@ -302,9 +302,9 @@ function ValuesSection() {
                 duration: 0.6,
                 delay: index * 0.15,
               }}
-              className="group rounded-sm border border-border bg-card p-10 transition-all duration-500 hover:-translate-y-2 hover:border-primary hover:shadow-2xl"
+              className="group rounded-sm border border-border bg-card p-6 transition-all duration-500 hover:-translate-y-2 hover:border-primary hover:shadow-2xl sm:p-10"
             >
-              <div className="text-6xl font-display font-black text-primary/15 transition-all duration-500 group-hover:text-primary">
+              <div className="text-5xl font-display font-black text-primary/15 transition-all duration-500 group-hover:text-primary sm:text-6xl">
                 {value.number}
               </div>
 
