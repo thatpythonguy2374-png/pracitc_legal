@@ -1,6 +1,9 @@
 globalThis.__nitro_main__ = import.meta.url;
-import { a as FastResponse, n as HTTPError, r as defineLazyEventHandler, t as H3Core } from "./_libs/h3+rou3+srvx.mjs";
-import { t as HookableCore } from "./_libs/hookable.mjs";
+import { a as toEventHandler, c as serve, i as defineLazyEventHandler, n as HTTPError, r as defineHandler, s as NodeResponse, t as H3Core } from "./_libs/h3+rou3+srvx.mjs";
+import { i as withoutTrailingSlash, n as joinURL, r as withLeadingSlash, t as decodePath } from "./_libs/ufo.mjs";
+import { promises } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { dirname, resolve } from "node:path";
 //#region #nitro-vite-setup
 function lazyService(loader) {
 	let promise, mod;
@@ -13,275 +16,342 @@ function lazyService(loader) {
 var services = { ["ssr"]: lazyService(() => import("./_ssr/ssr.mjs")) };
 globalThis.__nitro_vite_envs__ = services;
 //#endregion
+//#region node_modules/nitro/dist/runtime/internal/route-rules.mjs
+var headers = ((m) => function headersRouteRule(event) {
+	for (const [key, value] of Object.entries(m.options || {})) event.res.headers.set(key, value);
+});
+//#endregion
 //#region #nitro/virtual/public-assets-data
 var public_assets_data_default = {
-	"/assets/about-BMHrxGV4.js": {
+	"/assets/about-D5ElZzUs.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"20d8-6mLQgWZ4bvJHp69qBq3Rk6oe+ZA\"",
-		"mtime": "2026-09-03T15:04:24.525Z",
-		"size": 8408,
-		"path": "../public/assets/about-BMHrxGV4.js"
+		"etag": "\"2149-IdZZMhptZ3jO4b2tlTpx+3pWVto\"",
+		"mtime": "2026-11-01T07:05:45.284Z",
+		"size": 8521,
+		"path": "../public/assets/about-D5ElZzUs.js"
 	},
-	"/assets/civil-litigation-Rq452xuE.js": {
+	"/assets/bail-and-anticipatory-B9-IH3a4.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"f4d-qErZWJ+++1BO1wIoLqYvuf8FgFg\"",
-		"mtime": "2026-09-03T15:04:24.526Z",
-		"size": 3917,
-		"path": "../public/assets/civil-litigation-Rq452xuE.js"
+		"etag": "\"277e-3OLkrGTS8xFivQldBdUU/6K8qj0\"",
+		"mtime": "2026-11-01T07:05:45.284Z",
+		"size": 10110,
+		"path": "../public/assets/bail-and-anticipatory-B9-IH3a4.js"
 	},
-	"/assets/builder-buyer-disputes-C0qkPOAt.js": {
+	"/assets/builder-buyer-disputes-Du6kYHGE.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"27df-9utJ6MqTC7iQrEDrhBQn6F9PCGQ\"",
-		"mtime": "2026-09-03T15:04:24.526Z",
-		"size": 10207,
-		"path": "../public/assets/builder-buyer-disputes-C0qkPOAt.js"
+		"etag": "\"239c-L+KE5ElOB0ZZu3HkJ3qxPEzRYAo\"",
+		"mtime": "2026-11-01T07:05:45.285Z",
+		"size": 9116,
+		"path": "../public/assets/builder-buyer-disputes-Du6kYHGE.js"
 	},
-	"/assets/compensation-claims-BeCSQ_6F.js": {
+	"/assets/child-custody-BuKKHMuF.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"1282-I1/SiUasfYZc/v24VjZTsMABH4U\"",
-		"mtime": "2026-09-03T15:04:24.527Z",
-		"size": 4738,
-		"path": "../public/assets/compensation-claims-BeCSQ_6F.js"
+		"etag": "\"27bb-E+cTiOk7k43II5XRDKa/RwkT0UQ\"",
+		"mtime": "2026-11-01T07:05:45.285Z",
+		"size": 10171,
+		"path": "../public/assets/child-custody-BuKKHMuF.js"
 	},
-	"/assets/child-custody-CfT5zGrm.js": {
+	"/assets/civil-litigation-DMs9AxUB.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"126d-t9Vc8XE2s9iWJWlx3QAPLHH1RiU\"",
-		"mtime": "2026-09-03T15:04:24.526Z",
-		"size": 4717,
-		"path": "../public/assets/child-custody-CfT5zGrm.js"
-	},
-	"/assets/Disclaimer-XZOrbGm1.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"3db-8V5H9zQpBQXqHYCk6W3RXeOTk6I\"",
-		"mtime": "2026-09-03T15:04:24.524Z",
-		"size": 987,
-		"path": "../public/assets/Disclaimer-XZOrbGm1.js"
+		"etag": "\"1041-tCSRhXeTHBLaKktrj5fJndm+k0k\"",
+		"mtime": "2026-11-01T07:05:45.285Z",
+		"size": 4161,
+		"path": "../public/assets/civil-litigation-DMs9AxUB.js"
 	},
 	"/assets/bootstrap-icons-mSm7cUeB.woff2": {
 		"type": "font/woff2",
 		"etag": "\"20b9c-tEH8/5OeJPoJBqN7d4h4i5/du2g\"",
-		"mtime": "2026-09-03T15:04:24.539Z",
+		"mtime": "2026-11-01T07:05:45.298Z",
 		"size": 134044,
 		"path": "../public/assets/bootstrap-icons-mSm7cUeB.woff2"
 	},
-	"/assets/divorce-and-mutual-consent-C8qigQL4.js": {
+	"/assets/contact-CFAaqqZP.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"1294-l8Es+0EzF2bzlbeXwGTIWAfCD8o\"",
-		"mtime": "2026-09-03T15:04:24.527Z",
-		"size": 4756,
-		"path": "../public/assets/divorce-and-mutual-consent-C8qigQL4.js"
+		"etag": "\"2510-vNjVVHIDZtCu4hBsseP0YoFrdR8\"",
+		"mtime": "2026-11-01T07:05:45.286Z",
+		"size": 9488,
+		"path": "../public/assets/contact-CFAaqqZP.js"
 	},
-	"/assets/contact-Qq3J8DY0.js": {
+	"/assets/crimes-against-women-ChG50PPC.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"23d9-gn3uwNvB2UpR2wWsu6hp9/thjes\"",
-		"mtime": "2026-09-03T15:04:24.527Z",
-		"size": 9177,
-		"path": "../public/assets/contact-Qq3J8DY0.js"
-	},
-	"/assets/hit-and-run-cases-D7ftCrsr.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"129a-UxPsHm5k7pH4lGReXY+BhhdNJ8w\"",
-		"mtime": "2026-09-03T15:04:24.528Z",
-		"size": 4762,
-		"path": "../public/assets/hit-and-run-cases-D7ftCrsr.js"
-	},
-	"/assets/domestic-violence-DaDmRW5G.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"128b-l/NW3KuJTbO6rJIOrHVUJHcotwk\"",
-		"mtime": "2026-09-03T15:04:24.528Z",
-		"size": 4747,
-		"path": "../public/assets/domestic-violence-DaDmRW5G.js"
-	},
-	"/assets/insurance-claims-Dv_1bYDq.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"2cfc-ku/KMamNFTbjzX8oZWAZuSTiJL0\"",
-		"mtime": "2026-09-03T15:04:24.528Z",
-		"size": 11516,
-		"path": "../public/assets/insurance-claims-Dv_1bYDq.js"
-	},
-	"/assets/insurance-disputes-Da35rllO.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"127a-oRwTqsvKYigP2S3f6sna3xHqWxM\"",
-		"mtime": "2026-09-03T15:04:24.529Z",
-		"size": 4730,
-		"path": "../public/assets/insurance-disputes-Da35rllO.js"
-	},
-	"/assets/land-acquisition-BXTOzBe2.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"1272-087v3686xILKPFtCT1m+isEZgR4\"",
-		"mtime": "2026-09-03T15:04:24.529Z",
-		"size": 4722,
-		"path": "../public/assets/land-acquisition-BXTOzBe2.js"
-	},
-	"/assets/landlord-tenant-D4ZpZe1f.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"1e41-JPLiZ4G9BLYSq65wrqLcssK5eY4\"",
-		"mtime": "2026-09-03T15:04:24.530Z",
-		"size": 7745,
-		"path": "../public/assets/landlord-tenant-D4ZpZe1f.js"
-	},
-	"/assets/index-CqN5JKXL.css": {
-		"type": "text/css; charset=utf-8",
-		"etag": "\"13b94-tWevWVcF1IUlIZWcneU/cGu/+zY\"",
-		"mtime": "2026-09-03T15:04:24.540Z",
-		"size": 80788,
-		"path": "../public/assets/index-CqN5JKXL.css"
+		"etag": "\"27d5-oE6fbproWpvPypvfpyzWhaCDqxo\"",
+		"mtime": "2026-11-01T07:05:45.286Z",
+		"size": 10197,
+		"path": "../public/assets/crimes-against-women-ChG50PPC.js"
 	},
 	"/assets/bootstrap-icons-BeopsB42.woff": {
 		"type": "font/woff",
 		"etag": "\"2c040-diAQx5tKBeETH8j7Oxrv8yTYAz8\"",
-		"mtime": "2026-09-03T15:04:24.539Z",
+		"mtime": "2026-11-01T07:05:45.298Z",
 		"size": 180288,
 		"path": "../public/assets/bootstrap-icons-BeopsB42.woff"
+	},
+	"/assets/criminal-appeals-BjpTNDOx.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"1b17-tlOzb9ckR4J3V4nFRB2EnuJL/bM\"",
+		"mtime": "2026-11-01T07:05:45.287Z",
+		"size": 6935,
+		"path": "../public/assets/criminal-appeals-BjpTNDOx.js"
+	},
+	"/assets/criminal-matters-CPAGZUtw.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"104e-f7yxkNOQprVociLign3v4gMUteI\"",
+		"mtime": "2026-11-01T07:05:45.287Z",
+		"size": 4174,
+		"path": "../public/assets/criminal-matters-CPAGZUtw.js"
+	},
+	"/assets/cyber-crimes-legal-representation-DE3zLV_3.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"3068-mCB80lqVEE6bXwsiA49a7O17+XU\"",
+		"mtime": "2026-11-01T07:05:45.288Z",
+		"size": 12392,
+		"path": "../public/assets/cyber-crimes-legal-representation-DE3zLV_3.js"
+	},
+	"/assets/Disclaimer-CbSAYOZh.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"4b0-/wA4BWxEW2ZVZWx/ZvP++7zt8LI\"",
+		"mtime": "2026-11-01T07:05:45.283Z",
+		"size": 1200,
+		"path": "../public/assets/Disclaimer-CbSAYOZh.js"
+	},
+	"/assets/divorce-and-mutual-consent-Cq2-aPyc.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"2a28-OwIX9wkX5ZyD8ufvEI4Dss7xC54\"",
+		"mtime": "2026-11-01T07:05:45.288Z",
+		"size": 10792,
+		"path": "../public/assets/divorce-and-mutual-consent-Cq2-aPyc.js"
+	},
+	"/assets/economic-offences-BMnNNbMe.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"1b3c-xmmFe/R1ttMJcybug04nZOwKARQ\"",
+		"mtime": "2026-11-01T07:05:45.289Z",
+		"size": 6972,
+		"path": "../public/assets/economic-offences-BMnNNbMe.js"
+	},
+	"/assets/insurance-claims-DLTOdheZ.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"2cfd-pXzX/OPio83xDnjHmx7Swggd3lQ\"",
+		"mtime": "2026-11-01T07:05:45.289Z",
+		"size": 11517,
+		"path": "../public/assets/insurance-claims-DLTOdheZ.js"
+	},
+	"/assets/domestic-violence-D7bw9PeS.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"2884-rS0DrCTdz3QzE79bdHdcCLwzwCg\"",
+		"mtime": "2026-11-01T07:05:45.288Z",
+		"size": 10372,
+		"path": "../public/assets/domestic-violence-D7bw9PeS.js"
+	},
+	"/assets/landlord-tenant-BRVB_q1G.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"2072-LFq8pPJ1ZR/zfuBh5BtekvFh8Mg\"",
+		"mtime": "2026-11-01T07:05:45.290Z",
+		"size": 8306,
+		"path": "../public/assets/landlord-tenant-BRVB_q1G.js"
+	},
+	"/assets/intellectual-property-CyIu-jSJ.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"282f-pK5r1l9yrrf2FFfJmVUxtMOuq+8\"",
+		"mtime": "2026-11-01T07:05:45.289Z",
+		"size": 10287,
+		"path": "../public/assets/intellectual-property-CyIu-jSJ.js"
+	},
+	"/assets/intellectual-property-rights-RAYQXJjY.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"b63-9ULCrSFZOcUu9jx5f5QjlmKUZnk\"",
+		"mtime": "2026-11-01T07:05:45.290Z",
+		"size": 2915,
+		"path": "../public/assets/intellectual-property-rights-RAYQXJjY.js"
+	},
+	"/assets/index-CqN5JKXL.css": {
+		"type": "text/css; charset=utf-8",
+		"etag": "\"13b94-tWevWVcF1IUlIZWcneU/cGu/+zY\"",
+		"mtime": "2026-11-01T07:05:45.298Z",
+		"size": 80788,
+		"path": "../public/assets/index-CqN5JKXL.css"
 	},
 	"/assets/link-BroVZncT.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"8aab-BDDyRi0xKbzjvx31qX1k7C7cGbw\"",
-		"mtime": "2026-09-03T15:04:24.530Z",
+		"mtime": "2026-11-01T07:05:45.290Z",
 		"size": 35499,
 		"path": "../public/assets/link-BroVZncT.js"
 	},
-	"/assets/mact-appeals-Cn55Lmm7.js": {
+	"/assets/index-Dsau9vOV.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"125f-Rzu4OVzgRC1yZW5GUN+TJUQtg+U\"",
-		"mtime": "2026-09-03T15:04:24.530Z",
-		"size": 4703,
-		"path": "../public/assets/mact-appeals-Cn55Lmm7.js"
+		"etag": "\"734fb-BxH000TKCgeNfWTbfdS7I8H+fXU\"",
+		"mtime": "2026-11-01T07:05:45.283Z",
+		"size": 472315,
+		"path": "../public/assets/index-Dsau9vOV.js"
 	},
-	"/assets/maintenance-and-alimony-h05upLM8.js": {
+	"/assets/logo-BRAMDSRE.png": {
+		"type": "image/png",
+		"etag": "\"c027-Qv6lWtTTq4hHzZbI7HLrTuLVkMM\"",
+		"mtime": "2026-11-01T07:05:45.299Z",
+		"size": 49191,
+		"path": "../public/assets/logo-BRAMDSRE.png"
+	},
+	"/assets/logo-header-dUyXR3kF.png": {
+		"type": "image/png",
+		"etag": "\"9477-8oqKDy4WfzEm8YxFxpRDSsnR/jE\"",
+		"mtime": "2026-11-01T07:05:45.299Z",
+		"size": 38007,
+		"path": "../public/assets/logo-header-dUyXR3kF.png"
+	},
+	"/assets/maintenance-and-alimony-BMWGKTs-.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"1294-SzS2jr/v43vKU1SiyhBBYr994hA\"",
-		"mtime": "2026-09-03T15:04:24.531Z",
-		"size": 4756,
-		"path": "../public/assets/maintenance-and-alimony-h05upLM8.js"
+		"etag": "\"278b-EswuDqaVVwKO/WLRaznOLwkWyRc\"",
+		"mtime": "2026-11-01T07:05:45.291Z",
+		"size": 10123,
+		"path": "../public/assets/maintenance-and-alimony-BMWGKTs-.js"
 	},
-	"/assets/matrimonial-matters-BVJryqlV.js": {
+	"/assets/matrimonial-matters-CXfXdymq.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"b18-tPO567QkOCBOgS2aD02MIXMj2zY\"",
-		"mtime": "2026-09-03T15:04:24.531Z",
-		"size": 2840,
-		"path": "../public/assets/matrimonial-matters-BVJryqlV.js"
+		"etag": "\"cee-H3WlgG1ZRmpHAU2XNoP3dGYlbHc\"",
+		"mtime": "2026-11-01T07:05:45.291Z",
+		"size": 3310,
+		"path": "../public/assets/matrimonial-matters-CXfXdymq.js"
 	},
-	"/assets/mcd-tribunal-matters-C5sIZysh.js": {
+	"/assets/nullity-of-marriage-DXsJ7Cb7.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"2794-s5a7CSdTs/29JQw4b8kP7lHG/RA\"",
-		"mtime": "2026-09-03T15:04:24.531Z",
-		"size": 10132,
-		"path": "../public/assets/mcd-tribunal-matters-C5sIZysh.js"
+		"etag": "\"230b-oN+JLXrPkA90C8l8d98NWPYEmtg\"",
+		"mtime": "2026-11-01T07:05:45.292Z",
+		"size": 8971,
+		"path": "../public/assets/nullity-of-marriage-DXsJ7Cb7.js"
 	},
-	"/assets/motor-accident-claims-DcBTdCdt.js": {
+	"/assets/mcd-tribunal-matters-BD-eLCdx.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"ac8-EpOxjJoDud+TbUzNNfMHKAeJDF0\"",
-		"mtime": "2026-09-03T15:04:24.532Z",
-		"size": 2760,
-		"path": "../public/assets/motor-accident-claims-DcBTdCdt.js"
+		"etag": "\"2b4f-UVGFgH+FiYaJ0JnDyjNMZav3Ksw\"",
+		"mtime": "2026-11-01T07:05:45.291Z",
+		"size": 11087,
+		"path": "../public/assets/mcd-tribunal-matters-BD-eLCdx.js"
 	},
-	"/assets/partition-suits-CHn_mpja.js": {
+	"/assets/offences-against-the-human-body-C_nKTSug.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"126f-15LkQLU2k+I0F7ZHmfCvP64DIhA\"",
-		"mtime": "2026-09-03T15:04:24.532Z",
-		"size": 4719,
-		"path": "../public/assets/partition-suits-CHn_mpja.js"
+		"etag": "\"31d3-zfWfvIGJuRaGbQhOb15F877clws\"",
+		"mtime": "2026-11-01T07:05:45.292Z",
+		"size": 12755,
+		"path": "../public/assets/offences-against-the-human-body-C_nKTSug.js"
 	},
-	"/assets/index-CqXPaX_D.js": {
+	"/assets/ni-act-B2f9ccRO.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"712c8-zuYkV0vQPjprOwfGKHX5pD2/nzA\"",
-		"mtime": "2026-09-03T15:04:24.524Z",
-		"size": 463560,
-		"path": "../public/assets/index-CqXPaX_D.js"
+		"etag": "\"24df-Pxrq9VEzSC62qd/rREgnsKytyDQ\"",
+		"mtime": "2026-11-01T07:05:45.292Z",
+		"size": 9439,
+		"path": "../public/assets/ni-act-B2f9ccRO.js"
 	},
-	"/assets/probate-of-will-4-CxV7WekM.js": {
+	"/assets/offences-aganist-property-Dq5dVQnb.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"1272-n7d6mOrOYWUNAFKoebMvk2Z2+U0\"",
-		"mtime": "2026-09-03T15:04:24.533Z",
-		"size": 4722,
-		"path": "../public/assets/probate-of-will-4-CxV7WekM.js"
+		"etag": "\"21b7-zlbr1loKeAcTKNDjXgvZBRvmmOM\"",
+		"mtime": "2026-11-01T07:05:45.293Z",
+		"size": 8631,
+		"path": "../public/assets/offences-aganist-property-Dq5dVQnb.js"
 	},
-	"/assets/property-disputes-SjKUih_y.js": {
+	"/assets/patent-registration-BSfZ8Ixz.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"16d3-aL4w4rLC0dkk7XfUDd6KmOM/0QY\"",
-		"mtime": "2026-09-03T15:04:24.534Z",
-		"size": 5843,
-		"path": "../public/assets/property-disputes-SjKUih_y.js"
+		"etag": "\"2d34-KPRAVEDzaRs5x206PCHPsfAEt7c\"",
+		"mtime": "2026-11-01T07:05:45.294Z",
+		"size": 11572,
+		"path": "../public/assets/patent-registration-BSfZ8Ixz.js"
 	},
-	"/assets/probate-of-will-5-CxV7WekM.js": {
+	"/assets/probate-of-will-D9xW9Qld.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"1272-n7d6mOrOYWUNAFKoebMvk2Z2+U0\"",
-		"mtime": "2026-09-03T15:04:24.533Z",
-		"size": 4722,
-		"path": "../public/assets/probate-of-will-5-CxV7WekM.js"
+		"etag": "\"1d94-1NmXVuBpetoE8IPjXhgmq+fVlVM\"",
+		"mtime": "2026-11-01T07:05:45.294Z",
+		"size": 7572,
+		"path": "../public/assets/probate-of-will-D9xW9Qld.js"
 	},
-	"/assets/probate-of-will-LSYmyx-g.js": {
+	"/assets/property-disputes-Bn48Vqaa.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"1d37-Ratmhz6efP01GCfRO8n7GpouIj4\"",
-		"mtime": "2026-09-03T15:04:24.533Z",
-		"size": 7479,
-		"path": "../public/assets/probate-of-will-LSYmyx-g.js"
+		"etag": "\"2449-vexxmOa2edbXOFA9yKCglKWJvqE\"",
+		"mtime": "2026-11-01T07:05:45.294Z",
+		"size": 9289,
+		"path": "../public/assets/property-disputes-Bn48Vqaa.js"
 	},
-	"/assets/property-rights-BAk_PPF3.js": {
+	"/assets/recovery-suits-DHRtgqRv.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"ac6-GiaIY1DrU1uwLKwhgKCBsLT295k\"",
-		"mtime": "2026-09-03T15:04:24.535Z",
-		"size": 2758,
-		"path": "../public/assets/property-rights-BAk_PPF3.js"
+		"etag": "\"2069-sJaQP/w8mt2LJ6gWE1ti4g1n26s\"",
+		"mtime": "2026-11-01T07:05:45.295Z",
+		"size": 8297,
+		"path": "../public/assets/recovery-suits-DHRtgqRv.js"
 	},
-	"/assets/recovery-suits-DUbErOc1.js": {
+	"/assets/public-nuisance-litigation-7aj_hcEK.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"216a-0hzFdwE/7+D0DBrNJNjKc46BrV8\"",
-		"mtime": "2026-09-03T15:04:24.536Z",
-		"size": 8554,
-		"path": "../public/assets/recovery-suits-DUbErOc1.js"
+		"etag": "\"2896-xufq4CAfxj4Hfkzd8KJ/6R6u3u0\"",
+		"mtime": "2026-11-01T07:05:45.295Z",
+		"size": 10390,
+		"path": "../public/assets/public-nuisance-litigation-7aj_hcEK.js"
 	},
-	"/assets/Reveal-5RLDSBt_.js": {
+	"/assets/rwa-election-matters-8ucvmB5F.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"2ce-7mzFSuk8ydOobcH4C1bP3UnnNxE\"",
-		"mtime": "2026-09-03T15:04:24.525Z",
-		"size": 718,
-		"path": "../public/assets/Reveal-5RLDSBt_.js"
+		"etag": "\"2e5b-Z7FtF0z8z8mDt7f6nNZcZglOfiQ\"",
+		"mtime": "2026-11-01T07:05:45.296Z",
+		"size": 11867,
+		"path": "../public/assets/rwa-election-matters-8ucvmB5F.js"
 	},
-	"/assets/public-nuisance-litigation-CwvvX9OO.js": {
+	"/assets/routes-CkKTWsli.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"244d-mJEiSEfACAc55bGcwEHOboB9XBQ\"",
-		"mtime": "2026-09-03T15:04:24.536Z",
-		"size": 9293,
-		"path": "../public/assets/public-nuisance-litigation-CwvvX9OO.js"
+		"etag": "\"318a-Xtx2/e/TFHR1o93QOxHJSL+F6u8\"",
+		"mtime": "2026-11-01T07:05:45.296Z",
+		"size": 12682,
+		"path": "../public/assets/routes-CkKTWsli.js"
 	},
-	"/assets/SiteFooter-CA08BhHj.js": {
+	"/assets/restitution-of-conjugal-rights-as3WW38r.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"3398-otzJX2kIt4/MxXrhFw9xYauFJig\"",
-		"mtime": "2026-09-03T15:04:24.525Z",
-		"size": 13208,
-		"path": "../public/assets/SiteFooter-CA08BhHj.js"
+		"etag": "\"1fa7-E/eLHXFbz60SC4TpeUzeKtNyWjs\"",
+		"mtime": "2026-11-01T07:05:45.295Z",
+		"size": 8103,
+		"path": "../public/assets/restitution-of-conjugal-rights-as3WW38r.js"
 	},
-	"/assets/tenancy-and-eviction-sE1zRyLV.js": {
+	"/assets/SiteFooter-CCtMZZiw.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"1264-mbpTlS3twcdEhovVmCgCLBRvVOs\"",
-		"mtime": "2026-09-03T15:04:24.538Z",
-		"size": 4708,
-		"path": "../public/assets/tenancy-and-eviction-sE1zRyLV.js"
+		"etag": "\"3a43-55wM68w07/FhsB7frDSf6xmw0LI\"",
+		"mtime": "2026-11-01T07:05:45.283Z",
+		"size": 14915,
+		"path": "../public/assets/SiteFooter-CCtMZZiw.js"
 	},
-	"/assets/routes-DI05ASut.js": {
+	"/assets/Stagger-DJj_uV2I.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"2efd-N/7cTsevCDn2PObXHlsHcn1nKMs\"",
-		"mtime": "2026-09-03T15:04:24.537Z",
-		"size": 12029,
-		"path": "../public/assets/routes-DI05ASut.js"
+		"etag": "\"1ce-GLojZqKTzQjbXFbzNlb47DZ9A40\"",
+		"mtime": "2026-11-01T07:05:45.283Z",
+		"size": 462,
+		"path": "../public/assets/Stagger-DJj_uV2I.js"
 	},
-	"/assets/title-and-ownership-disputes-Cjqa4ino.js": {
+	"/assets/succession-certificate-CgA2dRhQ.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"128d-qKX8KJqch5CKYhLyXyOXqaftauw\"",
-		"mtime": "2026-09-03T15:04:24.538Z",
-		"size": 4749,
-		"path": "../public/assets/title-and-ownership-disputes-Cjqa4ino.js"
+		"etag": "\"190b-89zfvD4vQULuqH8EUjGUdQj6ZQI\"",
+		"mtime": "2026-11-01T07:05:45.296Z",
+		"size": 6411,
+		"path": "../public/assets/succession-certificate-CgA2dRhQ.js"
 	},
-	"/assets/styles-DAh1ZsKL.css": {
+	"/assets/styles-BRGCxvbS.css": {
 		"type": "text/css; charset=utf-8",
-		"etag": "\"16423-zZZ7BiZTvhCIRHDz5NkboNLCxeQ\"",
-		"mtime": "2026-09-03T15:04:24.540Z",
-		"size": 91171,
-		"path": "../public/assets/styles-DAh1ZsKL.css"
+		"etag": "\"171c5-2116dSZJl4XYnsR8hgJpSgI906o\"",
+		"mtime": "2026-11-01T07:05:45.299Z",
+		"size": 94661,
+		"path": "../public/assets/styles-BRGCxvbS.css"
+	},
+	"/assets/trademark-registration-DPp7961Z.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"27d4-jUMr3Ge2lwn5520J+9OfAGXsYNk\"",
+		"mtime": "2026-11-01T07:05:45.297Z",
+		"size": 10196,
+		"path": "../public/assets/trademark-registration-DPp7961Z.js"
+	},
+	"/assets/white-collar-crimes-BTvHLSPr.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"2127-ET+l8RWJTVmOLbTmzETAMT5/xI0\"",
+		"mtime": "2026-11-01T07:05:45.297Z",
+		"size": 8487,
+		"path": "../public/assets/white-collar-crimes-BTvHLSPr.js"
 	}
 };
+//#endregion
+//#region #nitro/virtual/public-assets-node
+function readAsset(id) {
+	const serverDir = dirname(fileURLToPath(globalThis.__nitro_main__));
+	return promises.readFile(resolve(serverDir, public_assets_data_default[id].path));
+}
 //#endregion
 //#region #nitro/virtual/public-assets
 var publicAssetBases = {};
@@ -290,10 +360,56 @@ function isPublicAssetURL(id = "") {
 	for (const base in publicAssetBases) if (id.startsWith(base)) return true;
 	return false;
 }
+function getAsset(id) {
+	return public_assets_data_default[id];
+}
 //#endregion
-//#region node_modules/nitro/dist/runtime/internal/route-rules.mjs
-var headers = ((m) => function headersRouteRule(event) {
-	for (const [key, value] of Object.entries(m.options || {})) event.res.headers.set(key, value);
+//#region node_modules/nitro/dist/runtime/internal/static.mjs
+var METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
+var EncodingMap = {
+	gzip: ".gz",
+	br: ".br",
+	zstd: ".zst"
+};
+var static_default = defineHandler((event) => {
+	if (event.req.method && !METHODS.has(event.req.method)) return;
+	let id = decodePath(withLeadingSlash(withoutTrailingSlash(event.url.pathname)));
+	let asset;
+	const encodings = [...(event.req.headers.get("accept-encoding") || "").split(",").map((e) => EncodingMap[e.trim()]).filter(Boolean).sort(), ""];
+	for (const encoding of encodings) for (const _id of [id + encoding, joinURL(id, "index.html" + encoding)]) {
+		const _asset = getAsset(_id);
+		if (_asset) {
+			asset = _asset;
+			id = _id;
+			break;
+		}
+	}
+	if (!asset) {
+		if (isPublicAssetURL(id)) {
+			event.res.headers.delete("Cache-Control");
+			throw new HTTPError({ status: 404 });
+		}
+		return;
+	}
+	if (encodings.length > 1) event.res.headers.append("Vary", "Accept-Encoding");
+	if (event.req.headers.get("if-none-match") === asset.etag) {
+		event.res.status = 304;
+		event.res.statusText = "Not Modified";
+		return "";
+	}
+	const ifModifiedSinceH = event.req.headers.get("if-modified-since");
+	const mtimeDate = new Date(asset.mtime);
+	if (ifModifiedSinceH && asset.mtime && new Date(ifModifiedSinceH) >= mtimeDate) {
+		event.res.status = 304;
+		event.res.statusText = "Not Modified";
+		return "";
+	}
+	if (asset.type) event.res.headers.set("Content-Type", asset.type);
+	if (asset.etag && !event.res.headers.has("ETag")) event.res.headers.set("ETag", asset.etag);
+	if (asset.mtime && !event.res.headers.has("Last-Modified")) event.res.headers.set("Last-Modified", mtimeDate.toUTCString());
+	if (asset.encoding && !event.res.headers.has("Content-Encoding")) event.res.headers.set("Content-Encoding", asset.encoding);
+	if (asset.size > 0 && !event.res.headers.has("Content-Length")) event.res.headers.set("Content-Length", asset.size.toString());
+	return readAsset(id);
 });
 //#endregion
 //#region #nitro/virtual/routing
@@ -317,11 +433,11 @@ var findRouteRules = /* @__PURE__ */ (() => {
 		return r;
 	};
 })();
-var _lazy_AOo9qg = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
+var _lazy_ViJLno = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
 var findRoute = /* @__PURE__ */ (() => {
 	const data = {
 		route: "/**",
-		handler: _lazy_AOo9qg
+		handler: _lazy_ViJLno
 	};
 	return ((_m, p) => {
 		return {
@@ -330,12 +446,12 @@ var findRoute = /* @__PURE__ */ (() => {
 		};
 	});
 })();
-[].filter(Boolean);
+var globalMiddleware = [toEventHandler(static_default)].filter(Boolean);
 //#endregion
 //#region node_modules/nitro/dist/runtime/internal/error/prod.mjs
 var errorHandler = (error, event) => {
 	const res = defaultHandler(error, event);
-	return new FastResponse(typeof res.body === "string" ? res.body : JSON.stringify(res.body, null, 2), res);
+	return new NodeResponse(typeof res.body === "string" ? res.body : JSON.stringify(res.body, null, 2), res);
 };
 function defaultHandler(error, event) {
 	const unhandled = error.unhandled ?? !HTTPError.isError(error);
@@ -408,6 +524,7 @@ function createNitroApp() {
 function createH3App(config) {
 	const h3App = new H3Core(config);
 	h3App["~findRoute"] = (event) => findRoute(event.req.method, event.url.pathname);
+	h3App["~middleware"].push(...globalMiddleware);
 	h3App["~getMiddleware"] = (event, route) => {
 		const pathname = event.url.pathname;
 		const method = event.req.method;
@@ -415,6 +532,7 @@ function createH3App(config) {
 		const routeRules = getRouteRules(method, pathname);
 		event.context.routeRules = routeRules?.routeRules;
 		if (routeRules?.routeRuleMiddleware.length) middleware.push(...routeRules.routeRuleMiddleware);
+		middleware.push(...h3App["~middleware"]);
 		if (route?.data?.middleware?.length) middleware.push(...route.data.middleware);
 		return middleware;
 	};
@@ -430,12 +548,6 @@ function useNitroApp() {
 	globalThis.__nitro__ = globalThis.__nitro__ || {};
 	globalThis.__nitro__[APP_ID] = instance;
 	return instance;
-}
-function useNitroHooks() {
-	const nitroApp = useNitroApp();
-	const hooks = nitroApp.hooks;
-	if (hooks) return hooks;
-	return nitroApp.hooks = new HookableCore();
 }
 function getRouteRules(method, pathname) {
 	const m = findRouteRules(method, pathname);
@@ -475,83 +587,37 @@ function getRouteRules(method, pathname) {
 	};
 }
 //#endregion
-//#region node_modules/nitro/dist/presets/cloudflare/runtime/_module-handler.mjs
-function createHandler(hooks) {
-	const nitroApp = useNitroApp();
-	const nitroHooks = useNitroHooks();
-	return {
-		async fetch(request, env, context) {
-			globalThis.__env__ = env;
-			augmentReq(request, {
-				env,
-				context
-			});
-			const ctxExt = {};
-			const url = new URL(request.url);
-			if (hooks.fetch) {
-				const res = await hooks.fetch(request, env, context, url, ctxExt);
-				if (res) return res;
-			}
-			return await nitroApp.fetch(request);
-		},
-		scheduled(controller, env, context) {
-			globalThis.__env__ = env;
-			context.waitUntil(nitroHooks.callHook("cloudflare:scheduled", {
-				controller,
-				env,
-				context
-			}) || Promise.resolve());
-		},
-		email(message, env, context) {
-			globalThis.__env__ = env;
-			context.waitUntil(nitroHooks.callHook("cloudflare:email", {
-				message,
-				event: message,
-				env,
-				context
-			}) || Promise.resolve());
-		},
-		queue(batch, env, context) {
-			globalThis.__env__ = env;
-			context.waitUntil(nitroHooks.callHook("cloudflare:queue", {
-				batch,
-				event: batch,
-				env,
-				context
-			}) || Promise.resolve());
-		},
-		tail(traces, env, context) {
-			globalThis.__env__ = env;
-			context.waitUntil(nitroHooks.callHook("cloudflare:tail", {
-				traces,
-				env,
-				context
-			}) || Promise.resolve());
-		},
-		trace(traces, env, context) {
-			globalThis.__env__ = env;
-			context.waitUntil(nitroHooks.callHook("cloudflare:trace", {
-				traces,
-				env,
-				context
-			}) || Promise.resolve());
-		}
-	};
+//#region node_modules/nitro/dist/runtime/internal/error/hooks.mjs
+function _captureError(error, type) {
+	console.error(`[${type}]`, error);
+	useNitroApp().captureError?.(error, { tags: [type] });
 }
-function augmentReq(cfReq, ctx) {
-	const req = cfReq;
-	req.ip = cfReq.headers.get("cf-connecting-ip") || void 0;
-	req.runtime ??= { name: "cloudflare" };
-	req.runtime.cloudflare = {
-		...req.runtime.cloudflare,
-		...ctx
-	};
-	req.waitUntil = ctx.context?.waitUntil.bind(ctx.context);
+function trapUnhandledErrors() {
+	process.on("unhandledRejection", (error) => _captureError(error, "unhandledRejection"));
+	process.on("uncaughtException", (error) => _captureError(error, "uncaughtException"));
 }
 //#endregion
-//#region node_modules/nitro/dist/presets/cloudflare/runtime/cloudflare-module.mjs
-var cloudflare_module_default = createHandler({ fetch(cfRequest, env, context, url) {
-	if (env.ASSETS && isPublicAssetURL(url.pathname)) return env.ASSETS.fetch(cfRequest);
-} });
+//#region #nitro/virtual/tracing
+var tracingSrvxPlugins = [];
 //#endregion
-export { cloudflare_module_default as default };
+//#region node_modules/nitro/dist/presets/node/runtime/node-server.mjs
+var _parsedPort = Number.parseInt(process.env.NITRO_PORT ?? process.env.PORT ?? "");
+var port = Number.isNaN(_parsedPort) ? 3e3 : _parsedPort;
+var host = process.env.NITRO_HOST || process.env.HOST;
+var cert = process.env.NITRO_SSL_CERT;
+var key = process.env.NITRO_SSL_KEY;
+var nitroApp = useNitroApp();
+serve({
+	port,
+	hostname: host,
+	tls: cert && key ? {
+		cert,
+		key
+	} : void 0,
+	fetch: nitroApp.fetch,
+	plugins: [...tracingSrvxPlugins]
+});
+trapUnhandledErrors();
+var node_server_default = {};
+//#endregion
+export { node_server_default as default };
