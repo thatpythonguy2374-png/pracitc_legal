@@ -31,7 +31,6 @@ function CivilLitigationLandlordTenantPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
-
       <section className="relative min-h-screen flex items-center overflow-hidden text-white">
         {/* Background Image */}
         <div
@@ -76,7 +75,6 @@ function CivilLitigationLandlordTenantPage() {
           </div>
         </div>
       </section>
-
       <div className="bg-secondary/40">
         <section className=" mx-auto max-w-7xl px-6 py-20 ">
           <div className="grid gap-12 lg:grid-cols-12 lg:items-start ">
@@ -240,52 +238,63 @@ function CivilLitigationLandlordTenantPage() {
           </p>
         </div>
       </section>
+
       <div className="bg-secondary/40">
-        <section className=" mx-auto max-w-7xl px-6 py-20 ">
-          <div className="grid gap-12 lg:grid-cols-12 lg:items-start ">
-            {/* Left Side */}
-            <div className="lg:col-span-4">
-              <Reveal>
+        <section className="mx-auto max-w-7xl px-6 py-20">
+          <Reveal>
+            <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+              <div>
+                <p className="eyebrow">Strategic Legal Guidance</p>
+
                 <h2 className="section-title mt-3 text-3xl md:text-4xl">Our Approach</h2>
 
                 <span className="mt-4 block h-1 w-16 bg-primary" />
-              </Reveal>
-            </div>
 
-            {/* Right Side */}
-            <div className="space-y-8 text-base leading-relaxed text-muted-foreground lg:col-span-8">
-              <Reveal>
-                <p className="text-[19px]">
-                  Every landlord–tenant dispute presents unique legal and practical challenges. We
-                  focus on:
+                <p className="mt-8 leading-relaxed text-muted-foreground">
+                  Every landlord–tenant dispute presents unique legal and practical challenges
+                  involving tenancy rights, contractual obligations, and possession of property. At
+                  Practic Legal, we carefully examine lease agreements and tenancy documents, assess
+                  available legal remedies, and develop strategic solutions tailored to each
+                  client's objectives. Our approach focuses on efficient dispute resolution,
+                  settlement opportunities, and effective representation before competent courts and
+                  relevant authorities.
                 </p>
+              </div>
 
-                <Stagger className="grid gap-x-10 gap-y-4 md:grid-cols-2 pt-6 ps-8">
-                  {[
-                    "Thorough review of lease and tenancy documents",
-                    "Strategic dispute resolution and settlement opportunities",
-                    "Effective representation before courts and authorities",
-                    "Rent enhancement and tenancy-related disagreements",
-                    "Early assessment of legal remedies",
-                    "Practical solutions tailored to client objectives",
-                    "Disputes regarding security deposits",
-                    "Illegal or forceful eviction",
-                    "Termination of tenancy",
-                    "Commercial lease disputes",
-                  ].map((item) => (
-                    <StaggerItem key={item}>
-                      <div className="flex items-start gap-3">
-                        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
-                        <p>{item}</p>
-                      </div>
-                    </StaggerItem>
-                  ))}
-                </Stagger>
-              </Reveal>
+              <div className="space-y-10">
+                {[
+                  {
+                    no: "01",
+                    title: "Tenancy Review & Legal Assessment",
+                    desc: "Thorough examination of lease agreements, tenancy documents, contractual obligations, and relevant facts to identify legal rights, potential disputes, and available remedies.",
+                  },
+                  {
+                    no: "02",
+                    title: "Strategic Dispute Resolution & Settlement",
+                    desc: "Developing effective legal strategies to address tenancy disputes, explore negotiation and settlement opportunities, and pursue appropriate remedies based on the circumstances of each case.",
+                  },
+                  {
+                    no: "03",
+                    title: "Litigation & Legal Representation",
+                    desc: "Providing effective representation before competent courts and relevant authorities, with practical legal solutions tailored to protect clients' interests and achieve their legal objectives.",
+                  },
+                ].map((service) => (
+                  <div key={service.no} className="flex gap-6">
+                    <span className="text-3xl font-bold text-primary">{service.no}</span>
+
+                    <div>
+                      <h3 className="font-display text-xl font-bold">{service.title}</h3>
+
+                      <p className="mt-2 leading-relaxed text-muted-foreground">{service.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          </Reveal>
         </section>
       </div>
+
       <DisclaimerSection />
       <SiteFooter />
     </div>

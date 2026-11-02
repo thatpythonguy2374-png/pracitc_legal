@@ -162,7 +162,7 @@ function RouteComponent() {
               <div>
                 <p className="eyebrow">Comprehensive Assistance</p>
 
-                <h2 className="section-title mt-3 text-3xl md:text-4xl">Our Services</h2>
+                <h2 className="section-title mt-3 text-3xl md:text-4xl">Our Approach</h2>
 
                 <span className="mt-4 block h-1 w-16 bg-primary" />
 

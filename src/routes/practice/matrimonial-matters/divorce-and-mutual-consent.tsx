@@ -269,19 +269,26 @@ function MatrimonialMattersDivorceAndMutualConsentPage() {
           </Reveal>
         </div>
       </section>
+
       <div className="bg-secondary/40">
-        <section className=" mx-auto max-w-7xl px-6 py-20">
+        <section className="mx-auto max-w-7xl px-6 py-20">
           <Reveal>
             <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
               <div>
-                <p className="eyebrow">Comprehensive Assistance</p>
+                <p className="eyebrow">Sensitive & Strategic Legal Guidance</p>
 
-                <h2 className="section-title mt-3 text-3xl md:text-4xl">Our Services</h2>
+                <h2 className="section-title mt-3 text-3xl md:text-4xl">Our Approach</h2>
 
                 <span className="mt-4 block h-1 w-16 bg-primary" />
 
                 <p className="mt-8 leading-relaxed text-muted-foreground">
-                  We provide comprehensive legal assistance in matters relating to:
+                  Every matrimonial dispute involves unique personal, legal, and family
+                  considerations. At Practic Legal, we carefully assess the factual background,
+                  legal position, and long-term implications of available legal options before
+                  advising our clients. Where reconciliation or amicable settlement is possible, we
+                  encourage constructive resolution. Where litigation becomes necessary, we focus on
+                  meticulous preparation and effective courtroom advocacy to safeguard our clients'
+                  rights and interests.
                 </p>
               </div>
 
@@ -289,18 +296,18 @@ function MatrimonialMattersDivorceAndMutualConsentPage() {
                 {[
                   {
                     no: "01",
-                    title: "Review & Legal Advisory",
-                    desc: "Review of municipal notices and orders, Legal opinions on building and property compliance issues, and legal risks before initiating proceedings.",
+                    title: "Legal Consultation & Case Assessment",
+                    desc: "Conducting a detailed assessment of the facts, applicable legal provisions, and long-term implications of matrimonial disputes to identify appropriate legal remedies and advise clients on available options.",
                   },
                   {
                     no: "02",
-                    title: "Litigation & Representation",
-                    desc: "Representation during hearings, Drafting and filing appeals before the MCD Tribunal, Applications for interim protection and stay orders, Challenges to demolition and sealing actions, and contractual disputes.",
+                    title: "Settlement & Mutual Consent Proceedings",
+                    desc: "Assistance with settlement negotiations, drafting settlement agreements, preparing and filing joint divorce petitions, and representation during both motions before the competent Family Court.",
                   },
                   {
                     no: "03",
-                    title: "Negotiation & Settlement",
-                    desc: "Strategic settlement discussions and mediation aimed at resolving disputes efficiently while protecting your legal interests.",
+                    title: "Matrimonial Litigation & Proceedings Closure",
+                    desc: "Providing effective legal representation in contested matrimonial matters, pursuing appropriate legal remedies, and assisting with the closure or withdrawal of connected matrimonial proceedings in accordance with applicable law and settlement terms.",
                   },
                 ].map((service) => (
                   <div key={service.no} className="flex gap-6">
@@ -318,6 +325,7 @@ function MatrimonialMattersDivorceAndMutualConsentPage() {
           </Reveal>
         </section>
       </div>
+
       <DisclaimerSection />
       <SiteFooter />
     </div>
